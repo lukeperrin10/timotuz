@@ -6,9 +6,10 @@ const App = ({ component }) => {
   return (
     <>
       <Header />
-      <Container maxWidth='xl' style={{ padding: '0px' }}>
-        <Box my={10}>{component}</Box>
-      </Container>
+        <Box>{component}</Box>
+      {/* <Container maxWidth='xl' style={{ padding: '0px', margin: '0px' }}> */}
+        {/* <Box my={10}>{component}</Box> */}
+      {/* </Container> */}
     </>
   );
 };
