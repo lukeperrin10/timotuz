@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import HeroSection from '../components/HeroSection';
 
 const IndexView = () => {
   return (
-    <div>
-      Awesome Hero Section!
-    </div>
-  )
-}
+    <>
+      <HeroSection />
+    </>
+  );
+};
 
-export default IndexView
+export default IndexView;
