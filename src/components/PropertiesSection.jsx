@@ -1,13 +1,12 @@
 import { Box, Grid } from '@material-ui/core'
 import React from 'react'
+import PropertyColum from './PropertyColum'
 
 const PropertiesSection = () => {
   return (
-   <Box>
+   <Box data-cy='property-section' >
      <Grid container>
-      <Grid container item>
-        
-      </Grid>
+      <PropertyColum />
      </Grid>
    </Box>
   )
