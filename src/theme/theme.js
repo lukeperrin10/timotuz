@@ -5,8 +5,8 @@ import MerriweatherItalic from '../assets/fonts/merriweatherItalic.woff2';
 import MerriweatherRegular from '../assets/fonts/merriweatherRegular.woff2';
 
 const gothamLight = {
-  fontFamily: 'Gotham',
-  fontStyle: 'light',
+  fontFamily: 'Gotham Light',
+  fontStyle: 'regular',
   fontDisplay: 'swap',
   fontWeight: 300,
   src: `
@@ -19,7 +19,7 @@ const gothamLight = {
 };
 
 const merriweatherBold = {
-  fontFamily: 'Merriweather',
+  fontFamily: 'Merriweather Bold',
   fontStyle: 'bold',
   fontDisplay: 'swap',
   fontWeight: 700,
@@ -33,7 +33,7 @@ const merriweatherBold = {
 };
 
 const merriweatherItalic = {
-  fontFamily: 'Merriweather',
+  fontFamily: 'Merriweather Regular Italic',
   fontStyle: 'italic',
   fontDisplay: 'swap',
   fontWeight: 400,
@@ -47,7 +47,7 @@ const merriweatherItalic = {
 };
 
 const merriweatherRegular = {
-  fontFamily: 'Merriweather',
+  fontFamily: 'Merriweather Regular',
   fontStyle: 'normal',
   fontDisplay: 'swap',
   fontWeight: 400,
@@ -62,9 +62,60 @@ const merriweatherRegular = {
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Gotham, Merriweather',
+    fontFamily: 'Gotham Light',
     h1: {
-      fontFamily: 'Merriweather',
+      fontFamily: 'Merriweather Regular',
+      fontStyle: 'regular',
+      fontWeight: 400,
+    },
+    h2: {
+      fontFamily: 'Merriweather Regular',
+      fontStyle: 'regular',
+      fontWeight: 400,
+    },
+    h3: {
+      fontFamily: 'Merriweather Regular',
+      fontStyle: 'regular',
+      fontWeight: 400,
+    },
+    h4: {
+      fontFamily: 'Merriweather Regular',
+      fontStyle: 'regular',
+      fontWeight: 400,
+    },
+    h5: {
+      fontFamily: 'Merriweather Regular',
+      fontStyle: 'regular',
+      fontWeight: 400,
+    },
+    h6: {
+      fontFamily: 'Merriweather Bold',
+      fontStyle: 'bold',
+      fontWeight: 700,
+    },
+    body1: {
+      fontFamily: 'Gotham Light',
+      fontStyle: 'regular',
+      fontWeight: 300,
+    },
+    body2: {
+      fontFamily: 'Gotham Light',
+      fontStyle: 'regular',
+      fontWeight: 300,
+    },
+    button: {
+      fontFamily: 'Gotham Light',
+      fontStyle: 'regular',
+      fontWeight: 300,
+    },
+    caption: {
+      fontFamily: 'Merriweather Regular Italic',
+      fontStyle: 'italic',
+      fontWeight: 400,
+    },
+    overline: {
+      fontFamily: 'Merriweather Regular',
+      fontStyle: 'regular',
       fontWeight: 400,
     },
   },
@@ -82,4 +133,4 @@ const theme = createTheme({
   },
 });
 
-export default theme
+export default theme;
