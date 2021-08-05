@@ -1,8 +1,13 @@
 import React from 'react';
-import { Box, CardMedia, makeStyles, Typography } from '@material-ui/core';
+import {
+  Box,
+  CardMedia,
+  Grid,
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
 import overview from '../assets/images/overview.jpeg';
-import houseIconWhite from '../assets/images/Building_ikon_white.svg'
-
+import houseIconWhite from '../assets/images/Building_ikon_white.svg';
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -25,13 +30,10 @@ const useStyles = makeStyles((theme) => ({
       left: '0px',
       paddingTop: '200px',
       paddingLeft: '4%',
-      paddingRight: '4%'
+      paddingRight: '4%',
     },
     [theme.breakpoints.up('sm')]: {
       paddingTop: '250px',
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: '300px',
     },
     [theme.breakpoints.up('lg')]: {
       height: '100%',
@@ -40,24 +42,27 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'rgba(15, 15, 15, 0.9)',
       top: '0px',
       left: '20%',
-      paddingTop: '15%',
+      paddingTop: '10%',
       paddingLeft: '1%',
-      paddingRight: '1%'
+      paddingRight: '1%',
+    },
+    [theme.breakpoints.up('xl')]: {
+      paddingTop: '4%',
     },
   },
   informationText: {
     [theme.breakpoints.up('xs')]: {
       color: '#eee',
-      fontSize: '2rem'
+      fontSize: '2rem',
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '2.5rem'
+      fontSize: '2.5rem',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '3rem'
+      fontSize: '3rem',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '3.75rem'
+      fontSize: '3.75rem',
     },
   },
   hoseIcon: {
@@ -65,7 +70,32 @@ const useStyles = makeStyles((theme) => ({
       width: '50%',
       marginLeft: '20%',
       marginRight: '20%',
-      marginTop: '50%'
+      marginTop: '50%',
+    },
+  },
+  redInfoBox: {
+    [theme.breakpoints.up('xs')]: {
+      position: 'absolute',
+      height: 'auto',
+      width: '100%',
+      textAlign: 'center',
+      top: '87.4%'
+    },
+  },
+  infoGrid: {
+    [theme.breakpoints.up('xs')]: {
+      height: '100%',
+      width: '100%',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      paddingTop: '20px',
+      paddingBottom: '20px',
+    },
+  },
+  dataColumn: {
+    [theme.breakpoints.up('xs')]: {
+      marginBottom: '10px',
+      marginTop: '10px'
     },
   }
 }));
@@ -82,16 +112,39 @@ const HeroSection = () => {
         alt='Bird view of a small town'
       />
       <Box data-cy='shadow-box' className={classes.shadowBox}>
-        <Typography className={classes.informationText} variant='h2' data-cy='information-text'>
+        <Typography
+          className={classes.informationText}
+          variant='h2'
+          data-cy='information-text'>
           Trygga fastigheter i södra sverige
         </Typography>
         <CardMedia
-        className={classes.hoseIcon}
-        component='img'
-        image={houseIconWhite}
-        data-cy='house-logo'
-        alt=''
-      />
+          className={classes.hoseIcon}
+          component='img'
+          image={houseIconWhite}
+          data-cy='house-logo'
+          alt=''
+        />
+      </Box>
+      <Box data-cy='information-bar' className={classes.redInfoBox} bgcolor='primary.main' color='primary.contrastText'>
+        <Grid container spacing={0} className={classes.infoGrid}>
+          <Grid className={classes.dataColumn} data-cy='column-0' item xs={6} lg={2}>
+            <Typography variant='h3'>114</Typography>
+            <Typography variant='subtitle1'gutterBottom>Lorem Ipsum</Typography>
+          </Grid>
+          <Grid className={classes.dataColumn} data-cy='column-1' item xs={6} lg={2}>
+            <Typography variant='h3'>32</Typography>
+            <Typography variant='subtitle1' gutterBottom>Lorem Ipsum</Typography>
+          </Grid>
+          <Grid className={classes.dataColumn} data-cy='column-2' item xs={6} lg={2}>
+            <Typography variant='h3'>2</Typography>
+            <Typography variant='subtitle1' gutterBottom>Lorem Ipsum</Typography>
+          </Grid>
+          <Grid className={classes.dataColumn} data-cy='column-3' item xs={6} lg={2}>
+            <Typography variant='h3'>Ja</Typography>
+            <Typography variant='subtitle1' gutterBottom>Lorem Ipsum</Typography>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
