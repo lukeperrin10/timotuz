@@ -25,10 +25,17 @@ describe('visitor can navigate see index view', () => {
     });
     it('is expected to show information bar', () => {
       cy.get('[data-cy=information-bar]').within(() => {
-        cy.get('[data-cy=column-0]').should('contain', '114 Lorem ipsum');
-        cy.get('[data-cy=column-1]').should('contain', '2 Lorem ipsum');
-        cy.get('[data-cy=column-2]').should('contain', '1 Lorem ipsum');
-        cy.get('[data-cy=column-3]').should('contain', 'Ja Lorem ipsum');
+        cy.get('[data-cy=column-0]').first().should('contain', '114');
+        cy.get('[data-cy=column-0]').last().should('contain', 'Lorem ipsum');
+
+        cy.get('[data-cy=column-1]').first().should('contain', '32');
+        cy.get('[data-cy=column-1]').last().should('contain', 'Lorem ipsum');
+
+        cy.get('[data-cy=column-2]').first().should('contain', '2');
+        cy.get('[data-cy=column-2]').last().should('contain', 'Lorem ipsum');
+
+        cy.get('[data-cy=column-3]').first().should('contain', 'Ja');
+        cy.get('[data-cy=column-3]').last().should('contain', 'Lorem ipsum');
       });
     });
   });

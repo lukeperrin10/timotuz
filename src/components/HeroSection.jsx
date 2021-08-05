@@ -130,19 +130,19 @@ const HeroSection = () => {
         <Grid container spacing={0} className={classes.infoGrid}>
           <Grid className={classes.dataColumn} data-cy='column-0' item xs={6} lg={2}>
             <Typography variant='h3'>114</Typography>
-            <Typography variant='subtitle1'gutterBottom>Lorem Ipsum</Typography>
+            <Typography variant='subtitle1'gutterBottom>Lorem ipsum</Typography>
           </Grid>
           <Grid className={classes.dataColumn} data-cy='column-1' item xs={6} lg={2}>
             <Typography variant='h3'>32</Typography>
-            <Typography variant='subtitle1' gutterBottom>Lorem Ipsum</Typography>
+            <Typography variant='subtitle1' gutterBottom>Lorem ipsum</Typography>
           </Grid>
           <Grid className={classes.dataColumn} data-cy='column-2' item xs={6} lg={2}>
             <Typography variant='h3'>2</Typography>
-            <Typography variant='subtitle1' gutterBottom>Lorem Ipsum</Typography>
+            <Typography variant='subtitle1' gutterBottom>Lorem ipsum</Typography>
           </Grid>
           <Grid className={classes.dataColumn} data-cy='column-3' item xs={6} lg={2}>
             <Typography variant='h3'>Ja</Typography>
-            <Typography variant='subtitle1' gutterBottom>Lorem Ipsum</Typography>
+            <Typography variant='subtitle1' gutterBottom>Lorem ipsum</Typography>
           </Grid>
         </Grid>
       </Box>
