@@ -18,19 +18,46 @@ const useStyles = makeStyles((theme) => ({
   shadowBox: {
     [theme.breakpoints.up('xs')]: {
       height: '100%',
+      width: '65%',
+      position: 'absolute',
+      backgroundColor: 'rgba(15, 15, 15, 0.9)',
+      top: '0px',
+      left: '0px',
+      paddingTop: '200px',
+      paddingLeft: '4%',
+      paddingRight: '4%'
+    },
+    [theme.breakpoints.up('sm')]: {
+      paddingTop: '250px',
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '300px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '100%',
       width: '30%',
       position: 'absolute',
       backgroundColor: 'rgba(15, 15, 15, 0.9)',
       top: '0px',
       left: '20%',
       paddingTop: '15%',
-      paddingLeft: '3%',
-      paddingRight: '3%'
+      paddingLeft: '1%',
+      paddingRight: '1%'
     },
   },
   informationText: {
     [theme.breakpoints.up('xs')]: {
       color: '#eee',
+      fontSize: '2rem'
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.5rem'
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3rem'
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '3.75rem'
     },
   },
   hoseIcon: {
@@ -38,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
       width: '50%',
       marginLeft: '20%',
       marginRight: '20%',
-      marginTop: '70%'
+      marginTop: '50%'
     },
   }
 }));
