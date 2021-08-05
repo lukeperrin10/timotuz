@@ -4,8 +4,8 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import App from './Components/App';
-import IndexView from './Views/IndexView'
+import App from './components/App';
+import IndexView from './views/IndexView'
 
 const Routes = () => {
   return (
