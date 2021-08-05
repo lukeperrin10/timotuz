@@ -4,10 +4,10 @@ import React from 'react'
 const App = () => {
   return (
     <>
-    <Typography variant="h1" component="h1">
+    <Typography variant="h1" component="h1" color="secondary">
       Hello world
     </Typography>
-    <Typography variant="h2" component="h2">
+    <Typography variant="h2" component="h2" color="primary">
       Hello world
     </Typography>
     <Typography variant="h3" component="h3">

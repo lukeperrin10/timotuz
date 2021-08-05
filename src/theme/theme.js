@@ -61,6 +61,17 @@ const merriweatherRegular = {
 };
 
 const theme = createTheme({
+  palette: {
+    common: {
+      black: '#0F0F0F'
+    },
+    primary: {
+      main: '#840C07',
+    },
+    secondary: {
+      main: '#E1252A'
+    },
+  },
   typography: {
     fontFamily: 'Gotham Light',
     h1: {
