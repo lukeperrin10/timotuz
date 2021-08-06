@@ -13,8 +13,7 @@ import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import theme from '../../theme/theme'
 import { Link } from 'react-router-dom'
 
-const secondary = theme.palette.secondary
-var _ = require('lodash');
+const _ = require('lodash')
 
 const useStyles = makeStyles({
   logoContainer: {
@@ -68,6 +67,7 @@ const Header = () => {
         className={classes.tab}
         component={Link}
         to={_.snakeCase(tab)}
+        data-cy={`${_.kebabCase(tab)}-tab`}
       />
     )
   )
@@ -80,7 +80,7 @@ const Header = () => {
             <img
               src={logo_web_timotuz}
               style={{ height: '30px' }}
-              data-cy="header-logo"
+              data-cy="logo"
               alt="Timotuz Company Logo"
             />
           </Grid>
@@ -97,6 +97,7 @@ const Header = () => {
             disableElevation
             className={classes.phoneButton}
             href="tel:+46 31-123-4567"
+            data-cy="phone"
           >
             031-123-4567
           </Button>
