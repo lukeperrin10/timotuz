@@ -58,7 +58,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       margin: '50px 0',
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },
   },
 }));
