@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   AppBar,
   Toolbar,
@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core'
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import theme from '../../theme/theme'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const _ = require('lodash')
 
@@ -28,6 +28,12 @@ const useStyles = makeStyles({
       paddingLeft: '0px',
     },
   },
+  logoButton: {
+    padding: 0,
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+  },
   tab: {
     minWidth: 10,
     marginRight: '24px',
@@ -39,8 +45,26 @@ const useStyles = makeStyles({
 })
 
 const Header = () => {
+  let url = useLocation()
   const classes = useStyles()
   const [selectedTab, setSelectedTab] = useState(0)
+
+  useEffect(() => {
+    switch (url.pathname) {
+      case '/start':
+        setSelectedTab(0)
+        break
+      case '/fastigheter':
+        setSelectedTab(1)
+        break
+      case '/om_oss':
+        setSelectedTab(2)
+        break
+      case '/kontakta_oss':
+        setSelectedTab(3)
+        break
+    }
+  }, [url])
 
   function ElevationScroll(props) {
     const { children } = props
@@ -52,10 +76,6 @@ const Header = () => {
     return React.cloneElement(children, {
       elevation: trigger ? 4 : 0,
     })
-  }
-
-  const handleChange = (event, value) => {
-    setSelectedTab(value)
   }
 
   const navMenu = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss'].map(
@@ -77,18 +97,21 @@ const Header = () => {
       <AppBar data-cy="header">
         <Toolbar disableGutters>
           <Grid container className={classes.logoContainer}>
-            <img
-              src={logo_web_timotuz}
-              style={{ height: '30px' }}
-              data-cy="logo"
-              alt="Timotuz Company Logo"
-            />
+            <Button
+              disableRipple
+              className={classes.logoButton}
+              component={Link}
+              to="/start"
+            >
+              <img
+                src={logo_web_timotuz}
+                style={{ height: '30px' }}
+                data-cy="logo"
+                alt="Timotuz Company Logo"
+              />
+            </Button>
           </Grid>
-          <Tabs
-            value={selectedTab}
-            onChange={handleChange}
-            style={{ marginLeft: 'auto' }}
-          >
+          <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
             {navMenu}
           </Tabs>
           <Button
