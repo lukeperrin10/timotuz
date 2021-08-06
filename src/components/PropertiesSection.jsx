@@ -1,4 +1,11 @@
-import { Box, CardMedia, Grid, Typography } from '@material-ui/core';
+import {
+  Box,
+  CardMedia,
+  Grid,
+  Typography,
+  makeStyles,
+  Divider,
+} from '@material-ui/core';
 import React from 'react';
 
 import LimhamnSky from '../assets/images/LimhamnSky.JPG';
@@ -6,21 +13,81 @@ import LimhamnBack from '../assets/images/LimhamnBack.JPG';
 import LimhamnFront from '../assets/images/LimhamnFront.JPG';
 import threeDImage from '../assets/images/3d_draft.jpg';
 
+const useStyles = makeStyles((theme) => ({
+  headerTextContainer: {
+    [theme.breakpoints.up('xs')]: {
+      textAlign: 'center',
+      padding: '100px 30px 50px 30px'
+    },
+  },
+  propertyColumn: {
+    [theme.breakpoints.up('xs')]: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '50px 0',
+    },
+  },
+  image: {
+    [theme.breakpoints.up('xs')]: {
+      width: '100%',
+      height: '375px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '400px',
+      height: '400px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '450px',
+      height: '450px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '600px',
+      height: '600px',
+    },
+  },
+  textContent: {
+    [theme.breakpoints.up('xs')]: {
+      padding: '20px 30px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      padding: '30px 100px',
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '30px 150px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '30px 30px',
+      width: 'auto'
+    },
+  },
+}));
+
 const PropertiesSection = () => {
+  const classes = useStyles();
   return (
     <Box data-cy='property-section'>
+      <Box className={classes.headerTextContainer}>
+        <Typography color='primary' variant='h4' gutterBottom>Fastigheter</Typography>
+        <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, distinctio!</Typography>
+      </Box>
       <Grid container>
-        <Grid data-cy='property-column-0' container item>
-          <Grid item>
+        <Grid
+          data-cy='property-column-0'
+          container
+          item
+          xs={12}
+          className={classes.propertyColumn}>
+          <Grid item lg={5}>
             <CardMedia
+              className={classes.image}
               component='img'
               image={threeDImage}
               data-cy='property-image'
               alt='Stor fastighet med tegelfasad'
             />
           </Grid>
-          <Grid item>
-            <Typography data-cy='property-name' variant='h5'>
+          <Grid item lg={5} className={classes.textContent}>
+            <Typography data-cy='property-name' variant='h5' gutterBottom>
               Benvägen 32, Limhamn
             </Typography>
             <Typography data-cy='property-text' variant='subtitle1'>
@@ -40,17 +107,24 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid data-cy='property-column-1' container item>
-          <Grid item>
+        <Divider/>
+        <Grid
+          data-cy='property-column-1'
+          container
+          item
+          xs={12}
+          className={classes.propertyColumn}>
+          <Grid item lg={5}>
             <CardMedia
+              className={classes.image}
               component='img'
               image={LimhamnSky}
               data-cy='property-image'
               alt='Stor fastighet med tegelfasad'
             />
           </Grid>
-          <Grid item>
-            <Typography data-cy='property-name' variant='h5'>
+          <Grid item lg={5} className={classes.textContent}>
+            <Typography data-cy='property-name' variant='h5' gutterBottom>
               Strandgatan 2, Limhamn
             </Typography>
             <Typography data-cy='property-text' variant='subtitle1'>
@@ -70,17 +144,23 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid data-cy='property-column-2' container item>
-          <Grid item>
+        <Grid
+          data-cy='property-column-2'
+          container
+          item
+          xs={12}
+          className={classes.propertyColumn}>
+          <Grid item lg={5}>
             <CardMedia
+              className={classes.image}
               component='img'
               image={LimhamnBack}
               data-cy='property-image'
               alt='Stor fastighet med tegelfasad'
             />
           </Grid>
-          <Grid item>
-            <Typography data-cy='property-name' variant='h5'>
+          <Grid item lg={5} className={classes.textContent}>
+            <Typography data-cy='property-name' variant='h5' gutterBottom>
               Väst svängen 32, Helsingborg
             </Typography>
             <Typography data-cy='property-text' variant='subtitle1'>
@@ -100,17 +180,23 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid data-cy='property-column-3' container item>
-          <Grid item>
+        <Grid
+          data-cy='property-column-3'
+          container
+          item
+          xs={12}
+          className={classes.propertyColumn}>
+          <Grid item lg={5}>
             <CardMedia
+              className={classes.image}
               component='img'
               image={LimhamnFront}
               data-cy='property-image'
               alt='Stor fastighet med tegelfasad'
             />
           </Grid>
-          <Grid item>
-            <Typography data-cy='property-name' variant='h5'>
+          <Grid item lg={5} className={classes.textContent}>
+            <Typography data-cy='property-name' variant='h5' gutterBottom>
               Bryggerigatan 3, Limhamn
             </Typography>
             <Typography data-cy='property-text' variant='subtitle1'>

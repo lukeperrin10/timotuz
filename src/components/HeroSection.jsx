@@ -79,16 +79,7 @@ const useStyles = makeStyles((theme) => ({
       height: 'auto',
       width: '100%',
       textAlign: 'center',
-      top: '68.2%'
-    },
-    [theme.breakpoints.up('sm')]: {
-      top: '74.8%'
-    },
-    [theme.breakpoints.up('md')]: {
-      top: '81.3%'
-    },
-    [theme.breakpoints.up('lg')]: {
-      top: '87.4%'
+      bottom: '0'
     },
   },
   infoGrid: {
