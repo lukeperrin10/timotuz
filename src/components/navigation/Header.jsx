@@ -8,10 +8,16 @@ import {
   Tabs,
   Tab,
   Button,
+  Hidden,
+  SwipeableDrawer,
+  IconButton,
+  Typography,
 } from '@material-ui/core'
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
+import MenuIcon from '@material-ui/icons/Menu'
+import PhoneIcon from '@material-ui/icons/Phone'
 
 const _ = require('lodash')
 
@@ -34,20 +40,26 @@ const useStyles = makeStyles({
       backgroundColor: 'transparent',
     },
   },
-  tab: {
+  tabDesktop: {
     minWidth: 10,
-    marginRight: '24px',
+    marginRight: '2rem',
+  },
+  tabMobile: {
+    width: '50vw',
   },
   phoneButton: {
     borderRadius: 0,
     height: '4rem',
+    padding: '0 1.5rem',
   },
+  hamburger: { margin: ' 0 12px 0 auto' },
 })
 
 const Header = () => {
   let url = useLocation()
   const classes = useStyles()
   const [selectedTab, setSelectedTab] = useState(0)
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   useEffect(() => {
     switch (url.pathname) {
@@ -62,6 +74,8 @@ const Header = () => {
         break
       case '/kontakta_oss':
         setSelectedTab(3)
+        break
+      default:
         break
     }
   }, [url])
@@ -78,18 +92,87 @@ const Header = () => {
     })
   }
 
-  const navMenu = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss'].map(
-    (tab, index) => (
-      <Tab
-        key={tab}
-        label={tab}
-        value={index}
-        className={classes.tab}
-        component={Link}
-        to={_.snakeCase(tab)}
-        data-cy={`${_.kebabCase(tab)}-tab`}
-      />
-    )
+  const tabs = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss']
+
+  const desktopNavTabs = tabs.map((tab, index) => (
+    <Tab
+      key={tab}
+      label={tab}
+      value={index}
+      className={classes.tabDesktop}
+      component={Link}
+      to={_.snakeCase(tab)}
+      data-cy={`${_.kebabCase(tab)}-tab`}
+    />
+  ))
+
+  const mobileNavTabs = tabs.map((tab, index) => (
+    <Tab
+      orientation="vertical"
+      key={`${tab}-drawer`}
+      label={tab}
+      value={index}
+      className={classes.tabMobile}
+      component={Link}
+      to={_.snakeCase(tab)}
+      data-cy={`${_.kebabCase(tab)}-tab`}
+      onClick={() => setDrawerOpen(false)}
+    />
+  ))
+
+  const navBar = (
+    <>
+      <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
+        {desktopNavTabs}
+      </Tabs>
+      <Button
+        variant="contained"
+        color="secondary"
+        disableElevation
+        className={classes.phoneButton}
+        href="tel:+46 31-123-4567"
+        data-cy="phone"
+      >
+        <PhoneIcon style={{ marginRight: '1rem' }} />
+        <Typography>031-123-4567</Typography>
+      </Button>
+    </>
+  )
+
+  const drawer = (
+    <>
+      <SwipeableDrawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        onOpen={() => setDrawerOpen(true)}
+      >
+        <Button
+          variant="contained"
+          color="secondary"
+          disableElevation
+          className={classes.phoneButton}
+          href="tel:+46 31-123-4567"
+          data-cy="phone"
+        >
+          <PhoneIcon style={{ marginRight: '1rem' }} />
+          031-123-4567
+        </Button>
+        {mobileNavTabs}
+        <img
+          src={logo_web_timotuz}
+          style={{ height: '30px', margin: 'auto 0 1rem 0' }}
+          data-cy="logo"
+          alt="Timotuz Company Logo"
+        />
+      </SwipeableDrawer>
+      <IconButton
+        className={classes.hamburger}
+        onClick={() => setDrawerOpen(true)}
+      >
+        <MenuIcon />
+      </IconButton>
+    </>
   )
 
   return (
@@ -111,19 +194,8 @@ const Header = () => {
               />
             </Button>
           </Grid>
-          <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
-            {navMenu}
-          </Tabs>
-          <Button
-            variant="contained"
-            color="secondary"
-            disableElevation
-            className={classes.phoneButton}
-            href="tel:+46 31-123-4567"
-            data-cy="phone"
-          >
-            031-123-4567
-          </Button>
+          <Hidden smDown>{navBar}</Hidden>
+          <Hidden mdUp>{drawer}</Hidden>
         </Toolbar>
       </AppBar>
     </ElevationScroll>
