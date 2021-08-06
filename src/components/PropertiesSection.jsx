@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   headerTextContainer: {
     [theme.breakpoints.up('xs')]: {
       textAlign: 'center',
-      padding: '100px 30px 50px 30px'
+      padding: '50px 30px'
     },
   },
   propertyColumn: {
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   textContent: {
     [theme.breakpoints.up('xs')]: {
       padding: '20px 30px',
+      height: 'auto'
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
@@ -57,9 +58,15 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       padding: '30px 30px',
+      marginLeft: '40px',
       width: 'auto'
     },
   },
+  divider: {
+    [theme.breakpoints.up('xs')]: {
+      width: '100%',
+    },
+  }
 }));
 
 const PropertiesSection = () => {
@@ -70,6 +77,7 @@ const PropertiesSection = () => {
         <Typography color='primary' variant='h4' gutterBottom>Fastigheter</Typography>
         <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, distinctio!</Typography>
       </Box>
+      <Divider className={classes.divider}/>
       <Grid container>
         <Grid
           data-cy='property-column-0'
@@ -107,7 +115,7 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Divider/>
+        <Divider className={classes.divider}/>
         <Grid
           data-cy='property-column-1'
           container
@@ -144,6 +152,7 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
+        <Divider className={classes.divider}/>
         <Grid
           data-cy='property-column-2'
           container
@@ -180,6 +189,7 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
+        <Divider className={classes.divider}/>
         <Grid
           data-cy='property-column-3'
           container
