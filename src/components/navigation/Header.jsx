@@ -12,7 +12,7 @@ import {
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import theme from '../../theme/theme'
 
-const primary = theme.palette.primary
+const secondary = theme.palette.secondary
 
 const useStyles = makeStyles({
   logoContainer: {
@@ -31,9 +31,7 @@ const useStyles = makeStyles({
     minWidth: 10,
     margin: '0 12px',
   },
-  phoneButton: {
-    backgroundColor: primary.dark,
-    color: primary.contrastText,
+  phoneButton: {  
     borderRadius: 0,
     height: '4rem'
   }
@@ -60,7 +58,7 @@ const Header = () => {
 
   return (
     <ElevationScroll>
-      <AppBar color="secondary" data-cy="header">
+      <AppBar data-cy="header">
         <Toolbar disableGutters>
           <Grid container className={classes.logoContainer}>
             <img
@@ -70,9 +68,10 @@ const Header = () => {
               alt="Timotuz Company Logo"
             />
           </Grid>
-          <Tabs style={{ marginLeft: 'auto' }}>{navMenu}</Tabs>
+          <Tabs value={0} style={{ marginLeft: 'auto' }}>{navMenu}</Tabs>
           <Button
             variant="contained"
+            color='secondary'
             disableElevation
             className={classes.phoneButton}
           >

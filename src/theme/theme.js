@@ -67,12 +67,14 @@ const theme = createTheme({
       white: '#FFFFFFEE',
     },
     primary: {
-      main: '#E1252A',      
-      dark: '#840C07',
+      main: '#FFFFFFEE',
+    },
+    secondary: {            
+      main: '#840C07',
       contrastText: '#eee',
     },
-    secondary: {
-      main: '#FFFFFFEE',
+    error: {
+      main: '#E1252A',
     },
     text: {
       primary: 'rgba(15, 15, 15, 1)',
