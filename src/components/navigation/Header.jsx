@@ -4,7 +4,9 @@ import {
   Toolbar,
   useScrollTrigger,
   makeStyles,
-  Grid
+  Grid,
+  Tabs,
+  Tab,
 } from '@material-ui/core'
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import theme from '../../theme/theme'
@@ -14,16 +16,18 @@ const useStyles = makeStyles({
     [theme.breakpoints.up('xs')]: {
       width: '65%',
       justifyContent: 'left',
-      paddingLeft: '1rem'
+      paddingLeft: '1rem',
     },
     [theme.breakpoints.up('lg')]: {
       width: '20%',
       justifyContent: 'center',
-      paddingLeft: '0px'
+      paddingLeft: '0px',
     },
   },
-  logo: {
-    height: '30px',
+  tab: {
+    fontWeight: 600,
+    minWidth: 10,
+    marginLeft: '25px'
   }
 })
 
@@ -42,19 +46,25 @@ const Header = () => {
     })
   }
 
+  const navMenu = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss'].map(
+    (tab) => (
+      <Tab label={tab} className={classes.tab}/>
+    )
+  )
+
   return (
     <ElevationScroll>
-      <AppBar color="secondary" data-cy='header'>
+      <AppBar color="secondary" data-cy="header">
         <Toolbar disableGutters>
           <Grid container className={classes.logoContainer}>
             <img
               src={logo_web_timotuz}
-              className={classes.logo}
+              style={{height: '30px'}}
               data-cy="header-logo"
               alt="Timotuz Company Logo"
             />
           </Grid>
-          Header
+          <Tabs style={{marginLeft: 'auto',}}>{navMenu}</Tabs>
         </Toolbar>
       </AppBar>
     </ElevationScroll>
