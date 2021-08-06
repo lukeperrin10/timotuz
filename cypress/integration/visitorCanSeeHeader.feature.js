@@ -19,7 +19,7 @@ describe('visitor can see header', () => {
       cy.get('[data-cy=kontakta-oss-tab]')
         .invoke('attr', 'href')
         .should('include', '/kontakta_oss');
-      cy.get("[data-cy=phone]").should('contain', '031-123-4567')
+      cy.get("[data-cy=phone]").should('contain', '+46 31-123-4567')
     });
   });
 });

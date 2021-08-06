@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   AppBar,
   Toolbar,
@@ -29,16 +29,17 @@ const useStyles = makeStyles({
   },
   tab: {
     minWidth: 10,
-    margin: '0 12px',
+    marginRight: '24px',
   },
-  phoneButton: {  
+  phoneButton: {
     borderRadius: 0,
-    height: '4rem'
-  }
+    height: '4rem',
+  },
 })
 
 const Header = () => {
   const classes = useStyles()
+  const [selectedTab, setSelectedTab] = useState(0)
 
   function ElevationScroll(props) {
     const { children } = props
@@ -52,8 +53,14 @@ const Header = () => {
     })
   }
 
+  const handleChange = (event, value) => {
+    setSelectedTab(value)
+  }
+
   const navMenu = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss'].map(
-    (tab) => <Tab key={tab} label={tab} className={classes.tab} />
+    (tab, index) => (
+      <Tab key={tab} label={tab} value={index} className={classes.tab} />
+    )
   )
 
   return (
@@ -68,12 +75,19 @@ const Header = () => {
               alt="Timotuz Company Logo"
             />
           </Grid>
-          <Tabs value={0} style={{ marginLeft: 'auto' }}>{navMenu}</Tabs>
+          <Tabs
+            value={selectedTab}
+            onChange={handleChange}
+            style={{ marginLeft: 'auto' }}
+          >
+            {navMenu}
+          </Tabs>
           <Button
             variant="contained"
-            color='secondary'
+            color="secondary"
             disableElevation
             className={classes.phoneButton}
+            href="tel:+46 31-123-4567"
           >
             031-123-4567
           </Button>
