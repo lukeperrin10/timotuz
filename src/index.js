@@ -7,12 +7,12 @@ import Routes from './Routes';
 import theme from './theme/theme';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes />
     </ThemeProvider>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

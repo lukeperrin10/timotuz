@@ -14,6 +14,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
+import logo_no_text from '../../assets/images/logo_no_text.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -120,53 +121,49 @@ const Header = () => {
     />
   ))
 
+  const phoneButton = (
+    <Button
+      variant="contained"
+      color="secondary"
+      disableElevation
+      className={classes.phoneButton}
+      href="tel:+46 31-123-4567"
+      data-cy="phone"
+    >
+      <PhoneIcon style={{ marginRight: '1rem' }} />
+      <Typography>031-123-4567</Typography>
+    </Button>
+  )
+
   const navBar = (
     <>
       <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
         {desktopNavTabs}
       </Tabs>
-      <Button
-        variant="contained"
-        color="secondary"
-        disableElevation
-        className={classes.phoneButton}
-        href="tel:+46 31-123-4567"
-        data-cy="phone"
-      >
-        <PhoneIcon style={{ marginRight: '1rem' }} />
-        <Typography>031-123-4567</Typography>
-      </Button>
+      {phoneButton}
     </>
   )
 
   const drawer = (
     <>
       <SwipeableDrawer
+        data-cy="drawer"
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         onOpen={() => setDrawerOpen(true)}
       >
-        <Button
-          variant="contained"
-          color="secondary"
-          disableElevation
-          className={classes.phoneButton}
-          href="tel:+46 31-123-4567"
-          data-cy="phone"
-        >
-          <PhoneIcon style={{ marginRight: '1rem' }} />
-          031-123-4567
-        </Button>
+        {phoneButton}
         {mobileNavTabs}
         <img
-          src={logo_web_timotuz}
-          style={{ height: '30px', margin: 'auto 0 1rem 0' }}
-          data-cy="logo"
+          src={logo_no_text}
+          style={{ height: '48px', margin: 'auto 0 1rem 0' }}
+          data-cy="drawer-logo"
           alt="Timotuz Company Logo"
         />
       </SwipeableDrawer>
       <IconButton
+        data-cy="hamburger-menu"
         className={classes.hamburger}
         onClick={() => setDrawerOpen(true)}
       >
