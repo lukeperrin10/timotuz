@@ -1,11 +1,18 @@
-import { Box, CardMedia, Grid, Typography, Divider } from '@material-ui/core';
+import {
+  Box,
+  CardMedia,
+  Grid,
+  Typography,
+  Divider,
+  Button,
+} from '@material-ui/core';
 import React from 'react';
 
 import LimhamnSky from '../assets/images/LimhamnSky.JPG';
 import LimhamnBack from '../assets/images/LimhamnBack.JPG';
 import LimhamnFront from '../assets/images/LimhamnFront.JPG';
 import threeDImage from '../assets/images/3d_draft.jpg';
-import propertySectionStyle from '../theme/propertiesSection';
+import propertySectionStyle from '../theme/themePropertiesSection';
 
 const PropertiesSection = () => {
   const classes = propertySectionStyle();
@@ -174,6 +181,11 @@ const PropertiesSection = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Box className={classes.button}>
+        <Button data-cy='show-more-btn' variant='outlined' color='primary'>
+          Show more
+        </Button>
+      </Box>
     </Box>
   );
 };

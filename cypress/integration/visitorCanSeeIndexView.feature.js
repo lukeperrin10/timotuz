@@ -49,7 +49,8 @@ describe('visitor can navigate see index view', () => {
           cy.get('[data-cy=property-address]').should('contain', 'Benvägen 32, Limhamn')
           cy.get('[data-cy=property-description]').should('contain', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit')
         })
-      })  
+      })
+      cy.get('[data-cy=show-more-btn]').click()
     });
   })
 });

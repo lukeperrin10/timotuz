@@ -54,6 +54,13 @@ const propertySectionStyle = makeStyles((theme) => ({
       width: '100%',
     },
   },
+  button: {
+    [theme.breakpoints.up('xs')]: {
+      margin: '50px 0',
+      display: 'flex',
+      justifyContent: 'center'
+    },
+  },
 }));
 
 export default propertySectionStyle;
