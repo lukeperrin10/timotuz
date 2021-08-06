@@ -64,13 +64,15 @@ const theme = createTheme({
   palette: {
     common: {
       black: '#0F0F0F',
+      white: '#FFFFFFEE',
     },
     primary: {
-      main: '#840C07',
+      main: '#E1252A',      
+      dark: '#840C07',
       contrastText: '#eee',
     },
     secondary: {
-      main: '#E1252A',
+      main: '#FFFFFFEE',
     },
     text: {
       primary: 'rgba(15, 15, 15, 1)',
