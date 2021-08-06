@@ -27,7 +27,7 @@ const PropertiesSection = () => {
       <Divider className={classes.divider} />
       <Grid container>
         <Grid
-          data-cy='property-column-0'
+          data-cy='property-0'
           container
           item
           xs={12}
@@ -42,10 +42,10 @@ const PropertiesSection = () => {
             />
           </Grid>
           <Grid item lg={5} className={classes.textContent}>
-            <Typography data-cy='property-name' variant='h5' gutterBottom>
+            <Typography data-cy='property-address' variant='h5' gutterBottom>
               Benvägen 32, Limhamn
             </Typography>
-            <Typography data-cy='property-text' variant='subtitle1'>
+            <Typography data-cy='property-description' variant='subtitle1'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Architecto corporis voluptatem nostrum, at quae vitae recusandae
               numquam aliquam et consequuntur illum perspiciatis deserunt.
@@ -64,7 +64,7 @@ const PropertiesSection = () => {
         </Grid>
         <Divider className={classes.divider} />
         <Grid
-          data-cy='property-column-1'
+          data-cy='property-1'
           container
           item
           xs={12}
@@ -79,10 +79,10 @@ const PropertiesSection = () => {
             />
           </Grid>
           <Grid item lg={5} className={classes.textContent}>
-            <Typography data-cy='property-name' variant='h5' gutterBottom>
+            <Typography data-cy='property-address' variant='h5' gutterBottom>
               Strandgatan 2, Limhamn
             </Typography>
-            <Typography data-cy='property-text' variant='subtitle1'>
+            <Typography data-cy='property-description' variant='subtitle1'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Architecto corporis voluptatem nostrum, at quae vitae recusandae
               numquam aliquam et consequuntur illum perspiciatis deserunt.
@@ -101,7 +101,7 @@ const PropertiesSection = () => {
         </Grid>
         <Divider className={classes.divider} />
         <Grid
-          data-cy='property-column-2'
+          data-cy='property-2'
           container
           item
           xs={12}
@@ -116,10 +116,10 @@ const PropertiesSection = () => {
             />
           </Grid>
           <Grid item lg={5} className={classes.textContent}>
-            <Typography data-cy='property-name' variant='h5' gutterBottom>
+            <Typography data-cy='property-address' variant='h5' gutterBottom>
               Väst svängen 32, Helsingborg
             </Typography>
-            <Typography data-cy='property-text' variant='subtitle1'>
+            <Typography data-cy='property-description' variant='subtitle1'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Architecto corporis voluptatem nostrum, at quae vitae recusandae
               numquam aliquam et consequuntur illum perspiciatis deserunt.
@@ -138,7 +138,7 @@ const PropertiesSection = () => {
         </Grid>
         <Divider className={classes.divider} />
         <Grid
-          data-cy='property-column-3'
+          data-cy='property-3'
           container
           item
           xs={12}
@@ -153,10 +153,10 @@ const PropertiesSection = () => {
             />
           </Grid>
           <Grid item lg={5} className={classes.textContent}>
-            <Typography data-cy='property-name' variant='h5' gutterBottom>
+            <Typography data-cy='property-address' variant='h5' gutterBottom>
               Bryggerigatan 3, Limhamn
             </Typography>
-            <Typography data-cy='property-text' variant='subtitle1'>
+            <Typography data-cy='property-description' variant='subtitle1'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Architecto corporis voluptatem nostrum, at quae vitae recusandae
               numquam aliquam et consequuntur illum perspiciatis deserunt.
