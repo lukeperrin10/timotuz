@@ -11,8 +11,10 @@ import {
 } from '@material-ui/core'
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import theme from '../../theme/theme'
+import { Link } from 'react-router-dom'
 
 const secondary = theme.palette.secondary
+var _ = require('lodash');
 
 const useStyles = makeStyles({
   logoContainer: {
@@ -59,7 +61,14 @@ const Header = () => {
 
   const navMenu = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss'].map(
     (tab, index) => (
-      <Tab key={tab} label={tab} value={index} className={classes.tab} />
+      <Tab
+        key={tab}
+        label={tab}
+        value={index}
+        className={classes.tab}
+        component={Link}
+        to={_.snakeCase(tab)}
+      />
     )
   )
 
