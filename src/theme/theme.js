@@ -127,7 +127,7 @@ const theme = createTheme({
     button: {
       fontFamily: 'Gotham Light',
       fontStyle: 'regular',
-      fontWeight: 300,
+      fontWeight: 600,
     },
     caption: {
       fontFamily: 'Merriweather Regular Italic',
