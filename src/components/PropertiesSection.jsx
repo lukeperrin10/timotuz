@@ -1,83 +1,30 @@
-import {
-  Box,
-  CardMedia,
-  Grid,
-  Typography,
-  makeStyles,
-  Divider,
-} from '@material-ui/core';
+import { Box, CardMedia, Grid, Typography, Divider } from '@material-ui/core';
 import React from 'react';
 
 import LimhamnSky from '../assets/images/LimhamnSky.JPG';
 import LimhamnBack from '../assets/images/LimhamnBack.JPG';
 import LimhamnFront from '../assets/images/LimhamnFront.JPG';
 import threeDImage from '../assets/images/3d_draft.jpg';
-
-const useStyles = makeStyles((theme) => ({
-  headerTextContainer: {
-    [theme.breakpoints.up('xs')]: {
-      textAlign: 'center',
-      padding: '50px 30px'
-    },
-  },
-  propertyColumn: {
-    [theme.breakpoints.up('xs')]: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '50px 0',
-    },
-  },
-  image: {
-    [theme.breakpoints.up('xs')]: {
-      width: '100%',
-      height: '375px',
-    },
-    [theme.breakpoints.up('sm')]: {
-      width: '400px',
-      height: '400px',
-    },
-    [theme.breakpoints.up('md')]: {
-      width: '450px',
-      height: '450px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      width: '600px',
-      height: '600px',
-    },
-  },
-  textContent: {
-    [theme.breakpoints.up('xs')]: {
-      padding: '20px 30px',
-      height: 'auto'
-    },
-    [theme.breakpoints.up('sm')]: {
-      padding: '30px 100px',
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: '30px 150px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: '30px 30px',
-      marginLeft: '40px',
-      width: 'auto'
-    },
-  },
-  divider: {
-    [theme.breakpoints.up('xs')]: {
-      width: '100%',
-    },
-  }
-}));
+import propertySectionStyle from '../theme/propertiesSection';
 
 const PropertiesSection = () => {
-  const classes = useStyles();
+  const classes = propertySectionStyle();
   return (
     <Box data-cy='property-section'>
       <Box className={classes.headerTextContainer}>
-        <Typography data-cy='properties-header' color='primary' variant='h4' gutterBottom>Fastigheter</Typography>
-        <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, distinctio!</Typography>
+        <Typography
+          data-cy='properties-header'
+          color='primary'
+          variant='h4'
+          gutterBottom>
+          Fastigheter
+        </Typography>
+        <Typography>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+          distinctio!
+        </Typography>
       </Box>
-      <Divider className={classes.divider}/>
+      <Divider className={classes.divider} />
       <Grid container>
         <Grid
           data-cy='property-column-0'
@@ -115,7 +62,7 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Divider className={classes.divider}/>
+        <Divider className={classes.divider} />
         <Grid
           data-cy='property-column-1'
           container
@@ -152,7 +99,7 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Divider className={classes.divider}/>
+        <Divider className={classes.divider} />
         <Grid
           data-cy='property-column-2'
           container
@@ -189,7 +136,7 @@ const PropertiesSection = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Divider className={classes.divider}/>
+        <Divider className={classes.divider} />
         <Grid
           data-cy='property-column-3'
           container
