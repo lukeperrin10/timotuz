@@ -29,18 +29,18 @@ const useStyles = makeStyles((theme) => ({
       top: '0px',
       left: '0px',
       paddingTop: '200px',
+      paddingBottom: '200px',
       paddingLeft: '4%',
       paddingRight: '4%',
     },
     [theme.breakpoints.up('sm')]: {
+      paddingTop: '200px',
+    },
+    [theme.breakpoints.up('md')]: {
       paddingTop: '250px',
     },
     [theme.breakpoints.up('lg')]: {
-      height: '100%',
       width: '30%',
-      position: 'absolute',
-      backgroundColor: 'rgba(15, 15, 15, 0.9)',
-      top: '0px',
       left: '20%',
       paddingTop: '10%',
       paddingLeft: '1%',
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
       width: '50%',
       marginLeft: '20%',
       marginRight: '20%',
-      marginTop: '50%',
+      marginTop: '25%',
     },
   },
   redInfoBox: {
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
       height: 'auto',
       width: '100%',
       textAlign: 'center',
-      top: '87.4%'
+      bottom: '0'
     },
   },
   infoGrid: {

@@ -39,4 +39,26 @@ describe('visitor can navigate see index view', () => {
       });
     });
   });
+
+  describe('Property section', () => {
+    it('is expected to show Grid of properties', () => {
+      cy.get('[data-cy=property-section]').within(() => {
+        cy.get('[data-cy=properties-header]').should('contain', 'Fastigheter');
+        cy.get('[data-cy=property-1]').within(() => {
+          cy.get('[data-cy=property-image]')
+            .should('have.attr', 'alt')
+            .should('equal', 'Stor fastighet med tegelfasad');
+          cy.get('[data-cy=property-address]').should(
+            'contain',
+            'Benvägen 32, Limhamn'
+          );
+          cy.get('[data-cy=property-description]').should(
+            'contain',
+            'Lorem ipsum dolor sit amet consectetur, adipisicing elit.'
+          );
+        });
+      });
+      cy.get('[data-cy=show-more-btn]').click();
+    });
+  });
 });
