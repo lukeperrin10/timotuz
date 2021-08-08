@@ -61,6 +61,11 @@ const propertySectionStyle = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
+  sliderButton: {
+    height: "100%",
+    width: "40px",
+    color: theme.palette.primary,
+  }
 }));
 
 export default propertySectionStyle;
