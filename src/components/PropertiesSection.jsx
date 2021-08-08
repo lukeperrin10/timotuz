@@ -16,7 +16,7 @@ const PropertiesSection = () => {
       <Box className={classes.headerTextContainer}>
         <Typography
           data-cy='properties-header'
-          color='primary'
+          color='secondary'
           variant='h4'
           gutterBottom>
           Fastigheter
@@ -32,7 +32,7 @@ const PropertiesSection = () => {
         <Button
           data-cy='show-more-btn'
           variant='outlined'
-          color='primary'
+          color='secondary'
           component={Link}
           to='/fastigheter'>
           Show more

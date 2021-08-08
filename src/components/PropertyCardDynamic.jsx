@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Grid,
   Typography,
@@ -6,73 +6,75 @@ import {
   Divider,
   IconButton,
   Box,
-  Container
-} from '@material-ui/core';
-import propertySectionStyle from '../theme/themePropertiesSection';
-import { motion, AnimatePresence } from 'framer-motion';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+} from '@material-ui/core'
+import propertySectionStyle from '../theme/themePropertiesSection'
+import { motion, AnimatePresence } from 'framer-motion'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
 const PropertyCard = ({ property }) => {
-  const { address, description, images } = property;
-  const [activeSlide, setActiveSlide] = useState(0);
-  const classes = propertySectionStyle();
+  const { address, description, images } = property
+  const [activeSlide, setActiveSlide] = useState(0)
+  const classes = propertySectionStyle()
 
   const sliderHandler = (action) => {
-    let slide = activeSlide;
+    let slide = activeSlide
     switch (action) {
       case 'nextSlide':
-        slide++;
+        slide++
         if (slide === images.length) {
-          setActiveSlide(0);
+          setActiveSlide(0)
         } else {
-          setActiveSlide(slide);
+          setActiveSlide(slide)
         }
-        break;
+        break
       case 'previousSlide':
-        slide--;
+        slide--
         if (slide === -1) {
-          setActiveSlide(images.length - 1);
+          setActiveSlide(images.length - 1)
         } else {
-          setActiveSlide(slide);
+          setActiveSlide(slide)
         }
-        break;
+        break
       default:
-        return;
+        return
     }
-  };
+  }
 
   const sliderButtons = () => (
     <Box className={classes.sliderButtonsContainer}>
       <IconButton
-      data-cy='next-image-button'
-      className={classes.iconButton}
-      disableRipple
+        data-cy="next-image-button"
+        className={classes.iconButton}
+        disableRipple
         onClick={() => {
-          sliderHandler('nextSlide');
-        }}>
-        <ChevronLeftIcon className={classes.sliderButton} fontSize='large' />
+          sliderHandler('nextSlide')
+        }}
+      >
+        <ChevronLeftIcon className={classes.sliderButton} fontSize="large" />
       </IconButton>
       <IconButton
-      data-cy='previous-image-button'
-      className={classes.iconButton}
-      disableRipple
+        data-cy="previous-image-button"
+        className={classes.iconButton}
+        disableRipple
         onClick={() => {
-          sliderHandler('previousSlide');
-        }}>
-        <ChevronRightIcon className={classes.sliderButton} fontSize='large' />
+          sliderHandler('previousSlide')
+        }}
+      >
+        <ChevronRightIcon className={classes.sliderButton} fontSize="large" />
       </IconButton>
     </Box>
-  );
+  )
 
   return (
-    <Container maxWidth='xl'>
+    <>
       <Grid
-        data-cy='property'
+        data-cy="property"
         container
         item
         xs={12}
-        className={classes.propertyRow}>
+        className={classes.propertyRow}
+      >
         <Grid item lg={5}>
           <Box className={classes.imageSlider}>
             <AnimatePresence initial={false}>
@@ -81,12 +83,13 @@ const PropertyCard = ({ property }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}>
+                transition={{ duration: 1 }}
+              >
                 <CardMedia
                   className={classes.image}
-                  component='img'
+                  component="img"
                   image={images[activeSlide].url}
-                  data-cy='property-image'
+                  data-cy="property-image"
                   alt={images[activeSlide].alt}
                 />
               </motion.div>
@@ -95,17 +98,17 @@ const PropertyCard = ({ property }) => {
           </Box>
         </Grid>
         <Grid container item lg={5} className={classes.textContent}>
-          <Typography data-cy='property-address' variant='h5' gutterBottom>
+          <Typography data-cy="property-address" variant="h5" gutterBottom>
             {address}
           </Typography>
-          <Typography data-cy='property-description' variant='subtitle1'>
+          <Typography data-cy="property-description" variant="subtitle1">
             {description}
           </Typography>
         </Grid>
       </Grid>
       <Divider className={classes.divider} />
-    </Container>
-  );
-};
+    </>
+  )
+}
 
-export default PropertyCard;
+export default PropertyCard

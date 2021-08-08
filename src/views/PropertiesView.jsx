@@ -1,7 +1,7 @@
 import React from 'react';
 import properties_dynamic from '../data/fixtures/properties_dynamic';
 import PropertyCardDynamic from '../components/PropertyCardDynamic'
-import { Grid } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 
 
 const PropertiesView = () => {
@@ -10,7 +10,11 @@ const PropertiesView = () => {
     return <PropertyCardDynamic property={property} key={id} />;
   });
 
-  return <Grid container>{property}</Grid>;
+  return (
+    <Container maxWidth='xl' style={{marginTop: '4rem'}}>
+      <Grid container>{property}</Grid>
+    </Container>
+  );
 };
 
 export default PropertiesView;
