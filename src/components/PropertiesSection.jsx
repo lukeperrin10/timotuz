@@ -16,7 +16,7 @@ const PropertiesSection = () => {
       <Box className={classes.headerTextContainer}>
         <Typography
           data-cy='properties-header'
-          color='primary'
+          color='secondary'
           variant='h4'
           gutterBottom>
           Fastigheter
@@ -29,7 +29,7 @@ const PropertiesSection = () => {
       <Divider className={classes.divider} />
       <Grid container>{property}</Grid>
       <Box className={classes.button}>
-        <Button data-cy='show-more-btn' variant='outlined' color='primary'>
+        <Button data-cy='show-more-btn' variant='outlined' color='secondary'>
           Show more
         </Button>
       </Box>
