@@ -14,11 +14,11 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '50px 0',
     },
   },
-  image: {
+  imageSlider: {
     [theme.breakpoints.up('xs')]: {
       width: '100%',
       height: '375px',
-      position: 'absolute'
+      position: 'relative',
     },
     [theme.breakpoints.up('sm')]: {
       width: '400px',
@@ -34,10 +34,16 @@ const propertySectionStyle = makeStyles((theme) => ({
       
     },
   },
+  image: {
+    position: 'absolute',
+    left: '0',
+    height: '100%'
+  },
   textContent: {
     [theme.breakpoints.up('xs')]: {
       padding: '20px 30px',
       height: 'auto',
+      alignItems: 'center'
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
@@ -63,10 +69,26 @@ const propertySectionStyle = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
-  sliderButton: {
-    height: "100%",
+  iconButton: {
+    height: "50px",
     width: "40px",
-    color: theme.palette.primary,
+    '&:hover': {
+      backgroundColor: 'transparent'
+    }
+  },
+  sliderButton: {  
+    height: "50px",
+    width: "40px",
+    backgroundColor: theme.palette.secondary.main,
+    color: 'white',  
+  },
+  sliderButtonsContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',  
+    position: 'absolute',
+    transform: 'translateY(-50%) scaleX(1.07)',
+    top: '50%',
+    width: '100%'
   }
 }));
 

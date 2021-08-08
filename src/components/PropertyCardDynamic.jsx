@@ -4,7 +4,8 @@ import {
   Typography,
   CardMedia,
   Divider,
-  IconButton
+  IconButton,
+  Box,
 } from '@material-ui/core';
 import propertySectionStyle from '../theme/themePropertiesSection';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -40,17 +41,25 @@ const PropertyCard = ({ property }) => {
     }
   };
 
-  const sliderButton = (direction) => (
-    <IconButton
-      onClick={() => {
-        sliderHandler(direction === 'next' ? 'nextSlide' : 'previousSlide');
-      }}>
-      {direction === 'next' ? (
-        <ChevronRightIcon className={classes.sliderButton} fontSize='large' />
-      ) : (
+  const sliderButtons = () => (
+    <Box className={classes.sliderButtonsContainer}>
+      <IconButton
+      className={classes.iconButton}
+      disableRipple
+        onClick={() => {
+          sliderHandler('nextSlide');
+        }}>
         <ChevronLeftIcon className={classes.sliderButton} fontSize='large' />
-      )}
-    </IconButton>
+      </IconButton>
+      <IconButton
+      className={classes.iconButton}
+      disableRipple
+        onClick={() => {
+          sliderHandler('previousSlide');
+        }}>
+        <ChevronRightIcon className={classes.sliderButton} fontSize='large' />
+      </IconButton>
+    </Box>
   );
 
   return (
@@ -61,27 +70,28 @@ const PropertyCard = ({ property }) => {
         item
         xs={12}
         className={classes.propertyRow}>
-        <Grid item justifyContent='center' lg={5}>
-          {sliderButton('next')}
-          <AnimatePresence initial={false}>
-            <motion.div
-              key={activeSlide}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}>
-              <CardMedia
-                className={classes.image}
-                component='img'
-                image={images[activeSlide].url}
-                data-cy='property-image'
-                alt={images[activeSlide].alt}
-              />
-            </motion.div>
-          </AnimatePresence>
-          {sliderButton('previous')}
+        <Grid item lg={5}>
+          <Box className={classes.imageSlider}>
+            <AnimatePresence initial={false}>
+              <motion.div
+                key={activeSlide}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}>
+                <CardMedia
+                  className={classes.image}
+                  component='img'
+                  image={images[activeSlide].url}
+                  data-cy='property-image'
+                  alt={images[activeSlide].alt}
+                />
+              </motion.div>
+            </AnimatePresence>
+            {sliderButtons()}
+          </Box>
         </Grid>
-        <Grid item lg={5} className={classes.textContent}>
+        <Grid container item lg={5} className={classes.textContent}>
           <Typography data-cy='property-address' variant='h5' gutterBottom>
             {address}
           </Typography>
