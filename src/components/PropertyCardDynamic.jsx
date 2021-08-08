@@ -4,7 +4,7 @@ import {
   Typography,
   CardMedia,
   Divider,
-  IconButton,
+  IconButton
 } from '@material-ui/core';
 import propertySectionStyle from '../theme/themePropertiesSection';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -61,7 +61,7 @@ const PropertyCard = ({ property }) => {
         item
         xs={12}
         className={classes.propertyRow}>
-        <Grid item lg={5}>
+        <Grid item justifyContent='center' lg={5}>
           {sliderButton('next')}
           <AnimatePresence initial={false}>
             <motion.div

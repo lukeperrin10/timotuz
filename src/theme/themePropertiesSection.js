@@ -18,6 +18,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       width: '100%',
       height: '375px',
+      position: 'absolute'
     },
     [theme.breakpoints.up('sm')]: {
       width: '400px',
@@ -30,6 +31,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       width: '600px',
       height: '600px',
+      
     },
   },
   textContent: {

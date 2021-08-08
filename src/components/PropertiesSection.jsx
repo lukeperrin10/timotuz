@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography, Divider, Button } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
 import properties from '../data/fixtures/properties';
 import PropertyCard from './PropertyCard';
 import propertySectionStyle from '../theme/themePropertiesSection';
@@ -29,7 +29,12 @@ const PropertiesSection = () => {
       <Divider className={classes.divider} />
       <Grid container>{property}</Grid>
       <Box className={classes.button}>
-        <Button data-cy='show-more-btn' variant='outlined' color='primary'>
+        <Button
+          data-cy='show-more-btn'
+          variant='outlined'
+          color='primary'
+          component={Link}
+          to='/fastigheter'>
           Show more
         </Button>
       </Box>
