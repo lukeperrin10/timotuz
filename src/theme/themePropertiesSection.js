@@ -97,12 +97,14 @@ const propertySectionStyle = makeStyles((theme) => ({
   sliderButtonsContainer: {
     display: 'flex',
     justifyContent: 'space-between',  
-    position: 'absolute',
-    transform: 'translateY(-50%) scaleX(1.07)',
+    position: 'absolute',  
     top: '50%',
     width: '100%',
     [theme.breakpoints.down('md')]: {
       transform: 'translateY(-50%)',
+    },
+    [theme.breakpoints.up('md')]: {
+      transform: 'translateY(-50%) scaleX(1.07)',
     },
   }
 }));
