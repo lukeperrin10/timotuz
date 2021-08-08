@@ -1,4 +1,4 @@
-import { Typography, Box, Divider, CardMedia } from '@material-ui/core'
+import { Typography, Box, CardMedia } from '@material-ui/core'
 import React from 'react'
 
 import aboutUsStyle from '../theme/aboutUsSection';
@@ -45,7 +45,6 @@ const AboutUs = () => {
           incidunt dicta!
         </Typography>
       </Box>
-      <Divider className={classes.divider} />
     </>
   )
 }
