@@ -64,12 +64,16 @@ const theme = createTheme({
   palette: {
     common: {
       black: '#0F0F0F',
+      white: '#FFFFFFEE',
     },
     primary: {
+      main: '#FFFFFFEE',
+    },
+    secondary: {            
       main: '#840C07',
       contrastText: '#eee',
     },
-    secondary: {
+    error: {
       main: '#E1252A',
     },
     text: {
@@ -125,7 +129,7 @@ const theme = createTheme({
     button: {
       fontFamily: 'Gotham Light',
       fontStyle: 'regular',
-      fontWeight: 300,
+      fontWeight: 600,
     },
     caption: {
       fontFamily: 'Merriweather Regular Italic',

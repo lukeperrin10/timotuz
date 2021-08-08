@@ -1,6 +1,6 @@
 import { Box } from '@material-ui/core';
 import React from 'react';
-import Header from './Navigation/Header';
+import Header from './navigation/Header';
 
 const App = ({ component }) => {
   return (

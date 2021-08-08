@@ -126,7 +126,7 @@ const HeroSection = () => {
           alt=''
         />
       </Box>
-      <Box data-cy='information-bar' className={classes.redInfoBox} bgcolor='primary.main' color='primary.contrastText'>
+      <Box data-cy='information-bar' className={classes.redInfoBox} bgcolor='secondary.main' color='secondary.contrastText'>
         <Grid container spacing={0} className={classes.infoGrid}>
           <Grid className={classes.dataColumn} data-cy='column-0' item xs={6} lg={2}>
             <Typography variant='h3'>114</Typography>
