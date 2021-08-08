@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography, Divider, Button } from '@material-ui/core';
+import { Box, Grid, Typography, Button } from '@material-ui/core';
 
 import properties from '../data/fixtures/properties';
 import PropertyCard from './PropertyCard';
@@ -16,7 +16,7 @@ const PropertiesSection = () => {
       <Box className={classes.headerTextContainer}>
         <Typography
           data-cy='properties-header'
-          color='primary'
+          color='secondary'
           variant='h4'
           gutterBottom>
           Fastigheter
@@ -26,10 +26,9 @@ const PropertiesSection = () => {
           distinctio!
         </Typography>
       </Box>
-      <Divider className={classes.divider} />
       <Grid container>{property}</Grid>
       <Box className={classes.button}>
-        <Button data-cy='show-more-btn' variant='outlined' color='primary'>
+        <Button data-cy='show-more-btn' variant='outlined' color='secondary'>
           Show more
         </Button>
       </Box>
