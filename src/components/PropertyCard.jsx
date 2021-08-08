@@ -1,12 +1,12 @@
 import React from 'react';
-import { Grid, Typography, CardMedia, Divider, Box } from '@material-ui/core';
+import { Grid, Typography, CardMedia, Divider, Box, Container } from '@material-ui/core';
 import propertySectionStyle from '../theme/themePropertiesSection';
 
 const PropertyCard = ({ property }) => {
   const { id, address, description, image } = property;
   const classes = propertySectionStyle();
   return (
-    <>
+    <Container maxWidth='xl'>
       <Grid
         data-cy={`property-${id}`}
         container
@@ -34,7 +34,7 @@ const PropertyCard = ({ property }) => {
         </Grid>
       </Grid>
       <Divider className={classes.divider} />
-    </>
+    </Container>
   );
 };
 

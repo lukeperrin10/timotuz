@@ -6,6 +6,7 @@ import {
   Divider,
   IconButton,
   Box,
+  Container
 } from '@material-ui/core';
 import propertySectionStyle from '../theme/themePropertiesSection';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,7 +64,7 @@ const PropertyCard = ({ property }) => {
   );
 
   return (
-    <>
+    <Container maxWidth='xl'>
       <Grid
         data-cy='property'
         container
@@ -101,7 +102,7 @@ const PropertyCard = ({ property }) => {
         </Grid>
       </Grid>
       <Divider className={classes.divider} />
-    </>
+    </Container>
   );
 };
 

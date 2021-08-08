@@ -16,27 +16,24 @@ const propertySectionStyle = makeStyles((theme) => ({
   },
   imageSlider: {
     [theme.breakpoints.up('xs')]: {
-      width: '100%',
+      width: '100vw',
       height: '375px',
       position: 'relative',
     },
     [theme.breakpoints.up('sm')]: {
-      width: '400px',
       height: '400px',
     },
-    [theme.breakpoints.up('md')]: {
-      width: '450px',
+    [theme.breakpoints.up('md')]: {      
       height: '450px',
     },
     [theme.breakpoints.up('lg')]: {
-      width: '600px',
-      height: '600px',
-      
+      width: '100%',
+      maxWidth: '600px',
+      height: '600px',  
     },
   },
   image: {
     position: 'absolute',
-    left: '0',
     height: '100%'
   },
   textContent: {
@@ -88,7 +85,10 @@ const propertySectionStyle = makeStyles((theme) => ({
     position: 'absolute',
     transform: 'translateY(-50%) scaleX(1.07)',
     top: '50%',
-    width: '100%'
+    width: '100%',
+    [theme.breakpoints.down('md')]: {
+      transform: 'translateY(-50%)',
+    },
   }
 }));
 
