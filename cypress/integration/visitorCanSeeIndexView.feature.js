@@ -65,7 +65,7 @@ describe('visitor can navigate see index view', () => {
   describe('About Us section', () => {
     it('is expected to show information about us', () => {
       cy.get('[data-cy=about-us-section]').within(() => {
-        cy.get('[data-cy=about-us-header]').should('equal', 'Om Oss')
+        cy.get('[data-cy=about-us-header]').should('contain', 'Om Oss')
         cy.get('[data-cy=3d-logo]')
           .should('have.attr', 'alt')
           .should('equal', 'Timotuz 3d logo')
