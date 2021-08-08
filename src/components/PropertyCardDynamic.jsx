@@ -45,6 +45,7 @@ const PropertyCard = ({ property }) => {
   const sliderButtons = () => (
     <Box className={classes.sliderButtonsContainer}>
       <IconButton
+      data-cy='next-image-button'
       className={classes.iconButton}
       disableRipple
         onClick={() => {
@@ -53,6 +54,7 @@ const PropertyCard = ({ property }) => {
         <ChevronLeftIcon className={classes.sliderButton} fontSize='large' />
       </IconButton>
       <IconButton
+      data-cy='previous-image-button'
       className={classes.iconButton}
       disableRipple
         onClick={() => {
