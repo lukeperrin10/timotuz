@@ -13,24 +13,26 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 const PropertyCard = ({ property }) => {
   const { address, description, images } = property;
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0);
   const classes = propertySectionStyle();
 
   const sliderHandler = (action) => {
     let slide = activeSlide;
     switch (action) {
       case 'nextSlide':
-        if (++slide === images.length + 1) {
-          setActiveSlide(1);
+        slide++;
+        if (slide === images.length) {
+          setActiveSlide(0);
         } else {
-          setActiveSlide(++slide);
+          setActiveSlide(slide);
         }
         break;
       case 'previousSlide':
-        if (--slide === 0) {
-          setActiveSlide(images.length);
+        slide--;
+        if (slide === -1) {
+          setActiveSlide(images.length - 1);
         } else {
-          setActiveSlide(--slide);
+          setActiveSlide(slide);
         }
         break;
       default:
