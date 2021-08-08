@@ -7,7 +7,7 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '50px 30px',
     },
   },
-  propertyColumn: {
+  propertyRow: {
     [theme.breakpoints.up('xs')]: {
       justifyContent: 'center',
       alignItems: 'center',
