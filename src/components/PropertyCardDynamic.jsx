@@ -6,11 +6,13 @@ import {
   Divider,
   IconButton,
   Box,
+  Hidden,
 } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
 import { motion, AnimatePresence } from 'framer-motion'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import SwipeableViews from 'react-swipeable-views'
 
 const PropertyCard = ({ property }) => {
   const { address, description, images } = property
@@ -66,6 +68,42 @@ const PropertyCard = ({ property }) => {
     </Box>
   )
 
+  const desktopSlider = (
+    <>
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={activeSlide}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <CardMedia
+            className={classes.image}
+            component="img"
+            image={images[activeSlide].url}
+            data-cy="property-image"
+            alt={images[activeSlide].alt}
+          />
+        </motion.div>
+      </AnimatePresence>
+    </>
+  )
+
+  const mobileSlider = (
+    <SwipeableViews>
+      {images.map((image) => (
+        <CardMedia
+          className={classes.imageSlider}
+          component="img"
+          image={image.url}
+          data-cy="property-image"
+          alt={image.alt}
+        />
+      ))}
+    </SwipeableViews>
+  )
+
   return (
     <>
       <Grid
@@ -77,23 +115,8 @@ const PropertyCard = ({ property }) => {
       >
         <Grid item lg={5}>
           <Box className={classes.imageSlider}>
-            <AnimatePresence initial={false}>
-              <motion.div
-                key={activeSlide}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-              >
-                <CardMedia
-                  className={classes.image}
-                  component="img"
-                  image={images[activeSlide].url}
-                  data-cy="property-image"
-                  alt={images[activeSlide].alt}
-                />
-              </motion.div>
-            </AnimatePresence>
+            <Hidden mdDown>{desktopSlider}</Hidden>
+            <Hidden lgUp>{mobileSlider}</Hidden>
             {sliderButtons()}
           </Box>
         </Grid>

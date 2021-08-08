@@ -1,6 +1,18 @@
 import { makeStyles } from '@material-ui/core';
 
 const propertySectionStyle = makeStyles((theme) => ({
+  viewContainer: {
+    [theme.breakpoints.up('xs')]: {
+      marginTop: '7px'
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginTop: '14px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '4rem'
+    },
+    
+  },
   headerTextContainer: {
     [theme.breakpoints.up('xs')]: {
       textAlign: 'center',
@@ -34,6 +46,9 @@ const propertySectionStyle = makeStyles((theme) => ({
   },
   image: {
     position: 'absolute',
+    height: '100%'
+  },
+  imageMobile: {  
     height: '100%'
   },
   textContent: {
