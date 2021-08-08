@@ -26,7 +26,6 @@ const PropertiesSection = () => {
           distinctio!
         </Typography>
       </Box>
-      <Divider className={classes.divider} />
       <Grid container>{property}</Grid>
       <Box className={classes.button}>
         <Button data-cy='show-more-btn' variant='outlined' color='secondary'>

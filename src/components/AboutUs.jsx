@@ -1,10 +1,14 @@
-import { Typography, Box, Divider } from '@material-ui/core'
+import { Typography, Box, Divider, CardMedia } from '@material-ui/core'
 import React from 'react'
 
+import aboutUsStyle from '../theme/aboutUsSection';
+import logo3d from '../assets/images/om_oss_3d.png'
+
 const AboutUs = () => {
+  const classes = aboutUsStyle();
   return (
     <>
-      <Box data-cy='about-us-section'>
+      <Box data-cy='about-us-section' className={classes.contentContainer}>
         <Typography
           data-cy="about-us-header"
           color="secondary"
@@ -13,8 +17,14 @@ const AboutUs = () => {
         >
           Om Oss
         </Typography>
-
-        <Typography data-cy='about-us-content'>
+        <CardMedia
+            className={classes.image}
+            component='img'
+            image={logo3d}
+            data-cy='3d-logo'
+            alt='Timotuz 3d logo'
+          />
+        <Typography data-cy='about-us-content' className={classes.textContent} variant='subtitle1'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis,
           praesentium accusantium totam ut illo sint doloremque mollitia quo a
           quis alias aliquam sapiente ea ab vero eum nisi cum id sit maiores
@@ -35,6 +45,7 @@ const AboutUs = () => {
           incidunt dicta!
         </Typography>
       </Box>
+      <Divider className={classes.divider} />
     </>
   )
 }
