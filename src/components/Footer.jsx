@@ -31,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'transparent',
     },
   },
-  longWord: {
-    marginTop: '25px',
+  copyright: {
+    position: 'absolute',
+    bottom: 0,
     textAlign: 'center',
     wordWrap: 'break-word',
   },
@@ -41,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles()
   return (
-    <Box className={classes.footerContainer}>
-      <Grid container direction="row" className={classes.footer}>
+    <Box data-cy="footer" className={classes.footerContainer}>
+      <Grid container item direction="row" className={classes.footer}>
         <Grid item container xs={4} sm={6} justifyContent="center">
           <Button
             disableRipple
@@ -59,23 +60,24 @@ const Footer = () => {
           >
             <Hidden xsDown>
               <img
+                data-cy="logo"
                 src={logo_web_timotuz}
-                style={{ height: '72px' }}
-                data-cy="drawer-logo"
+                style={{ height: '72px' }}                
                 alt="Timotuz Company Logo"
               />
             </Hidden>
             <Hidden smUp>
               <img
+                data-cy="logo"
                 src={logo_no_text}
-                style={{ height: '64px' }}
-                data-cy="drawer-logo"
+                style={{ height: '64px' }}                
                 alt="Timotuz Company Logo"
               />
             </Hidden>
           </Button>
         </Grid>
         <Grid
+        data-cy="contacts"
           item
           container
           direction="column"
@@ -84,15 +86,14 @@ const Footer = () => {
           alignContent="center"
           justifyContent="center"
         >
-          <Typography variant="h5" color="secondary" gutterBottom>
+          <Typography data-cy="header" variant="h5" color="error" gutterBottom>
             Kontakta oss:
           </Typography>
-          <Typography variant="body1" gutterBottom>
+          <Typography data-cy="email" variant="body1" gutterBottom>
             email: jacob@fastigheter.se
           </Typography>
           <Button
             variant="outlined"
-            color="black"
             disableElevation
             className={classes.phoneButton}
             href="tel:+46 31-123-4567"
@@ -103,6 +104,7 @@ const Footer = () => {
           </Button>
         </Grid>
       </Grid>
+      <Box className={classes.copyright}>2021 All Rights Reserved</Box>
     </Box>
   )
 }
