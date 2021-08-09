@@ -17,6 +17,7 @@ import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import logo_no_text from '../../assets/images/logo_no_text.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import MenuIcon from '@material-ui/icons/Menu'
 import PhoneIcon from '@material-ui/icons/Phone'
 
@@ -101,8 +102,9 @@ const Header = () => {
       label={tab}
       value={index}
       className={classes.tabDesktop}
-      component={Link}
-      to={_.snakeCase(tab)}
+      component={tab === 'Om oss' ? HashLink : Link}
+      to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
+      smooth={tab === 'Om oss' ? true : undefined}
       data-cy={`${_.kebabCase(tab)}-tab`}
     />
   ))
@@ -114,8 +116,9 @@ const Header = () => {
       label={tab}
       value={index}
       className={classes.tabMobile}
-      component={Link}
-      to={_.snakeCase(tab)}
+      component={tab === 'Om oss' ? HashLink : Link}
+      to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
+      smooth={tab === 'Om oss' ? true : undefined}
       data-cy={`${_.kebabCase(tab)}-tab`}
       onClick={() => setDrawerOpen(false)}
     />
