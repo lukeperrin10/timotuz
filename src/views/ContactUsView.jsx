@@ -20,7 +20,7 @@ const ContactUsView = () => {
       <Box className={classes.contactContainer}>
         <Box className={classes.contactInfo}>
           <Typography data-cy="phone" variant="h4">
-            Telefon Nummer
+            Telefonnummer
           </Typography>
           <Divider className={classes.divider} />
           <Typography data-cy="phone-number" variant="h4">
@@ -29,7 +29,7 @@ const ContactUsView = () => {
         </Box>
         <Box className={classes.contactInfo}>
           <Typography data-cy="email" variant="h4">
-            E-post Address
+            E-post
           </Typography>
           <Divider className={classes.divider} />
           <Typography data-cy="email-address" variant="h4">
