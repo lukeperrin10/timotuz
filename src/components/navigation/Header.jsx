@@ -65,14 +65,14 @@ const Header = () => {
 
   useEffect(() => {
     switch (url.pathname) {
+      case '/start#om_oss':
+        setSelectedTab(2)
+        break
       case '/start':
         setSelectedTab(0)
         break
       case '/fastigheter':
         setSelectedTab(1)
-        break
-      case '/om_oss':
-        setSelectedTab(2)
         break
       case '/kontakta_oss':
         setSelectedTab(3)
@@ -105,6 +105,7 @@ const Header = () => {
       component={tab === 'Om oss' ? HashLink : Link}
       to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
       smooth={tab === 'Om oss' ? true : undefined}
+      onclick={tab === 'Start' ? window.scrollTo({top: 0, left: 0, behavior: 'smooth'}) : undefined}
       data-cy={`${_.kebabCase(tab)}-tab`}
     />
   ))
@@ -185,12 +186,14 @@ const Header = () => {
               className={classes.logoButton}
               component={Link}
               to="/start"
+
             >
               <img
                 src={logo_web_timotuz}
                 style={{ height: '30px' }}
                 data-cy="logo"
                 alt="Timotuz Company Logo"
+                onclick={window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}
               />
             </Button>
           </Grid>
