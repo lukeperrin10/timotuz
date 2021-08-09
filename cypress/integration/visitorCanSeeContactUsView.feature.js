@@ -11,7 +11,7 @@ describe('visitor can navigate see index view', () => {
         .should('contain', 'Bild av stad från ovan')
       cy.get('[data-cy=phone]').should('contain', 'Telefon Nummer')
       cy.get('[data-cy=phone-number]').should('contain', '031-123-4567')
-      cy.get('[data-cy=email]').should('contain', 'E-post address')
+      cy.get('[data-cy=email]').should('contain', 'E-post Address')
       cy.get('[data-cy=email-address]').should('contain', 'jakob@timotuz.se')
     })
   })
