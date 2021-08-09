@@ -106,7 +106,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       transform: 'translateY(-50%) scaleX(1.07)',
     },
-  }
+  },
 }));
 
 export default propertySectionStyle;
