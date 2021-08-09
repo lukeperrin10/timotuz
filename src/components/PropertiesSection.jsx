@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography, Divider, Button } from '@material-ui/core';
+import { Box, Grid, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import properties from '../data/fixtures/properties';
 import PropertyCard from './PropertyCard';
