@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography, Button } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
 import properties from '../data/fixtures/properties';
 import PropertyCard from './PropertyCard';
 import propertySectionStyle from '../theme/themePropertiesSection';
@@ -28,7 +28,12 @@ const PropertiesSection = () => {
       </Box>
       <Grid container>{property}</Grid>
       <Box className={classes.button}>
-        <Button data-cy='show-more-btn' variant='outlined' color='secondary'>
+        <Button
+          data-cy='show-more-btn'
+          variant='outlined'
+          color='secondary'
+          component={Link}
+          to='/fastigheter'>
           Show more
         </Button>
       </Box>
