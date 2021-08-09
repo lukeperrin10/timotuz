@@ -13,7 +13,7 @@ import {
   IconButton,
   Typography,
 } from '@material-ui/core'
-import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
+import logo_web_timotuz from '../../assets/images/logo_web_fastigheter.svg'
 import logo_no_text from '../../assets/images/logo_no_text.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
@@ -190,7 +190,7 @@ const Header = () => {
             >
               <img
                 src={logo_web_timotuz}
-                style={{ height: '30px' }}
+                style={{ height: '50px' }}
                 data-cy="logo"
                 alt="Timotuz Company Logo"
                 onclick={window.scrollTo({top: 0,  behavior: 'smooth'})}
