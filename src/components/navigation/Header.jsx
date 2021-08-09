@@ -17,6 +17,7 @@ import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import logo_no_text from '../../assets/images/logo_no_text.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import MenuIcon from '@material-ui/icons/Menu'
 import PhoneIcon from '@material-ui/icons/Phone'
 
@@ -64,14 +65,14 @@ const Header = () => {
 
   useEffect(() => {
     switch (url.pathname) {
+      case '/start#om_oss':
+        setSelectedTab(2)
+        break
       case '/start':
         setSelectedTab(0)
         break
       case '/fastigheter':
         setSelectedTab(1)
-        break
-      case '/om_oss':
-        setSelectedTab(2)
         break
       case '/kontakta_oss':
         setSelectedTab(3)
@@ -101,8 +102,10 @@ const Header = () => {
       label={tab}
       value={index}
       className={classes.tabDesktop}
-      component={Link}
-      to={_.snakeCase(tab)}
+      component={tab === 'Om oss' ? HashLink : Link}
+      to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
+      smooth={tab === 'Om oss' ? true : undefined}
+      onclick={tab === 'Start' ? window.scrollTo({top: 0, behavior: 'smooth'}) : undefined}
       data-cy={`${_.kebabCase(tab)}-tab`}
     />
   ))
@@ -114,8 +117,9 @@ const Header = () => {
       label={tab}
       value={index}
       className={classes.tabMobile}
-      component={Link}
-      to={_.snakeCase(tab)}
+      component={tab === 'Om oss' ? HashLink : Link}
+      to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
+      smooth={tab === 'Om oss' ? true : undefined}
       data-cy={`${_.kebabCase(tab)}-tab`}
       onClick={() => setDrawerOpen(false)}
     />
@@ -182,12 +186,14 @@ const Header = () => {
               className={classes.logoButton}
               component={Link}
               to="/start"
+
             >
               <img
                 src={logo_web_timotuz}
                 style={{ height: '30px' }}
                 data-cy="logo"
                 alt="Timotuz Company Logo"
+                onclick={window.scrollTo({top: 0,  behavior: 'smooth'})}
               />
             </Button>
           </Grid>

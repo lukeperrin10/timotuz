@@ -25,7 +25,6 @@ const Routes = () => {
           path="/fastigheter"
           render={() => <App component={<PropertiesView />} />}
         />
-        <Route exact path="/om_oss" render={() => <App component={<></>} />} />
         <Route
           exact
           path="/kontakta_oss"
