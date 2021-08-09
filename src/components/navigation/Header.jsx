@@ -105,7 +105,7 @@ const Header = () => {
       component={tab === 'Om oss' ? HashLink : Link}
       to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
       smooth={tab === 'Om oss' ? true : undefined}
-      onclick={tab === 'Start' ? window.scrollTo({top: 0, left: 0, behavior: 'smooth'}) : undefined}
+      onclick={tab === 'Start' ? window.scrollTo({top: 0, behavior: 'smooth'}) : undefined}
       data-cy={`${_.kebabCase(tab)}-tab`}
     />
   ))
@@ -193,7 +193,7 @@ const Header = () => {
                 style={{ height: '30px' }}
                 data-cy="logo"
                 alt="Timotuz Company Logo"
-                onclick={window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}
+                onclick={window.scrollTo({top: 0,  behavior: 'smooth'})}
               />
             </Button>
           </Grid>
