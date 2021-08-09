@@ -6,7 +6,7 @@ const PropertyCard = ({ property }) => {
   const { id, address, description, image } = property;
   const classes = propertySectionStyle();
   return (
-    <Container maxWidth='xl'>
+    <Container maxWidth='xl' >
       <Grid
         data-cy={`property-${id}`}
         container

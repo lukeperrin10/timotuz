@@ -7,7 +7,11 @@ import logo3d from '../assets/images/om_oss_3d.png'
 const AboutUs = () => {
   const classes = aboutUsStyle()
   return (
-    <Box data-cy="about-us-section" className={classes.contentContainer}>
+    <Box
+      data-cy="about-us-section"
+      className={classes.contentContainer}
+      id="about_us"
+    >
       <Typography
         data-cy="about-us-header"
         color="secondary"
