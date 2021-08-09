@@ -1,13 +1,7 @@
-import React from 'react';
-import {
-  Box,
-  CardMedia,
-  Grid,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
-import overview from '../assets/images/overview.jpeg';
-import houseIconWhite from '../assets/images/Building_ikon_white.svg';
+import React from 'react'
+import { Box, CardMedia, Grid, makeStyles, Typography } from '@material-ui/core'
+import overview from '../assets/images/overview.jpeg'
+import houseIconWhite from '../assets/images/Building_ikon_white.svg'
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -28,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'rgba(15, 15, 15, 0.9)',
       top: '0px',
       left: '0px',
-      paddingTop: '200px',
-      paddingBottom: '200px',
+      paddingTop: '56px',
+      paddingBottom: '99px',
       paddingLeft: '4%',
       paddingRight: '4%',
     },
@@ -42,12 +36,20 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       width: '30%',
       left: '20%',
-      paddingTop: '10%',
+      // paddingTop: '10%',
       paddingLeft: '1%',
       paddingRight: '1%',
     },
     [theme.breakpoints.up('xl')]: {
-      paddingTop: '4%',
+      // paddingTop: '4%',
+    },
+  },
+  shadowBoxContent: {
+    [theme.breakpoints.up('xs')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      height: '100%'
     },
   },
   informationText: {
@@ -79,11 +81,19 @@ const useStyles = makeStyles((theme) => ({
       height: 'auto',
       width: '100%',
       textAlign: 'center',
-      bottom: '0'
+      bottom: '0',
     },
   },
   infoGrid: {
     [theme.breakpoints.up('xs')]: {
+      height: '100%',
+      width: '100%',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      paddingTop: '0px',
+      paddingBottom: '0px',
+    },
+    [theme.breakpoints.up('sm')]: {
       height: '100%',
       width: '100%',
       justifyContent: 'space-evenly',
@@ -95,59 +105,91 @@ const useStyles = makeStyles((theme) => ({
   dataColumn: {
     [theme.breakpoints.up('xs')]: {
       marginBottom: '10px',
-      marginTop: '10px'
+      marginTop: '10px',
     },
-  }
-}));
+  },
+  dataText: {
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '1.7rem',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.4rem',
+    },
+  },
+}))
 
 const HeroSection = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
-    <Box data-cy='hero-section' className={classes.section}>
+    <Box data-cy="hero-section" className={classes.section}>
       <CardMedia
         className={classes.image}
-        component='img'
+        component="img"
         image={overview}
-        data-cy='hero-img'
-        alt='Bird view of a small town'
+        data-cy="hero-img"
+        alt="Bird view of a small town"
       />
-      <Box data-cy='shadow-box' className={classes.shadowBox}>
-        <Typography
-          className={classes.informationText}
-          variant='h2'
-          data-cy='information-text'>
-          Trygga fastigheter i södra sverige
-        </Typography>
-        <CardMedia
-          className={classes.hoseIcon}
-          component='img'
-          image={houseIconWhite}
-          data-cy='house-logo'
-          alt=''
-        />
+      <Box data-cy="shadow-box" className={classes.shadowBox}>
+        <Box className={classes.shadowBoxContent}>
+          <Typography
+            className={classes.informationText}
+            variant="h2"
+            data-cy="information-text"
+          >
+            Trygga fastigheter i södra sverige
+          </Typography>
+          <CardMedia
+            className={classes.hoseIcon}
+            component="img"
+            image={houseIconWhite}
+            data-cy="house-logo"
+            alt=""
+          />
+        </Box>
       </Box>
-      <Box data-cy='information-bar' className={classes.redInfoBox} bgcolor='secondary.main' color='secondary.contrastText'>
+      <Box
+        data-cy="information-bar"
+        className={classes.redInfoBox}
+        bgcolor="secondary.main"
+        color="secondary.contrastText"
+      >
         <Grid container spacing={0} className={classes.infoGrid}>
-          <Grid className={classes.dataColumn} data-cy='column-0' item xs={6} lg={2}>
-            <Typography variant='h3'>114</Typography>
-            <Typography variant='subtitle1'gutterBottom>Lorem ipsum</Typography>
+          <Grid className={classes.dataColumn} data-cy="column-0" item xs={2}>
+            <Typography className={classes.dataText} variant="h4">
+              114
+            </Typography>
+            <Typography variant="subtitle2" gutterBottom>
+              Lorem ipsum
+            </Typography>
           </Grid>
-          <Grid className={classes.dataColumn} data-cy='column-1' item xs={6} lg={2}>
-            <Typography variant='h3'>32</Typography>
-            <Typography variant='subtitle1' gutterBottom>Lorem ipsum</Typography>
+          <Grid className={classes.dataColumn} data-cy="column-1" item xs={2}>
+            <Typography className={classes.dataText} variant="h4">
+              32
+            </Typography>
+            <Typography variant="subtitle2" gutterBottom>
+              Lorem ipsum
+            </Typography>
           </Grid>
-          <Grid className={classes.dataColumn} data-cy='column-2' item xs={6} lg={2}>
-            <Typography variant='h3'>2</Typography>
-            <Typography variant='subtitle1' gutterBottom>Lorem ipsum</Typography>
+          <Grid className={classes.dataColumn} data-cy="column-2" item xs={2}>
+            <Typography className={classes.dataText} variant="h4">
+              2
+            </Typography>
+            <Typography variant="subtitle2" gutterBottom>
+              Lorem ipsum
+            </Typography>
           </Grid>
-          <Grid className={classes.dataColumn} data-cy='column-3' item xs={6} lg={2}>
-            <Typography variant='h3'>Ja</Typography>
-            <Typography variant='subtitle1' gutterBottom>Lorem ipsum</Typography>
+          <Grid className={classes.dataColumn} data-cy="column-3" item xs={2}>
+            <Typography className={classes.dataText} variant="h4">
+              Ja
+            </Typography>
+            <Typography variant="subtitle2" gutterBottom>
+              Lorem ipsum
+            </Typography>
           </Grid>
         </Grid>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
