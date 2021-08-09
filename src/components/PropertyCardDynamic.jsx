@@ -99,6 +99,7 @@ const PropertyCard = ({ property }) => {
           image={image.url}
           data-cy="property-image"
           alt={image.alt}
+          key={image.id}
         />
       ))}
     </SwipeableViews>

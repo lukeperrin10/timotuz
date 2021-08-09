@@ -8,6 +8,7 @@ import {
 import App from './components/App'
 import IndexView from './views/IndexView'
 import PropertiesView from './views/PropertiesView'
+import ContactUsView from './views/ContactUsView'
 
 const Routes = () => {
   return (
@@ -28,7 +29,7 @@ const Routes = () => {
         <Route
           exact
           path="/kontakta_oss"
-          render={() => <App component={<></>} />}
+          render={() => <App component={<ContactUsView />} />}
         />
       </Switch>
     </Router>
