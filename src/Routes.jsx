@@ -23,7 +23,7 @@ const Routes = () => {
         />
         <Route
           exact
-          path="/fastigheter"
+          path="/vara_fastigheter"
           render={() => <App component={<PropertiesView />} />}
         />
         <Route

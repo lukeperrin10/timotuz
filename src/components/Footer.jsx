@@ -86,8 +86,8 @@ const Footer = () => {
           alignContent="center"
           justifyContent="center"
         >
-          <Typography data-cy="header" variant="h5" color="error" gutterBottom>
-            Kontakta oss:
+          <Typography data-cy="header" variant="h5" color="secondary" gutterBottom>
+            Kontakta oss
           </Typography>
           <Typography data-cy="email" variant="body1" gutterBottom>
             email: jacob@fastigheter.se

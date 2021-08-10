@@ -16,19 +16,20 @@ const PropertiesSection = () => {
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
-    <Box data-cy="property-section">
+    <>
       <Box className={classes.headerTextContainer}>
         <Typography
+          className={classes.header}
           data-cy="properties-header"
           color="secondary"
           variant="h4"
           gutterBottom
         >
-          Fastigheter
+          Våra fastigheter
         </Typography>
-        <Typography>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-          distinctio!
+        <Typography variant="subtitle1">
+          I dagsläget förvaltar vi fastigheter i Helsingborg, Malmö, Ystad och
+          Limhamn och vår fastighetsportfölj utökas ständigt.
         </Typography>
       </Box>
       <Carousel
@@ -43,16 +44,16 @@ const PropertiesSection = () => {
       </Carousel>
       <Box className={classes.button}>
         <Button
-          data-cy="show-more-btn"
+          data-cy="våra-fastigheter-btn"
           variant="outlined"
           color="secondary"
           component={Link}
-          to="/fastigheter"
+          to="/vara_fastigheter"
         >
-          Show more
+          Alla våra fastigheter
         </Button>
       </Box>
-    </Box>
+      </>
   )
 }
 
