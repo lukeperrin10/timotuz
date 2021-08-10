@@ -64,22 +64,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   useEffect(() => {
-    switch (url.pathname) {
-      case '/start#om_oss':
-        setSelectedTab(2)
-        break
-      case '/start':
-        setSelectedTab(0)
-        break
-      case '/vara_fastigheter':
-        setSelectedTab(1)
-        break
-      case '/kontakta_oss':
-        setSelectedTab(3)
-        break
-      default:
-        break
-    }
+    
   }, [url])
 
   function ElevationScroll(props) {
