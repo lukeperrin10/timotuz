@@ -25,7 +25,7 @@ const PropertyCard = ({ property }) => {
           </Box>
         </Grid>
         <Grid item lg={5} className={classes.textContent}>
-          <Typography data-cy='property-address' variant='h5' gutterBottom>
+          <Typography className={classes.header} data-cy='property-address' variant='h5' gutterBottom>
             {address}
           </Typography>
           <Typography data-cy='property-description' variant='subtitle1'>
