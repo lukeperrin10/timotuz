@@ -6,6 +6,9 @@ import houseIconWhite from '../assets/images/Building_ikon_white.svg'
 const useStyles = makeStyles((theme) => ({
   section: {
     [theme.breakpoints.up('xs')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('sm')]: {
       height: '100vh',
     },
   },
@@ -26,12 +29,6 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: '99px',
       paddingLeft: '4%',
       paddingRight: '4%',
-    },
-    [theme.breakpoints.up('sm')]: {
-      paddingTop: '200px',
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: '250px',
     },
     [theme.breakpoints.up('lg')]: {
       width: '30%',
