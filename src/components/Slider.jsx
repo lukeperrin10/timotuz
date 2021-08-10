@@ -19,7 +19,7 @@ const Slider = ({
     <Carousel
       animation={animation}
       timeout={timeout}
-      autoPlay={autoPlay}
+      autoPlay={mobile ? false : autoPlay}
       fullHeightHover={false}
       NavButton={({ onClick, style, next, prev }) =>
         mobile ? (
