@@ -65,14 +65,14 @@ const Header = () => {
 
   useEffect(() => {
     switch (url.pathname) {
-      case '/start#om_oss':
-        setSelectedTab(2)
-        break
       case '/start':
         setSelectedTab(0)
         break
       case '/fastigheter':
         setSelectedTab(1)
+        break
+      case '/om_oss':
+        setSelectedTab(2)
         break
       case '/kontakta_oss':
         setSelectedTab(3)
