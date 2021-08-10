@@ -47,9 +47,9 @@ const PropertiesSection = () => {
           variant="outlined"
           color="secondary"
           component={Link}
-          to="/fastigheter"
+          to="/vara_fastigheter"
         >
-          Show more
+          Alla våra fastigheter
         </Button>
       </Box>
     </Box>

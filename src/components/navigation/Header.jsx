@@ -94,7 +94,7 @@ const Header = () => {
     })
   }
 
-  const tabs = ['Start', 'Fastigheter', 'Om oss', 'Kontakta oss']
+  const tabs = ['Start', 'Våra fastigheter', 'Om oss', 'Kontakta oss']
 
   const desktopNavTabs = tabs.map((tab, index) => (
     <Tab
