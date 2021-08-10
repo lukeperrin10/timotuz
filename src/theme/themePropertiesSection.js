@@ -26,7 +26,7 @@ const propertySectionStyle = makeStyles((theme) => ({
   },
   header: {
     [theme.breakpoints.up('xs')]: {
-      paddingBottom: '15px',
+      paddingBottom: '30px',
     },
   },
   propertyRow: {
@@ -91,30 +91,14 @@ const propertySectionStyle = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
-  iconButton: {
-    height: '50px',
-    width: '40px',
-    '&:hover': {
-      backgroundColor: 'transparent',
-    },
-  },
   sliderButton: {
-    height: '50px',
-    width: '40px',
-    backgroundColor: theme.palette.secondary.main,
+    margin: '50% 10px',
     color: 'white',
-  },
-  sliderButtonsContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    position: 'absolute',
-    top: '50%',
-    width: '100%',
-    [theme.breakpoints.down('md')]: {
-      transform: 'translateY(-50%)',
-    },
-    [theme.breakpoints.up('md')]: {
-      transform: 'translateY(-50%) scaleX(1.07)',
+    backgroundColor: theme.palette.secondary.main,
+    opacity: "0.5",
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.main,
+      opacity: "1",
     },
   },
 }))

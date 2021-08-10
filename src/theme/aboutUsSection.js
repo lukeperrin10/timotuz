@@ -14,10 +14,10 @@ const aboutUsStyle = makeStyles((theme) => ({
   image: {
     [theme.breakpoints.up('xs')]: {
       width: '100%',
-      height: '375px',
+      height: '300px',
     },
     [theme.breakpoints.up('sm')]: {
-      width: '400px',
+      width: '900px',
       height: '400px',
     },
     [theme.breakpoints.up('md')]: {
@@ -25,13 +25,14 @@ const aboutUsStyle = makeStyles((theme) => ({
       height: '450px',
     },
     [theme.breakpoints.up('lg')]: {
-      width: '600px',
-      height: '600px',
+      width: '1000px',
+      height: '400px',
+      paddingLeft: '150px'
     },
   },
   textContent: {
     [theme.breakpoints.up('xs')]: {
-      padding: '20px 30px',
+      padding: '30px 30px',
       height: 'auto',
     },
     [theme.breakpoints.up('sm')]: {
@@ -41,7 +42,7 @@ const aboutUsStyle = makeStyles((theme) => ({
       padding: '30px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '50px 400px',
+      padding: '40px 400px',
       marginLeft: '40px',
       width: 'auto',
     },

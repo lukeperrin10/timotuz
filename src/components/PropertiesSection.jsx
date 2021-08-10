@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box, useMediaQuery, Typography, Button } from '@material-ui/core'
-import Carousel from 'react-material-ui-carousel'
+import { Box, Typography, Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import properties from '../data/fixtures/properties'
 import PropertyCard from './PropertyCard'
-import theme from '../theme/theme'
+import Slider from './Slider'
 import propertySectionStyle from '../theme/themePropertiesSection'
 
 const PropertiesSection = () => {
@@ -12,8 +11,6 @@ const PropertiesSection = () => {
   const property = properties.map((property, id) => {
     return <PropertyCard property={property} key={id} />
   })
-
-  const mobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <>
@@ -32,16 +29,7 @@ const PropertiesSection = () => {
           Limhamn och vår fastighetsportfölj utökas ständigt.
         </Typography>
       </Box>
-      <Carousel
-        navButtonsProps={{
-          style: { backgroundColor: theme.palette.secondary.main },
-        }}
-        navButtonsAlwaysVisible={mobile ? false : true}
-        animation="slide"
-        timeout={750}
-      >
-        {property}
-      </Carousel>
+      <Slider>{property}</Slider>    
       <Box className={classes.button}>
         <Button
           data-cy="våra-fastigheter-btn"

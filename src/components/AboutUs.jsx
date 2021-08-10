@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import aboutUsStyle from '../theme/aboutUsSection'
-import logo3d from '../assets/images/om_oss_3d.png'
+import logo3d from '../assets/images/Timotuz_3D_logo.svg'
 
 const AboutUs = () => {
   const classes = aboutUsStyle()

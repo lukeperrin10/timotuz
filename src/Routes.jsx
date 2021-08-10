@@ -27,6 +27,12 @@ const Routes = () => {
           render={() => <App component={<PropertiesView />} />}
         />
         <Route
+        exact
+        path="/om_oss"
+        render={() => <App component={<AboutUsView />} />}
+        >
+        </Route>
+        <Route
           exact
           path="/om_oss"
           render={() => <App component={<AboutUsView />} />}
