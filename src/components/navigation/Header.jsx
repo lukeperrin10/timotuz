@@ -65,14 +65,14 @@ const Header = () => {
 
   useEffect(() => {
     switch (url.pathname) {
-      case '/start#om_oss':
-        setSelectedTab(2)
-        break
       case '/start':
         setSelectedTab(0)
         break
       case '/vara_fastigheter':
         setSelectedTab(1)
+        break
+      case '/om_oss':
+        setSelectedTab(2)
         break
       case '/kontakta_oss':
         setSelectedTab(3)
@@ -103,9 +103,12 @@ const Header = () => {
       value={index}
       className={classes.tabDesktop}
       component={tab === 'Om oss' ? HashLink : Link}
-      to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
-      smooth={tab === 'Om oss' ? true : undefined}
-      onClick={tab === 'Start' ? window.scrollTo({top: 0, behavior: 'smooth'}) : undefined}
+      to={_.snakeCase(tab)}
+      onClick={
+        tab === 'Start'
+          ? window.scrollTo({ top: 0, behavior: 'smooth' })
+          : undefined
+      }
       data-cy={`${_.kebabCase(tab)}-tab`}
     />
   ))
@@ -118,8 +121,7 @@ const Header = () => {
       value={index}
       className={classes.tabMobile}
       component={tab === 'Om oss' ? HashLink : Link}
-      to={tab === 'Om oss' ? '/start#about_us' : _.snakeCase(tab)}
-      smooth={tab === 'Om oss' ? true : undefined}
+      to={_.snakeCase(tab)}
       data-cy={`${_.kebabCase(tab)}-tab`}
       onClick={() => setDrawerOpen(false)}
     />
@@ -186,14 +188,13 @@ const Header = () => {
               className={classes.logoButton}
               component={Link}
               to="/start"
-
             >
               <img
                 src={logo_web_timotuz}
                 style={{ height: '50px' }}
                 data-cy="logo"
                 alt="Timotuz Company Logo"
-                onClick={window.scrollTo({top: 0,  behavior: 'smooth'})}
+                onClick={window.scrollTo({ top: 0, behavior: 'smooth' })}
               />
             </Button>
           </Grid>

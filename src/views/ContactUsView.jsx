@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, CardMedia, Divider, Typography, Hidden } from '@material-ui/core'
-
 import overview from '../assets/images/overview.jpeg'
 import contactUsStyle from '../theme/contactUsView'
 
