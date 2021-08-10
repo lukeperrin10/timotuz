@@ -26,7 +26,7 @@ const propertySectionStyle = makeStyles((theme) => ({
   },
   header: {
     [theme.breakpoints.up('xs')]: {
-      paddingBottom: '15px',
+      paddingBottom: '30px',
     },
   },
   propertyRow: {
