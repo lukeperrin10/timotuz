@@ -35,7 +35,7 @@ const PropertiesSection = () => {
         navButtonsProps={{
           style: { backgroundColor: theme.palette.secondary.main },
         }}
-        navButtonsAlwaysVisible={mobile ? false : 'true'}
+        navButtonsAlwaysVisible={mobile ? false : true}
         animation="slide"
         timeout={750}
       >

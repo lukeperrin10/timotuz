@@ -1,17 +1,16 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core'
 
 const propertySectionStyle = makeStyles((theme) => ({
   viewContainer: {
     [theme.breakpoints.up('xs')]: {
-      marginTop: '7px'
+      marginTop: '7px',
     },
     [theme.breakpoints.up('sm')]: {
-      marginTop: '14px'
+      marginTop: '14px',
     },
     [theme.breakpoints.up('lg')]: {
-      marginTop: '4rem'
+      marginTop: '4rem',
     },
-    
   },
   headerTextContainer: {
     [theme.breakpoints.up('xs')]: {
@@ -35,27 +34,27 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       height: '400px',
     },
-    [theme.breakpoints.up('md')]: {      
+    [theme.breakpoints.up('md')]: {
       height: '450px',
     },
     [theme.breakpoints.up('lg')]: {
       width: '100%',
       maxWidth: '600px',
-      height: '600px',  
+      height: '600px',
     },
   },
   image: {
     position: 'absolute',
-    height: '100%'
+    height: '100%',
   },
-  imageMobile: {  
-    height: '100%'
+  imageMobile: {
+    height: '100%',
   },
   textContent: {
     [theme.breakpoints.up('xs')]: {
       padding: '20px 30px',
       height: 'auto',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
@@ -82,22 +81,22 @@ const propertySectionStyle = makeStyles((theme) => ({
     },
   },
   iconButton: {
-    height: "50px",
-    width: "40px",
+    height: '50px',
+    width: '40px',
     '&:hover': {
-      backgroundColor: 'transparent'
-    }
+      backgroundColor: 'transparent',
+    },
   },
-  sliderButton: {  
-    height: "50px",
-    width: "40px",
+  sliderButton: {
+    height: '50px',
+    width: '40px',
     backgroundColor: theme.palette.secondary.main,
-    color: 'white',  
+    color: 'white',
   },
   sliderButtonsContainer: {
     display: 'flex',
-    justifyContent: 'space-between',  
-    position: 'absolute',  
+    justifyContent: 'space-between',
+    position: 'absolute',
     top: '50%',
     width: '100%',
     [theme.breakpoints.down('md')]: {
@@ -106,7 +105,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       transform: 'translateY(-50%) scaleX(1.07)',
     },
-  },
-}));
+  }
+}))
 
-export default propertySectionStyle;
+export default propertySectionStyle
