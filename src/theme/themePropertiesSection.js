@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core'
-import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const propertySectionStyle = makeStyles((theme) => ({
   viewContainer: {
@@ -81,19 +80,15 @@ const propertySectionStyle = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
-  iconButton: {
-    height: '50px',
-    width: '40px',
-    '&:hover': {
-      backgroundColor: 'transparent',
-    },
-  },
   sliderButton: {
-    backgroundColor: '#840C0777',
-    '&::hover': {
-      backgroundColor: '#840C07',
-    },
+    margin: '50% 10px',
     color: 'white',
+    backgroundColor: theme.palette.secondary.main,
+    opacity: "0.5",
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.main,
+      opacity: "1",
+    },
   },
 }))
 

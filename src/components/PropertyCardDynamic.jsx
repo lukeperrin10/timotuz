@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Grid,
   Typography,
   CardMedia,
   Divider,
-  Box,
 } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
 import Slider from './Slider'
@@ -35,7 +34,7 @@ const PropertyCard = ({ property }) => {
       >
         <Grid item container justifyContent='center' lg={5}>
 
-            <Slider autoPlay={false}>{listOfImages}</Slider>
+            <Slider autoPlay={false} animation='fade'>{listOfImages}</Slider>
 
         </Grid>
         <Grid container item lg={5} className={classes.textContent}>

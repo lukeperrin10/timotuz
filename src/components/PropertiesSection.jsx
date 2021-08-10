@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, useMediaQuery, Typography, Button } from '@material-ui/core'
+import { Box, Typography, Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import properties from '../data/fixtures/properties'
 import PropertyCard from './PropertyCard'
