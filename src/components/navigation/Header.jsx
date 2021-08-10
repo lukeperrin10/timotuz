@@ -71,7 +71,7 @@ const Header = () => {
       case '/start':
         setSelectedTab(0)
         break
-      case '/fastigheter':
+      case '/vara_fastigheter':
         setSelectedTab(1)
         break
       case '/kontakta_oss':

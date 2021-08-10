@@ -44,7 +44,7 @@ const PropertiesSection = () => {
       </Carousel>
       <Box className={classes.button}>
         <Button
-          data-cy="show-more-btn"
+          data-cy="våra-fastigheter-btn"
           variant="outlined"
           color="secondary"
           component={Link}

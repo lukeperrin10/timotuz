@@ -42,7 +42,7 @@ const AboutUs = () => {
         </Typography>
       <Box className={classes.button}>
         <Button
-          data-cy="show-more-btn"
+          data-cy="mer-om-oss-btn"
           variant="outlined"
           color="secondary"
           component={Link}
