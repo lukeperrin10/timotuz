@@ -17,6 +17,15 @@ const propertySectionStyle = makeStyles((theme) => ({
       textAlign: 'center',
       padding: '50px 30px',
     },
+    [theme.breakpoints.up('lg')]: {
+      textAlign: 'center',
+      padding: '50px 400px',
+    },
+  },
+  propertyViewBox: {
+    [theme.breakpoints.up('xs')]: {
+     marginTop: '5vh'
+    },
   },
   propertyRow: {
     [theme.breakpoints.up('xs')]: {
