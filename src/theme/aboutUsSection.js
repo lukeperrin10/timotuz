@@ -41,7 +41,7 @@ const aboutUsStyle = makeStyles((theme) => ({
       padding: '30px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '50px 200px',
+      padding: '50px 400px',
       marginLeft: '40px',
       width: 'auto',
     },
