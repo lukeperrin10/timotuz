@@ -125,6 +125,7 @@ const theme = createTheme({
       fontFamily: 'Gotham Light',
       fontStyle: 'regular',
       fontWeight: 300,
+      fontSize: '2rem'
     },
     button: {
       fontFamily: 'Gotham Light',

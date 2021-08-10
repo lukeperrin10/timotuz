@@ -26,12 +26,12 @@ const contactUsStyle = makeStyles((theme) => ({
   },
   contactInfo: {
     [theme.breakpoints.up('xs')]: {
-      margin: '40px 0'
+      margin: '40px 0',
     },
   },
   divider: {
     [theme.breakpoints.up('xs')]: {
-      height: '5px',
+      height: '2px',
       backgroundColor: theme.palette.secondary.main,
       margin: '10px 0'
     },

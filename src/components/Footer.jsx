@@ -62,7 +62,7 @@ const Footer = () => {
               <img
                 data-cy="logo"
                 src={logo_web_timotuz}
-                style={{ height: '72px' }}                
+                style={{ height: '72px' }}
                 alt="Timotuz Company Logo"
               />
             </Hidden>
@@ -70,14 +70,14 @@ const Footer = () => {
               <img
                 data-cy="logo"
                 src={logo_no_text}
-                style={{ height: '64px' }}                
+                style={{ height: '64px' }}
                 alt="Timotuz Company Logo"
               />
             </Hidden>
           </Button>
         </Grid>
         <Grid
-        data-cy="contacts"
+          data-cy="contacts"
           item
           container
           direction="column"
@@ -86,7 +86,12 @@ const Footer = () => {
           alignContent="center"
           justifyContent="center"
         >
-          <Typography data-cy="header" variant="h5" color="secondary" gutterBottom>
+          <Typography
+            data-cy="header"
+            variant="h5"
+            color="secondary"
+            gutterBottom
+          >
             Kontakta oss
           </Typography>
           <Typography data-cy="email" variant="body1" gutterBottom>
@@ -104,7 +109,7 @@ const Footer = () => {
           </Button>
         </Grid>
       </Grid>
-      <Box className={classes.copyright}>2021 All Rights Reserved</Box>
+      <Typography variant="body1" className={classes.copyright}>2021 All Rights Reserved</Typography>
     </Box>
   )
 }
