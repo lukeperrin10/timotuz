@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       height: '100%',
       width: '65%',
       position: 'absolute',
-      backgroundColor: 'rgba(15, 15, 15, 0.9)',
+      backgroundColor: 'rgba(15, 15, 15, 0.6)',
       top: '0px',
       left: '0px',
       paddingTop: '56px',
@@ -35,13 +35,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       width: '30%',
-      left: '20%',
-      // paddingTop: '10%',
+      left: '4%',
       paddingLeft: '1%',
       paddingRight: '1%',
-    },
-    [theme.breakpoints.up('xl')]: {
-      // paddingTop: '4%',
     },
   },
   shadowBoxContent: {
