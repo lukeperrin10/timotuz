@@ -15,16 +15,18 @@ const propertySectionStyle = makeStyles((theme) => ({
   headerTextContainer: {
     [theme.breakpoints.up('xs')]: {
       textAlign: 'center',
+      marginTop: '13vh',
+      marginBottom: '10vh',
       padding: '50px 30px',
     },
     [theme.breakpoints.up('lg')]: {
-      textAlign: 'center',
       padding: '50px 400px',
+      marginBottom: '10vh',
     },
   },
-  propertyViewBox: {
+  header: {
     [theme.breakpoints.up('xs')]: {
-     marginTop: '5vh'
+      paddingBottom: '15px',
     },
   },
   propertyRow: {
@@ -114,7 +116,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       transform: 'translateY(-50%) scaleX(1.07)',
     },
-  }
+  },
 }))
 
 export default propertySectionStyle

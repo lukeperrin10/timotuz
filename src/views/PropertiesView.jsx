@@ -11,9 +11,10 @@ const PropertiesView = () => {
   })
 
   return (
-    <Box className={classes.propertyViewBox}>
+    <>
       <Box className={classes.headerTextContainer}>
         <Typography
+          className={classes.header}
           data-cy="properties-header"
           color="secondary"
           variant="h4"
@@ -36,6 +37,7 @@ const PropertiesView = () => {
       </Container>
       <Box className={classes.headerTextContainer}>
         <Typography
+          className={classes.header}
           data-cy="properties-header"
           color="secondary"
           variant="h4"
@@ -55,7 +57,7 @@ const PropertiesView = () => {
           företagare som växer däri. maila oss på …@timotuz.se
         </Typography>
       </Box>
-    </Box>
+    </>
   )
 }
 

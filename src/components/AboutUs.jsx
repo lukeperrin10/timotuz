@@ -48,7 +48,7 @@ const AboutUs = () => {
           component={Link}
           to="/om_oss"
         >
-          Alla våra fastigheter
+          Mer om oss
         </Button>
       </Box>
       </Box>

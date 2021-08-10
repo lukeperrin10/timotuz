@@ -16,9 +16,10 @@ const PropertiesSection = () => {
   const mobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
-    <Box data-cy="property-section">
+    <>
       <Box className={classes.headerTextContainer}>
         <Typography
+          className={classes.header}
           data-cy="properties-header"
           color="secondary"
           variant="h4"
@@ -52,7 +53,7 @@ const PropertiesSection = () => {
           Alla våra fastigheter
         </Button>
       </Box>
-    </Box>
+      </>
   )
 }
 
