@@ -34,6 +34,11 @@ const Routes = () => {
         </Route>
         <Route
           exact
+          path="/om_oss"
+          render={() => <App component={<AboutUsView />} />}
+        />
+        <Route
+          exact
           path="/kontakta_oss"
           render={() => <App component={<ContactUsView />} />}
         />

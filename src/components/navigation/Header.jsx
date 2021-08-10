@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import {
   AppBar,
   Toolbar,
@@ -6,7 +6,6 @@ import {
   makeStyles,
   Grid,
   Tabs,
-  Tab,
   Button,
   Hidden,
   SwipeableDrawer,
@@ -17,11 +16,10 @@ import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
 import logo_no_text from '../../assets/images/logo_no_text.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
 import MenuIcon from '@material-ui/icons/Menu'
 import PhoneIcon from '@material-ui/icons/Phone'
-
-const _ = require('lodash')
+import AdaptiveHelper from '../../modules/AdaptiveHelper'
+import NavTab from './NavTab'
 
 const useStyles = makeStyles({
   logoContainer: {
@@ -42,13 +40,6 @@ const useStyles = makeStyles({
       backgroundColor: 'transparent',
     },
   },
-  tabDesktop: {
-    minWidth: 10,
-    marginRight: '2rem',
-  },
-  tabMobile: {
-    width: '50vw',
-  },
   phoneButton: {
     borderRadius: 0,
     height: '4rem',
@@ -58,31 +49,20 @@ const useStyles = makeStyles({
 })
 
 const Header = () => {
-  let url = useLocation()
+  let currentUrl = useLocation().pathname
   const classes = useStyles()
   const [selectedTab, setSelectedTab] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const tabs = useMemo(
+    () => ['Start', 'Våra fastigheter', 'Om oss', 'Kontakta oss'],
+    []
+  )
 
   useEffect(() => {
-    switch (url.pathname) {
-      case '/start':
-        setSelectedTab(0)
-        break
-      case '/vara_fastigheter':
-        setSelectedTab(1)
-        break
-      case '/om_oss':
-        setSelectedTab(2)
-        break
-      case '/kontakta_oss':
-        setSelectedTab(3)
-        break
-      default:
-        break
-    }
-  }, [url])
+    AdaptiveHelper.muiActiveTabSelect(currentUrl, tabs, setSelectedTab)
+  }, [currentUrl, tabs])
 
-  function ElevationScroll(props) {
+  const ElevationScroll = (props) => {
     const { children } = props
     const trigger = useScrollTrigger({
       disableHysteresis: true,
@@ -93,39 +73,6 @@ const Header = () => {
       elevation: trigger ? 4 : 0,
     })
   }
-
-  const tabs = ['Start', 'Våra fastigheter', 'Om oss', 'Kontakta oss']
-
-  const desktopNavTabs = tabs.map((tab, index) => (
-    <Tab
-      key={tab}
-      label={tab}
-      value={index}
-      className={classes.tabDesktop}
-      component={tab === 'Om oss' ? HashLink : Link}
-      to={_.snakeCase(tab)}
-      onClick={
-        tab === 'Start'
-          ? window.scrollTo({ top: 0, behavior: 'smooth' })
-          : undefined
-      }
-      data-cy={`${_.kebabCase(tab)}-tab`}
-    />
-  ))
-
-  const mobileNavTabs = tabs.map((tab, index) => (
-    <Tab
-      orientation="vertical"
-      key={`${tab}-drawer`}
-      label={tab}
-      value={index}
-      className={classes.tabMobile}
-      component={tab === 'Om oss' ? HashLink : Link}
-      to={_.snakeCase(tab)}
-      data-cy={`${_.kebabCase(tab)}-tab`}
-      onClick={() => setDrawerOpen(false)}
-    />
-  ))
 
   const phoneButton = (
     <Button
@@ -144,7 +91,9 @@ const Header = () => {
   const navBar = (
     <>
       <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
-        {desktopNavTabs}
+        {tabs.map((tab, index) => (
+          <NavTab key={tab} label={tab} value={index} />
+        ))}
       </Tabs>
       {phoneButton}
     </>
@@ -160,7 +109,15 @@ const Header = () => {
         onOpen={() => setDrawerOpen(true)}
       >
         {phoneButton}
-        {mobileNavTabs}
+        {tabs.map((tab, index) => (
+          <NavTab
+            key={`${tab}-drawer`}
+            label={tab}
+            value={index}
+            drawer={true}
+            setDrawerOpen={setDrawerOpen}
+          />
+        ))}
         <img
           src={logo_no_text}
           style={{ height: '48px', margin: 'auto 0 1rem 0' }}
