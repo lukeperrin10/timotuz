@@ -7,8 +7,7 @@ describe('visitor can navigate to about us section', () => {
   describe('About us section', () => {
     it('is expected to navigate to about us', () => {
       cy.get('[data-cy=om-oss-tab]').click()
-      cy.get('[data-cy=about-us-header]').should('be.visible')
-      cy.get('[data-cy=about-us-content]').should('contain', 'Timotuz skall skapa platser för skåningar att växa och trivas på. Vi')
+      cy.url().should('contain', '/om_oss')
     })
   })
 })

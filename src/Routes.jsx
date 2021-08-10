@@ -9,6 +9,7 @@ import App from './components/App'
 import IndexView from './views/IndexView'
 import PropertiesView from './views/PropertiesView'
 import ContactUsView from './views/ContactUsView'
+import AboutUsView from './views/AboutUsView'
 
 const Routes = () => {
   return (
@@ -24,6 +25,11 @@ const Routes = () => {
           exact
           path="/vara_fastigheter"
           render={() => <App component={<PropertiesView />} />}
+        />
+        <Route
+          exact
+          path="/om_oss"
+          render={() => <App component={<AboutUsView />} />}
         />
         <Route
           exact

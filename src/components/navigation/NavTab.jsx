@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tab } from '@material-ui/core'
 import { useRouteMatch } from 'react-router'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
   },
 })
 
-const Tab = ({
+const NavTab = ({
   label,
   value,
   drawer = false,
@@ -24,8 +25,8 @@ const Tab = ({
 }) => {
   const classes = useStyles()
   let noRedirect = useRouteMatch(_.snakeCase(label))
-  
-  const handleClick = () => {    
+
+  const handleClick = () => {
     if (noRedirect) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
@@ -37,7 +38,6 @@ const Tab = ({
   return (
     <Tab
       orientation={drawer ? 'vertical' : undefined}
-      key={drawer ? `${label}-drawer` : label}
       label={label}
       value={value}
       className={drawer ? classes.tabMobile : classes.tabDesktop}
@@ -50,4 +50,4 @@ const Tab = ({
   )
 }
 
-export default Tab
+export default NavTab

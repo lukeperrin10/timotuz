@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import {
   AppBar,
   Toolbar,
@@ -19,7 +19,7 @@ import { Link, useLocation } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
 import PhoneIcon from '@material-ui/icons/Phone'
 import AdaptiveHelper from '../../modules/AdaptiveHelper'
-import Tab from './Tab'
+import NavTab from './NavTab'
 
 const useStyles = makeStyles({
   logoContainer: {
@@ -52,20 +52,15 @@ const Header = () => {
   let currentUrl = useLocation().pathname
   const classes = useStyles()
   const [selectedTab, setSelectedTab] = useState(0)
-  //const [urlValues, setUrlValues] = useState()
   const [drawerOpen, setDrawerOpen] = useState(false)
-  const tabs = ['Start', 'Våra fastigheter', 'Om oss', 'Kontakta oss']
+  const tabs = useMemo(
+    () => ['Start', 'Våra fastigheter', 'Om oss', 'Kontakta oss'],
+    []
+  )
 
   useEffect(() => {
-    const urlValues = {
-      '/start': 0,
-      '/vara_fastigheter': 1,
-      '/om_oss': 2,
-      '/kontakta_oss': 3,
-    }
-
-    AdaptiveHelper.muiActiveTabSelect(currentUrl, urlValues, setSelectedTab)
-  }, [currentUrl])
+    AdaptiveHelper.muiActiveTabSelect(currentUrl, tabs, setSelectedTab)
+  }, [currentUrl, tabs])
 
   const ElevationScroll = (props) => {
     const { children } = props
@@ -97,7 +92,7 @@ const Header = () => {
     <>
       <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
         {tabs.map((tab, index) => (
-          <Tab label={tab} value={index} />
+          <NavTab key={tab} label={tab} value={index} />
         ))}
       </Tabs>
       {phoneButton}
@@ -115,7 +110,8 @@ const Header = () => {
       >
         {phoneButton}
         {tabs.map((tab, index) => (
-          <Tab
+          <NavTab
+            key={`${tab}-drawer`}
             label={tab}
             value={index}
             drawer={true}
