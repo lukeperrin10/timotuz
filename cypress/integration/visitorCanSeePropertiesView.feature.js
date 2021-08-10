@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('visitor can navigate see index view', () => {
+describe('visitor can navigate see properties view', () => {
   beforeEach(() => {
     cy.visit('/vara_fastigheter');
   });
@@ -21,7 +21,7 @@ describe('visitor can navigate see index view', () => {
             'contain',
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit.'
           );
-          cy.get('[data-cy=next-image-button]').click()
+          cy.get('[data-cy=slider-button]').eq(1).click()
           cy.get('[data-cy=property-image]')
             .should('have.attr', 'alt')
             .should('equal', "Image of the bird's-eye view of brick house");

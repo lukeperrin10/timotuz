@@ -26,6 +26,7 @@ const Slider = ({
           <></>
         ) : (
           <IconButton
+            data-cy="slider-button"
             onClick={onClick}
             className={classes.sliderButton}
             style={style}
