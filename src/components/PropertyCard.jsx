@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, CardMedia, Divider, Box, Container } from '@material-ui/core';
+import { Grid, Typography, CardMedia, Box, Container } from '@material-ui/core';
 import propertySectionStyle from '../theme/themePropertiesSection';
 
 const PropertyCard = ({ property }) => {
@@ -33,7 +33,6 @@ const PropertyCard = ({ property }) => {
           </Typography>
         </Grid>
       </Grid>
-      <Divider className={classes.divider} />
     </Container>
   );
 };
