@@ -1,16 +1,31 @@
 import React from 'react'
 import { useRouteMatch } from 'react-router'
+import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
+import { makeStyles } from '@material-ui/core'
+
+const _ = require('lodash')
+const useStyles = makeStyles({
+  tabDesktop: {
+    minWidth: 10,
+    marginRight: '2rem',
+  },
+  tabMobile: {
+    width: '50vw',
+  },
+})
 
 const Tab = ({
   label,
   value,
   drawer = false,
   scroll = false,
-  setDrawerOpen,
+  setDrawerOpen = () => {},
 }) => {
-  const handleClick = () => {
-    let noRedirect = useRouteMatch(_.snakeCase(label))
+  const classes = useStyles()
+  let noRedirect = useRouteMatch(_.snakeCase(label))
+  
+  const handleClick = () => {    
     if (noRedirect) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
