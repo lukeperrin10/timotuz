@@ -27,8 +27,8 @@ const PropertiesSection = () => {
           Våra fastigheter
         </Typography>
         <Typography variant="subtitle1">
-          I dagsläget förvaltar vi fastigheter i Helsingborg, Malmö och Ystad
-          (Limhamn?) och vår fastighetsportfölj utökas ständigt.
+          I dagsläget förvaltar vi fastigheter i Helsingborg, Malmö, Ystad och
+          Limhamn och vår fastighetsportfölj utökas ständigt.
         </Typography>
       </Box>
       <Carousel
