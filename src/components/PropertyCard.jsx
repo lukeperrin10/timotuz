@@ -33,7 +33,6 @@ const PropertyCard = ({ property }) => {
           </Typography>
         </Grid>
       </Grid>
-      <Divider className={classes.divider} />
     </Container>
   );
 };
