@@ -4,6 +4,8 @@ import PropertyCardDynamic from '../components/PropertyCardDynamic'
 import { Grid, Container, Box, Typography } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
 
+
+
 const PropertiesView = () => {
   const classes = propertySectionStyle()
   const property = properties_dynamic.map((property, id) => {
