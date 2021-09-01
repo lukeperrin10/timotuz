@@ -1,42 +1,94 @@
 import { makeStyles } from '@material-ui/core'
 
 const aboutUsStyles = makeStyles((theme) => ({
-  pageBox: {
-    [theme.breakpoints.up('xs')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
+  contentContainer: {
     [theme.breakpoints.up('lg')]: {
-      marginTop: '70px',
-      marginBottom: '20px',
-      padding: '0',
+      height: '100vh',
+      width: '100vw',
+      display: 'flex',
+      flexDirection: 'row',
     },
   },
 
-  header: {
-    marginBottom: '50px',
+  imageContainer: {
+    [theme.breakpoints.up('lg')]: {
+      width: '50%',
+    },
   },
 
   textContainer: {
     [theme.breakpoints.up('xs')]: {
-      textAlign: 'center',
-      margin: '100px 0',
-      padding: '70px 30px 70px 30px',
+      padding: '2%',
+      backgroundColor: theme.palette.primary.main,
+      textAlign: 'left',
     },
+
     [theme.breakpoints.up('lg')]: {
-      padding: '0 400px',
+      paddingTop: '7%',
+      width: '50%',
     },
   },
 
-  textContainerDark: {
+  aboutUsText: {
     [theme.breakpoints.up('xs')]: {
-      textAlign: 'center',
-      padding: '150px 30px 150px 30px',
-      backgroundColor: '#ddd',
+      fontSize: '1.2rem',
+      textAlign: 'left',
+    },
+  },
+
+  image: {
+    [theme.breakpoints.up('xs')]: {
+      width: '100%',
+      height: '370px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '800px',
+    },
+
+    [theme.breakpoints.up('lg')]: {
+      height: '100%',
+    },
+  },
+  textContent: {
+    color: '#fff',
+    [theme.breakpoints.up('xs')]: {
+      padding: '10%',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '70px 400px',
+      padding: '2% 35% 2% 8%  ',
+    },
+  },
+
+  header: {
+    color: '#fff',
+    fontStyle: 'light',
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '40px',
+      margin: 'auto',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '55px',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '70px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '45px',
+      marginBottom: '20px',
+    },
+  },
+
+  shadowBox: {
+    [theme.breakpoints.up('xs')]: {
+      height: '370px',
+      left: '0px',
+      position: 'absolute',
+      display: 'flex',
+      width: '100vw',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '800px',
     },
   },
 }))
