@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import properties_dynamic from '../data/fixtures/properties_dynamic'
 import PropertyCardDynamic from '../components/PropertyCardDynamic'
 import { Grid, Container, Box, Typography } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
-
-
+import LargeSlideShow from '../components/LargeSlideShow'
 
 const PropertiesView = () => {
   const classes = propertySectionStyle()
+  const [slideShow, setSlideShow] = useState()
+  const [slideShowData, setSlideShowData] = useState([])
   const property = properties_dynamic.map((property, id) => {
-    return <PropertyCardDynamic property={property} key={id} />
+    return (
+      <PropertyCardDynamic
+        property={property}
+        key={id}
+        setSlideShow={setSlideShow}
+        setSlideShowData={setSlideShowData}
+      />
+    )
   })
 
   return (
     <>
+      <LargeSlideShow images={slideShowData} open={slideShow} setSlideShow={setSlideShow} />
       <Box className={classes.headerTextContainer}>
         <Typography
           className={classes.header}

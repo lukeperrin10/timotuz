@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Grid,
   Typography,
@@ -8,18 +8,23 @@ import {
 } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
 import Slider from './Slider'
-import ReactBnbGallery from 'react-bnb-gallery'
-const PropertyCard = ({ property }) => {
+
+const PropertyCard = ({ property, setSlideShow, setSlideShowData }) => {
   const { address, description, images } = property
   const classes = propertySectionStyle()
-  const [slideShow, setSlideShow] = useState(false)
+
+  const handleClick = () => {
+    setSlideShow(true)
+    setSlideShowData(images)
+    
+  }
 
   const listOfImages = images.map((image) => (
-    <ButtonBase onClick={() => setSlideShow(true)}>
+    <ButtonBase component="button" onClick={handleClick}>
       <CardMedia
         className={classes.imageSlider}
         component="img"
-        image={image.url}
+        image={image.photo}
         data-cy="property-image"
         alt={image.alt}
         key={image.id}
@@ -29,7 +34,6 @@ const PropertyCard = ({ property }) => {
 
   return (
     <>
-      <ReactBnbGallery show={slideShow} photos={images} zIndex={2000} />
       <Grid
         data-cy="property"
         container
