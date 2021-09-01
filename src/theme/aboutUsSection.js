@@ -93,6 +93,8 @@ const aboutUsStyle = makeStyles((theme) => ({
 
   header: {
     marginBottom: '20px',
+    color: '#fff',
+    alignContent: 'centre',
   },
 
   button: {
@@ -102,6 +104,29 @@ const aboutUsStyle = makeStyles((theme) => ({
     borderColor: '#fff',
     width: '191px',
     height: '50px',
+  },
+
+  shadowBox: {
+    [theme.breakpoints.up('xs')]: {
+      height: '370px',
+      left: '0px',
+      position: 'absolute',
+      width: '100vw',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      textAlign: 'center',
+      paddingTop: '160px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '800px',
+      minHeight: '370px',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '800px',
+      minHeight: '370px',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      paddingTop: '300px',
+    },
   },
 }))
 

@@ -1,4 +1,10 @@
-import { Typography, Box, CardMedia, Button } from '@material-ui/core'
+import {
+  Typography,
+  Box,
+  CardMedia,
+  Button,
+  useMediaQuery,
+} from '@material-ui/core'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -7,12 +13,21 @@ import people_2 from '../assets/images/people_2.jpg'
 
 const AboutUs = () => {
   const classes = aboutUsStyle()
+  const desktop = useMediaQuery('(min-width:1265px)')
   return (
     <>
       <Box
         data-cy='about-us-section'
         className={classes.contentContainer}
         id='about_us'>
+        {desktop ? undefined : (
+          <Box className={classes.shadowBox}>
+            <Typography variant='h4' className={classes.header}>
+              Om oss
+            </Typography>
+          </Box>
+        )}
+
         <Box className={classes.imageContainer}>
           <CardMedia
             component='img'
@@ -22,9 +37,11 @@ const AboutUs = () => {
         </Box>
         <Box className={classes.textContainer}>
           <Box className={classes.textContent}>
-            <Typography variant='h4' className={classes.header}>
-              Om oss
-            </Typography>
+            {desktop && (
+              <Typography variant='h4' className={classes.header}>
+                Om oss
+              </Typography>
+            )}
             <Typography
               data-cy='about-us-content'
               className={classes.aboutUsText}
