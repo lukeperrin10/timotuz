@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, CardMedia, Container } from '@material-ui/core'
 import fastigheterView from '../theme/fastigheterView'
-import overview from '../assets/images/overview.jpeg'
+import lokaler_divider_image from '../assets/images/lokaler_divider_image.jpg'
 
 const FastigheterHero = () => {
   const classes = fastigheterView()
@@ -11,7 +11,7 @@ const FastigheterHero = () => {
       <CardMedia
         className={classes.image}
         component='img'
-        image={overview}
+        image={lokaler_divider_image}
         data-cy='hero-img'
         alt='Fågelperspektiv över det historiska distriktet'
       />
