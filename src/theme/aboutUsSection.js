@@ -25,49 +25,30 @@ const aboutUsStyle = makeStyles((theme) => ({
   textContainer: {
     [theme.breakpoints.up('xs')]: {
       width: '100%',
+      backgroundColor: theme.palette.primary.main,
       height: '450px',
-      backgroundColor: '#00474C',
-      textAlign: 'center',
+      textAlign: 'left',
     },
-    [theme.breakpoints.up('sm')]: {
-      width: '100%',
-      height: '450px',
-      backgroundColor: '#00474C',
-      textAlign: 'center',
-    },
-    [theme.breakpoints.up('md')]: {
-      width: '100%',
-      height: '450px',
-      backgroundColor: '#00474C',
-      textAlign: 'center',
-    },
+
     [theme.breakpoints.up('lg')]: {
       paddingTop: '40px',
       width: '50%',
       height: '100%',
-      display: 'flex',
-      textAlign: 'left',
-      backgroundColor: '#00474C',
     },
   },
 
   aboutUsText: {
-    
     paddingBottom: '20px',
     [theme.breakpoints.up('xs')]: {
-      fontSize: '18px',
+      fontSize: '1.1rem',
       margin: 'auto',
+      textAlign: 'left',
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '24px',
       paddingTop: '10px',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '28px',
       paddingTop: '26px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: '18px',
     },
   },
 
@@ -80,12 +61,8 @@ const aboutUsStyle = makeStyles((theme) => ({
       width: '100%',
       height: '800px',
     },
-    [theme.breakpoints.up('md')]: {
-      width: '100%',
-      height: '800px',
-    },
+
     [theme.breakpoints.up('lg')]: {
-      width: '100%',
       height: '100%',
     },
   },
@@ -94,7 +71,6 @@ const aboutUsStyle = makeStyles((theme) => ({
     letterSpacing: '0px',
     [theme.breakpoints.up('xs')]: {
       padding: '50px 30px',
-      height: 'auto',
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
@@ -103,7 +79,7 @@ const aboutUsStyle = makeStyles((theme) => ({
       padding: '20px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '80px 300px 0px 70px',
+      padding: '2% 30% 2% 8%  ',
     },
   },
 
@@ -134,7 +110,7 @@ const aboutUsStyle = makeStyles((theme) => ({
     borderColor: '#fff',
     width: '191px',
     height: '50px',
-    fontSize: '18px'
+    fontSize: '18px',
   },
 
   shadowBox: {
@@ -142,22 +118,14 @@ const aboutUsStyle = makeStyles((theme) => ({
       height: '370px',
       left: '0px',
       position: 'absolute',
+      display: 'flex',
+      alignContent: 'center',
       width: '100vw',
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
       textAlign: 'center',
-      paddingTop: '160px',
     },
     [theme.breakpoints.up('sm')]: {
       height: '800px',
-      minHeight: '370px',
-      backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      paddingTop: '350px',
-    },
-    [theme.breakpoints.up('md')]: {
-      height: '800px',
-      minHeight: '370px',
-      backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      paddingTop: '350px',
     },
   },
 }))
