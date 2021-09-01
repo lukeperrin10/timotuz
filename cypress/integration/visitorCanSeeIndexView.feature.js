@@ -9,34 +9,16 @@ describe('visitor can navigate see index view', () => {
       cy.get('[data-cy=hero-section]').within(() => {
         cy.get('[data-cy=hero-img]')
           .should('have.attr', 'alt')
-          .should('equal', 'Bird view of a small town')
+          .should('equal', 'Pågående project i Ystad')
       })
       it('is expected to show some information on a black bar on top of image', () => {
         cy.get('[data-cy=shadow-box]').within(() => {
-          cy.get('[data-cy=information-text]').should(
+          cy.get('[data-cy=first-text]').should(
             'contain',
-            'Trygga fastigheter i södra sverige'
+            'Fredrik 16'
           )
-          cy.get('[data-cy=house-logo]')
-            .should('have.attr', 'alt')
-            .should('equal', '')
+          cy.get('[data-cy=second-text]').should('contain', 'Gamla anor möter morgondagens vanor')
         })
-      })
-    })
-
-    it('is expected to show information bar', () => {
-      cy.get('[data-cy=information-bar]').within(() => {
-        cy.get('[data-cy=column-0]').first().should('contain', '114')
-        cy.get('[data-cy=column-0]').last().should('contain', 'Lorem ipsum')
-
-        cy.get('[data-cy=column-1]').first().should('contain', '32')
-        cy.get('[data-cy=column-1]').last().should('contain', 'Lorem ipsum')
-
-        cy.get('[data-cy=column-2]').first().should('contain', '2')
-        cy.get('[data-cy=column-2]').last().should('contain', 'Lorem ipsum')
-
-        cy.get('[data-cy=column-3]').first().should('contain', 'Ja')
-        cy.get('[data-cy=column-3]').last().should('contain', 'Lorem ipsum')
       })
     })
   })

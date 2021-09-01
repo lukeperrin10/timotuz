@@ -3,6 +3,11 @@ import { makeStyles } from '@material-ui/core'
 const heroSectionStyle = makeStyles((theme) => ({
   section: {
     [theme.breakpoints.up('xs')]: {
+      height: '40vh',
+      minHeight: '284px',
+      marginTop: '6vh',
+    },
+    [theme.breakpoints.up('sm')]: {
       height: '100vh',
     },
   },
@@ -13,12 +18,16 @@ const heroSectionStyle = makeStyles((theme) => ({
   },
   shadowBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
+      height: '40vh',
+      minHeight: '284px',
       width: '100vw',
       position: 'absolute',
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      top: '0px',
+      top: '6vh',
       left: '0px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '100vh',
     },
   },
   content: {
@@ -35,21 +44,22 @@ const heroSectionStyle = makeStyles((theme) => ({
   textFirst: {
     [theme.breakpoints.up('xs')]: {
       letterSpacing: '-1px',
-      marginBottom: '40px',
-      fontSize: '68px',
+      marginBottom: '20px',
+      fontSize: '3rem',
     },
     [theme.breakpoints.up('lg')]: {
       letterSpacing: '-3px',
-      fontSize: '88px',
+      fontSize: '5.5rem',
     },
   },
   textSecond: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: '34px',
-      textAlign: 'center'
+      fontSize: '1.7rem',
+      textAlign: 'center',
+      margin: '0 20px'
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '48px',
+      fontSize: '3rem',
     },
   },
 

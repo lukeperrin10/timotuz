@@ -12,7 +12,7 @@ const HeroSection = () => {
         component='img'
         image={overview}
         data-cy='hero-img'
-        alt='Bird view of a small town'
+        alt='Pågående project i Ystad'
       />
       <Box data-cy='shadow-box' className={classes.shadowBox}>
         <Container className={classes.content}>
