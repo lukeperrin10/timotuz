@@ -11,34 +11,39 @@ const PropertiesView = () => {
   const [slideShow, setSlideShow] = useState()
   const [slideShowData, setSlideShowData] = useState([])
   const property = properties_dynamic.map((property, id) => {
+    let trueIfOdd = (id + 1) % 2 === 0
     return (
       <PropertyCardDynamic
+        key={`fastigheter-card-${id}`}
         property={property}
-        key={id}
         setSlideShow={setSlideShow}
         setSlideShowData={setSlideShowData}
+        border={trueIfOdd}
       />
     )
   })
 
   return (
     <>
-      <LargeSlideShow images={slideShowData} open={slideShow} setSlideShow={setSlideShow} />
-      <FastigheterHero/>
-      <Container maxWidth="xl" className={classes.viewContainer}>
+      <LargeSlideShow
+        images={slideShowData}
+        open={slideShow}
+        setSlideShow={setSlideShow}
+      />
+      <FastigheterHero />
+      <Container maxWidth='xl' className={classes.viewContainer}>
         <Grid container>{property}</Grid>
       </Container>
       <Box className={classes.headerTextContainer}>
         <Typography
           className={classes.header}
-          data-cy="properties-header"
-          color="secondary"
-          variant="h4"
-          gutterBottom
-        >
+          data-cy='properties-header'
+          color='secondary'
+          variant='h4'
+          gutterBottom>
           Lokaler
         </Typography>
-        <Typography variant="subtitle1">
+        <Typography variant='subtitle1'>
           Genom att välja attraktiva lägen i Skåne där vi förstår marknaden bäst
           kan vi erbjuda dig rätt fastighet för din verksamhet. Vår lokala
           närvaro med max 1h ställtid innebär att vi kan upprätthålla god

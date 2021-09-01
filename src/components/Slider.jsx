@@ -26,17 +26,25 @@ const Slider = ({
           <></>
         ) : (
           <IconButton
-            data-cy="slider-button"
+            data-cy='slider-button'
             onClick={onClick}
             className={classes.sliderButton}
-            style={style}
-          >
+            style={style}>
             {next && <ChevronRightIcon />}
             {prev && <ChevronLeftIcon />}
           </IconButton>
         )
-      }
-    >
+      }      
+      indicatorIconButtonProps={{
+        style: {
+          color: '#707070',
+        },
+      }}
+      activeIndicatorIconButtonProps={{
+        style: {
+          color: '#00474C',
+        },
+      }}>
       {children}
     </Carousel>
   )

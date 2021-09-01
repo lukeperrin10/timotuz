@@ -4,12 +4,14 @@ const propertySectionStyle = makeStyles((theme) => ({
   viewContainer: {
     [theme.breakpoints.up('xs')]: {
       marginTop: '7px',
+      padding: '0'
     },
     [theme.breakpoints.up('sm')]: {
       marginTop: '14px',
     },
     [theme.breakpoints.up('lg')]: {
       marginTop: '4rem',
+      padding: '0 24px'
     },
   },
   headerTextContainer: {
@@ -24,15 +26,14 @@ const propertySectionStyle = makeStyles((theme) => ({
       marginBottom: '10vh',
     },
   },
-  header: {
-    [theme.breakpoints.up('xs')]: {
-      paddingBottom: '30px',
-    },
-  },
   propertyRow: {
     [theme.breakpoints.up('xs')]: {
       justifyContent: 'center',
-      alignItems: 'center',
+      maxWidth: '1740px',
+      margin: 'auto',
+      padding: '0 0 50px 0',
+    },
+    [theme.breakpoints.up('lg')]: {
       padding: '50px 0',
     },
   },
@@ -73,7 +74,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       padding: '20px 30px',
       height: 'auto',
-      alignItems: 'center',
+      alignItems: 'flex-start',
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
@@ -82,9 +83,34 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '30px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '30px 30px',
+      padding: '18px',
       marginLeft: '40px',
       width: 'auto',
+    },
+  },
+  district: {
+    [theme.breakpoints.up('xs')]: {
+      paddingBottom: '4px',
+      marginBottom: '32px',
+      textTransform: 'uppercase',
+      borderBottom: '2px solid #000',
+    },
+  },
+  name: {
+    [theme.breakpoints.up('xs')]: {
+      paddingBottom: '1rem',
+      fontSize: '2rem',
+    },
+  },
+  description: {
+    [theme.breakpoints.down('md')]: {
+      whiteSpace: 'pre-wrap',
+    },
+    [theme.breakpoints.up('md')]: {
+      whiteSpace: 'none',
+    },
+    '@media (min-width: 1600px)': {
+      whiteSpace: 'pre-wrap',
     },
   },
   divider: {
