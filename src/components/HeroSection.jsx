@@ -1,24 +1,29 @@
 import React from 'react'
-import { Box, CardMedia} from '@material-ui/core'
+import { Box, CardMedia, Container, Typography } from '@material-ui/core'
 import overview from '../assets/images/Pågående_Ystad/01.jpg'
 import heroSectionStyle from '../theme/heroSection'
-
 
 const HeroSection = () => {
   const classes = heroSectionStyle()
   return (
-    <Box data-cy="hero-section" className={classes.section}>
+    <Box data-cy='hero-section' className={classes.section}>
       <CardMedia
         className={classes.image}
-        component="img"
+        component='img'
         image={overview}
-        data-cy="hero-img"
-        alt="Bird view of a small town"
+        data-cy='hero-img'
+        alt='Bird view of a small town'
       />
-      <Box data-cy="shadow-box" className={classes.shadowBox}>
-        
+      <Box data-cy='shadow-box' className={classes.shadowBox}>
+        <Container className={classes.content}>
+          <Typography className={classes.textFirst} variant='h1'>
+            Fredrik 16
+          </Typography>
+          <Typography className={classes.textSecond} variant='h4'>
+            Gamla anor möter morgondagens vanor
+          </Typography>
+        </Container>
       </Box>
-     
     </Box>
   )
 }
