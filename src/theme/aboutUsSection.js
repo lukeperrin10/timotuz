@@ -58,7 +58,6 @@ const aboutUsStyle = makeStyles((theme) => ({
       height: '370px',
     },
     [theme.breakpoints.up('sm')]: {
-      width: '100%',
       height: '800px',
     },
 
@@ -85,7 +84,6 @@ const aboutUsStyle = makeStyles((theme) => ({
 
   header: {
     color: '#fff',
-    alignContent: 'centre',
     fontStyle: 'light',
     [theme.breakpoints.up('xs')]: {
       fontSize: '40px',
@@ -119,10 +117,8 @@ const aboutUsStyle = makeStyles((theme) => ({
       left: '0px',
       position: 'absolute',
       display: 'flex',
-      alignContent: 'center',
       width: '100vw',
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      textAlign: 'center',
     },
     [theme.breakpoints.up('sm')]: {
       height: '800px',
