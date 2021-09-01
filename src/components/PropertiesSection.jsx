@@ -19,31 +19,31 @@ const PropertiesSection = () => {
   return (
     <Container className={classes.gridContainer}>
       <Grid className={classes.gridRow} container>
-        <Grid className={classes.gridItem} container item>
+        <Grid data-cy="first-box" className={classes.gridItem} container item>
           <Container className={classes.outerBox}>
             <Container className={classes.innerBox}>
-              <Typography variant='body1' className={classes.firstText}>
+              <Typography data-cy="question" variant='body1' className={classes.firstText}>
                 Söker du lokal eller bostad?
               </Typography>
-              <Typography variant='body2' className={classes.phoneNumber}>
+              <Typography data-cy="phone" variant='body2' className={classes.phoneNumber}>
                 040 - 68 59 400
               </Typography>
             </Container>
           </Container>
         </Grid>
-        <Grid className={classes.gridItem} item>
+        <Grid data-cy="second-box" className={classes.gridItem} item>
           <CardMedia
             className={classes.image}
             component={Link}
             to='/vara_fastigheter'
             image={strutsen}
-            data-cy='helsinborg-img'
+            data-cy='limhamn-img'
             alt='Huset strutsen från ovan'>
-            <Box className={classes.shadowBox}>
-              <Typography variant='body2' className={classes.city}>
+            <Box data-cy='shadow-box' className={classes.shadowBox}>
+              <Typography data-cy='city' variant='body2' className={classes.city}>
                 limhamn
               </Typography>
-              <Typography variant='body2' className={classes.address}>
+              <Typography data-cy='address' variant='body2' className={classes.address}>
                 Strutsen 25
               </Typography>
             </Box>
@@ -51,19 +51,19 @@ const PropertiesSection = () => {
         </Grid>
       </Grid>
       <Grid className={classes.gridRow} container>
-        <Grid className={classes.gridItemCenter} item>
+        <Grid data-cy="third-box" className={classes.gridItemCenter} item>
           <CardMedia
             className={classes.image}
             component={Link}
             to='/vara_fastigheter'
             image={fredrik}
-            data-cy='helsinborg-img'
+            data-cy='ystad-img'
             alt='Illustration av folk på en innergård'>
-            <Box className={classes.shadowBoxCenter}>
-              <Typography variant='body2' className={classes.city}>
+            <Box data-cy='shadow-box' className={classes.shadowBoxCenter}>
+              <Typography data-cy='city' variant='body2' className={classes.city}>
                 ystad
               </Typography>
-              <Typography variant='body2' className={classes.address}>
+              <Typography data-cy='address' variant='body2' className={classes.address}>
                 Fredrik 16
               </Typography>
             </Box>
@@ -71,7 +71,7 @@ const PropertiesSection = () => {
         </Grid>
       </Grid>
       <Grid className={classes.gridRow} container>
-        <Grid className={classes.gridItem} item>
+        <Grid data-cy="fourth-box" className={classes.gridItem} item>
           <CardMedia
             className={classes.image}
             component={Link}
@@ -79,17 +79,17 @@ const PropertiesSection = () => {
             image={helsingborg}
             data-cy='helsinborg-img'
             alt='Industri lokal med röda portar'>
-            <Box className={classes.shadowBox}>
-              <Typography variant='body2' className={classes.city}>
+            <Box data-cy='shadow-box' className={classes.shadowBox}>
+              <Typography data-cy='city' variant='body2' className={classes.city}>
                 helsingborg
               </Typography>
-              <Typography variant='body2' className={classes.address}>
+              <Typography data-cy='address' variant='body2' className={classes.address}>
                 Mörsaren Västra 6
               </Typography>
             </Box>
           </CardMedia>
         </Grid>
-        <Grid className={classes.gridItem} item>
+        <Grid data-cy="fifth-box" className={classes.gridItem} item>
           <Container className={classes.outerBox}>
             <Button
               className={classes.button}
