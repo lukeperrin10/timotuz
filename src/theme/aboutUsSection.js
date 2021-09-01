@@ -1,52 +1,108 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core'
 
 const aboutUsStyle = makeStyles((theme) => ({
   contentContainer: {
-    [theme.breakpoints.up('xs')]: {
+    [theme.breakpoints.up('lg')]: {
+      height: '570px',
+      width: '100vw',
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center',
-      padding: '100px 30px 50px 30px',
-      backgroundColor: '#ddd'
+      flexDirection: 'row',
+      marginBottom: '80px',
     },
   },
+
+  imageContainer: {
+    [theme.breakpoints.up('xs')]: {
+      width: '100%',
+    },
+
+    [theme.breakpoints.up('lg')]: {
+      width: '50%',
+      height: '570px',
+    },
+  },
+
+  textContainer: {
+    [theme.breakpoints.up('xs')]: {
+      width: '100%',
+      height: '450px',
+      backgroundColor: '#00474C',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '100%',
+      height: '450px',
+      backgroundColor: '#00474C',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+      height: '450px',
+      backgroundColor: '#00474C',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: '40px',
+      width: '50%',
+      height: '100%',
+      display: 'flex',
+      textAlign: 'left',
+      backgroundColor: '#00474C',
+    },
+  },
+
+  aboutUsText: {
+    paddingBottom: '20px',
+  },
+
   image: {
     [theme.breakpoints.up('xs')]: {
       width: '100%',
-      height: '300px',
+      height: '370px',
     },
     [theme.breakpoints.up('sm')]: {
-      width: '900px',
-      height: '400px',
+      width: '100%',
+      height: '800px',
     },
     [theme.breakpoints.up('md')]: {
-      width: '450px',
-      height: '450px',
+      width: '100%',
+      height: '800px',
     },
     [theme.breakpoints.up('lg')]: {
-      width: '1000px',
-      height: '400px',
-      paddingLeft: '150px'
+      width: '100%',
+      height: '100%',
     },
   },
   textContent: {
+    color: '#fff',
+    letterSpacing: '0px',
     [theme.breakpoints.up('xs')]: {
-      padding: '30px 30px',
+      padding: '20px 30px',
       height: 'auto',
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
     },
     [theme.breakpoints.up('md')]: {
-      padding: '30px 150px',
+      padding: '20px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '40px 400px',
-      marginLeft: '40px',
-      width: 'auto',
+      padding: '80px 300px 0px 70px',
     },
   },
-}));
 
-export default aboutUsStyle;
+  header: {
+    marginBottom: '20px',
+  },
+
+  button: {
+    marginTop: '20px',
+    color: '#fff',
+    borderRadius: '0',
+    borderColor: '#fff',
+    width: '191px',
+    height: '50px',
+  },
+}))
+
+export default aboutUsStyle
