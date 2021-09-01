@@ -108,8 +108,8 @@ const theme = createTheme({
       fontWeight: 400,
     },
     h5: {
-      fontFamily: 'Open Sans Regular',
-      fontStyle: 'regular',
+      fontFamily: 'Open Sans Light',
+      fontStyle: 'light',
       fontWeight: 400,
     },
     h6: {

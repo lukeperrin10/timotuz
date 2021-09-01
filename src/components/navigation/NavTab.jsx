@@ -6,12 +6,12 @@ import { HashLink } from 'react-router-hash-link'
 import { makeStyles } from '@material-ui/core'
 
 const _ = require('lodash')
-const useStyles = makeStyles((theme) =>({
+const useStyles = makeStyles((theme) => ({
   tabDesktop: {
     minWidth: 10,
     marginRight: '2rem',
     color: '#000',
-    fontSize: '16px'
+    fontSize: '16px',
   },
   tabMobile: {
     minWidth: '100vw',
