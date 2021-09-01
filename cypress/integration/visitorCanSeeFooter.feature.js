@@ -11,11 +11,14 @@ describe('visitor can see footer', () => {
         cy.get('[data-cy=header]').should('contain', 'Kontakta oss')
         cy.get('[data-cy=email]').should(
           'contain',
-          'email: jacob@fastigheter.se'
+          'info@timotuz.com'
         )
-        cy.get('[data-cy=phone]')
-          .invoke('attr', 'href')
-          .should('contain', '+46 31-123-4567')
+        cy.get('[data-cy=phone]').should(
+          'contain',
+          '040 - 68 59 400'
+        )
+        cy.get('[data-cy=address]')
+          .should('contain', 'Box 20, 239 21 Skanör')
       })
     })
   })
