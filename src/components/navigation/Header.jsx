@@ -98,12 +98,11 @@ const Header = () => {
     <>
       <SwipeableDrawer
         className={classes.drawer}
-        data-cy="drawer"
-        anchor="top"
+        data-cy='drawer'
+        anchor='top'
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        onOpen={() => setDrawerOpen(true)}
-      >
+        onOpen={() => setDrawerOpen(true)}>
         {tabs.map((tab, index) => (
           <NavTab
             key={`${tab}-drawer`}
@@ -116,15 +115,14 @@ const Header = () => {
         <img
           src={logo_no_text}
           className={classes.drawerLogo}
-          data-cy="drawer-logo"
-          alt="Timotuz Company Logo"
+          data-cy='drawer-logo'
+          alt='Timotuz Company Logo'
         />
       </SwipeableDrawer>
       <IconButton
-        data-cy="hamburger-menu"
+        data-cy='hamburger-menu'
         className={classes.hamburger}
-        onClick={() => setDrawerOpen(true)}
-      >
+        onClick={() => setDrawerOpen(true)}>
         <MenuIcon />
       </IconButton>
     </>
@@ -132,20 +130,19 @@ const Header = () => {
 
   return (
     <ElevationScroll>
-      <AppBar data-cy="header" className={classes.navBar}>
+      <AppBar data-cy='header' className={classes.navBar}>
         <Toolbar disableGutters className={classes.navBar}>
           <Grid container className={classes.logoContainer}>
             <Button
               disableRipple
               className={classes.logoButton}
               component={Link}
-              to="/start"
-            >
+              to='/start'>
               <img
                 src={logo_web_timotuz}
                 style={{ height: '50px' }}
-                data-cy="logo"
-                alt="Timotuz Company Logo"
+                data-cy='logo'
+                alt='Timotuz Company Logo'
                 onClick={window.scrollTo({ top: 0, behavior: 'smooth' })}
               />
             </Button>
