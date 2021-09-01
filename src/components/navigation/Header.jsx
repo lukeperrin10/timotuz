@@ -86,28 +86,12 @@ const Header = () => {
     })
   }
 
-  // const phoneButton = (
-  //   <Button
-  //     variant="contained"
-  //     color="secondary"
-  //     disableElevation
-  //     className={classes.phoneButton}
-  //     href="tel:+46 31-123-4567"
-  //     data-cy="phone"
-  //   >
-  //     <PhoneIcon style={{ marginRight: '1rem' }} />
-  //     <Typography>031-123-4567</Typography>
-  //   </Button>
-  // )
-
   const navBar = (
-    <>
-      <Tabs value={selectedTab} className={classes.navBarTabs}>
-        {tabs.map((tab, index) => (
-          <NavTab key={tab} label={tab} value={index} />
-        ))}
-      </Tabs>
-    </>
+    <Tabs value={selectedTab} className={classes.navBarTabs}>
+      {tabs.map((tab, index) => (
+        <NavTab key={tab} label={tab} value={index} />
+      ))}
+    </Tabs>
   )
 
   const drawer = (
