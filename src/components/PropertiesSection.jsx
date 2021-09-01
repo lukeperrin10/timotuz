@@ -40,8 +40,12 @@ const PropertiesSection = () => {
             data-cy='helsinborg-img'
             alt='Huset strutsen från ovan'>
             <Box className={classes.shadowBox}>
-              <Typography variant='body2' className={classes.city}>limhamn</Typography>
-              <Typography variant='body2' className={classes.address}>Strutsen 25</Typography>
+              <Typography variant='body2' className={classes.city}>
+                limhamn
+              </Typography>
+              <Typography variant='body2' className={classes.address}>
+                Strutsen 25
+              </Typography>
             </Box>
           </CardMedia>
         </Grid>
@@ -56,8 +60,12 @@ const PropertiesSection = () => {
             data-cy='helsinborg-img'
             alt='Illustration av folk på en innergård'>
             <Box className={classes.shadowBoxCenter}>
-              <Typography variant='body2' className={classes.city}>ystad</Typography>
-              <Typography variant='body2' className={classes.address}>Fredrik 16</Typography>
+              <Typography variant='body2' className={classes.city}>
+                ystad
+              </Typography>
+              <Typography variant='body2' className={classes.address}>
+                Fredrik 16
+              </Typography>
             </Box>
           </CardMedia>
         </Grid>
@@ -72,7 +80,9 @@ const PropertiesSection = () => {
             data-cy='helsinborg-img'
             alt='Industri lokal med röda portar'>
             <Box className={classes.shadowBox}>
-              <Typography variant='body2' className={classes.city}>helsingborg</Typography>
+              <Typography variant='body2' className={classes.city}>
+                helsingborg
+              </Typography>
               <Typography variant='body2' className={classes.address}>
                 Mörsaren Västra 6
               </Typography>

@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core'
-import { transform } from 'framer-motion'
 
 const propertyGridStyle = makeStyles((theme) => ({
   gridContainer: {
@@ -32,10 +31,17 @@ const propertyGridStyle = makeStyles((theme) => ({
       margin: '27px',
       justifyContent: 'center',
     },
+    [theme.breakpoints.up('sm')]: {
+      width: '460px',
+      height: '304px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '692px',
+      height: '456px',
+    },
     [theme.breakpoints.up('lg')]: {
       width: '346px',
       height: '248px',
-      justifyContent: 'center',
     },
   },
 
@@ -45,7 +51,8 @@ const propertyGridStyle = makeStyles((theme) => ({
       height: '550px',
       margin: '27px',
     },
-    [theme.breakpoints.up('sm')]: {
+
+    [theme.breakpoints.up('lg')]: {
       width: '346px',
       height: '550px',
     },
@@ -67,12 +74,23 @@ const propertyGridStyle = makeStyles((theme) => ({
   },
 
   innerBox: {
-    textAlign: 'center',
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    border: 'solid #fff 2px',
-    margin: 'auto',
-    padding: '65px 35px',
+    [theme.breakpoints.up('xs')]: {
+      textAlign: 'center',
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+      border: 'solid #fff 2px',
+      margin: 'auto',
+      padding: '65px 35px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      padding: '88px 35px',
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '164px 35px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '65px 35px',
+    },
   },
 
   firstText: {
@@ -91,17 +109,34 @@ const propertyGridStyle = makeStyles((theme) => ({
   },
 
   shadowBox: {
-    width: '346px',
-    height: '248px',
-    position: 'absolute',
-    backgroundColor: 'rgba(15, 15, 15, 0.2)',
-    textDecoration: 'none',
-    color: theme.palette.primary.contrastText,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    paddingTop: '45px',
+    [theme.breakpoints.up('xs')]: {
+      width: '346px',
+      height: '248px',
+      position: 'absolute',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      textDecoration: 'none',
+      color: theme.palette.primary.contrastText,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      paddingTop: '45px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '460px',
+      height: '304px',
+      paddingTop: '57px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '692px',
+      height: '456px',
+      paddingTop: '96px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '346px',
+      height: '248px',
+      paddingTop: '45px',
+    },
   },
 
   shadowBoxCenter: {
@@ -118,8 +153,15 @@ const propertyGridStyle = makeStyles((theme) => ({
       alignItems: 'center',
       paddingTop: '45px',
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: '57px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: '96px',
+    },
+    [theme.breakpoints.up('lg')]: {
       width: '346px',
+      paddingTop: '45px',
     },
   },
 
