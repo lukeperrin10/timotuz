@@ -4,12 +4,14 @@ const propertySectionStyle = makeStyles((theme) => ({
   viewContainer: {
     [theme.breakpoints.up('xs')]: {
       marginTop: '7px',
+      padding: '0'
     },
     [theme.breakpoints.up('sm')]: {
       marginTop: '14px',
     },
     [theme.breakpoints.up('lg')]: {
       marginTop: '4rem',
+      padding: '0 24px'
     },
   },
   headerTextContainer: {
@@ -29,6 +31,9 @@ const propertySectionStyle = makeStyles((theme) => ({
       justifyContent: 'center',
       maxWidth: '1740px',
       margin: 'auto',
+      padding: '0 0 50px 0',
+    },
+    [theme.breakpoints.up('lg')]: {
       padding: '50px 0',
     },
   },
