@@ -77,7 +77,7 @@ const PropertiesSection = () => {
             component={Link}
             to='/vara_fastigheter'
             image={helsingborg}
-            data-cy='helsinborg-img'
+            data-cy='helsingborg-img'
             alt='Industri lokal med röda portar'>
             <Box data-cy='shadow-box' className={classes.shadowBox}>
               <Typography data-cy='city' variant='body2' className={classes.city}>
