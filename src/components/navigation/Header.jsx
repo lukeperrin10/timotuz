@@ -12,7 +12,7 @@ import {
   IconButton,
 } from '@material-ui/core'
 import logo_web_timotuz from '../../assets/images/logo_web_timotuz_green.svg'
-import logo_no_text from '../../assets/images/logo_no_text.svg'
+import logo_no_text from '../../assets/images/logo_no_text_white.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -21,12 +21,9 @@ import NavTab from './NavTab'
 
 const useStyles = makeStyles({
   navBar: {
-    [theme.breakpoints.up('sm')]: {
-      backgroundColor: '#ffe',
+    [theme.breakpoints.up('xs')]: {
+      backgroundColor: '#fafafa',
     },
-  },
-  drawer:{
-    backgroundColor: ''
   },
   navBarTabs: {
     [theme.breakpoints.up('sm')]: {
@@ -48,6 +45,11 @@ const useStyles = makeStyles({
       justifyContent: 'center',
       paddingLeft: '0px',
     },
+  },
+  drawerLogo: {
+    backgroundColor: theme.palette.secondary.main,
+    height: '60px',
+    padding: '0.5rem 0 0.5rem 0',
   },
   logoButton: {
     padding: 0,
@@ -129,7 +131,7 @@ const Header = () => {
         ))}
         <img
           src={logo_no_text}
-          style={{ height: '48px', margin: 'auto 0 1rem 0' }}
+          className={classes.drawerLogo}
           data-cy="drawer-logo"
           alt="Timotuz Company Logo"
         />
@@ -146,7 +148,7 @@ const Header = () => {
 
   return (
     <ElevationScroll>
-      <AppBar data-cy="header">
+      <AppBar data-cy="header" className={classes.navBar}>
         <Toolbar disableGutters className={classes.navBar}>
           <Grid container className={classes.logoContainer}>
             <Button

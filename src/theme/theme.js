@@ -74,6 +74,9 @@ const theme = createTheme({
       main: '#002F33',
       contrastText: '#fff',
     },
+    navDrawer: {
+      main: '#000B0B',
+    },
     error: {
       main: '#E1252A',
     },
