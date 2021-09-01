@@ -1,56 +1,69 @@
-import { Typography, Box, CardMedia, Button } from '@material-ui/core'
+import {
+  Typography,
+  Box,
+  CardMedia,
+  Button,
+  useMediaQuery,
+} from '@material-ui/core'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 import aboutUsStyle from '../theme/aboutUsSection'
-import logo3d from '../assets/images/Timotuz_3D_logo.svg'
+import people_2 from '../assets/images/people_2.jpg'
 
 const AboutUs = () => {
   const classes = aboutUsStyle()
+  const desktop = useMediaQuery('(min-width:1265px)')
   return (
     <>
       <Box
-        data-cy="about-us-section"
+        data-cy='about-us-section'
         className={classes.contentContainer}
-        id="about_us"
-      >
-        <Typography
-          data-cy="about-us-header"
-          color="secondary"
-          variant="h4"
-          gutterBottom
-        >
-          Vår Mission
-        </Typography>
-        <CardMedia
-          className={classes.image}
-          component="img"
-          image={logo3d}
-          data-cy="3d-logo"
-          alt="Timotuz 3d logo"
-        />
-        <Typography
-          data-cy="about-us-content"
-          className={classes.textContent}
-          variant="subtitle1"
-        >
-          Timotuz skall skapa platser för skåningar att växa och trivas på. Vi
-          gör det genom att tillgodose bostads- och lokalbehov idag, men med ena
-          foten in i morgondagens teknik och miljö. Vi ska hitta eller skapa
-          fastigheter med stor värdepotential och utveckla dessa för ett lönsamt
-          ägande och en hållbar framtid.
-        </Typography>
-      <Box className={classes.button}>
-        <Button
-          data-cy="mer-om-oss-btn"
-          variant="outlined"
-          color="secondary"
-          component={Link}
-          to="/om_oss"
-        >
-          Mer om oss
-        </Button>
-      </Box>
+        id='about_us'>
+        {desktop ? undefined : (
+          <Box className={classes.shadowBox}>
+            <Typography className={classes.header}>
+              Om oss
+            </Typography>
+          </Box>
+        )}
+
+        <Box className={classes.imageContainer}>
+          <CardMedia
+            component='img'
+            image={people_2}
+            className={classes.image}
+          />
+        </Box>
+        <Box className={classes.textContainer}>
+          <Box className={classes.textContent}>
+            {desktop && (
+              <Typography variant='h4' className={classes.header}>
+                Om oss
+              </Typography>
+            )}
+            <Typography
+              data-cy='about-us-content'
+              className={classes.aboutUsText}
+              variant='body1'>
+              Timotuz skall skapa platser för skåningar att växa och trivas på.
+              Vi gör det genom att tillgodose bostads- och lokalbehov idag, men
+              med ena foten in i morgondagens teknik och miljö. <br></br>
+              <br></br> Vi ska hitta eller skapa fastigheter med stor
+              värdepotential och utveckla dessa för ett lönsamt ägande och en
+              hållbar framtid.
+            </Typography>
+
+            <Button
+              className={classes.button}
+              data-cy='mer-om-oss-btn'
+              variant='outlined'
+              component={Link}
+              to='/om_oss'>
+              Mer om oss
+            </Button>
+          </Box>
+        </Box>
       </Box>
     </>
   )
