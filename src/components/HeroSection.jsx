@@ -1,71 +1,28 @@
 import React from 'react'
-import { Box, CardMedia, Grid, Typography } from '@material-ui/core'
-import overview from '../assets/images/overview.jpeg'
+import { Box, CardMedia, Container, Typography } from '@material-ui/core'
+import overview from '../assets/images/Pågående_Ystad/01.jpg'
 import heroSectionStyle from '../theme/heroSection'
-
 
 const HeroSection = () => {
   const classes = heroSectionStyle()
   return (
-    <Box data-cy="hero-section" className={classes.section}>
+    <Box data-cy='hero-section' className={classes.section}>
       <CardMedia
         className={classes.image}
-        component="img"
+        component='img'
         image={overview}
-        data-cy="hero-img"
-        alt="Bird view of a small town"
+        data-cy='hero-img'
+        alt='Pågående project i Ystad'
       />
-      <Box data-cy="shadow-box" className={classes.shadowBox}>
-        <Box className={classes.shadowBoxContent}>
-          <Typography
-            className={classes.informationText}
-            variant="h2"
-            data-cy="information-text"
-          >
-            Trygga fastigheter i södra sverige
+      <Box data-cy='shadow-box' className={classes.shadowBox}>
+        <Container className={classes.content}>
+          <Typography className={classes.textFirst} variant='h1'>
+            Fredrik 16
           </Typography>
-        </Box>
-      </Box>
-      <Box
-        data-cy="information-bar"
-        className={classes.redInfoBox}
-        bgcolor="secondary.main"
-        color="secondary.contrastText"
-      >
-        <Grid container spacing={0} className={classes.infoGrid}>
-          <Grid className={classes.dataColumn} data-cy="column-0" item xs={2}>
-            <Typography className={classes.dataText} variant="h4">
-              114
-            </Typography>
-            <Typography variant="subtitle2" gutterBottom>
-              Lorem ipsum
-            </Typography>
-          </Grid>
-          <Grid className={classes.dataColumn} data-cy="column-1" item xs={2}>
-            <Typography className={classes.dataText} variant="h4">
-              32
-            </Typography>
-            <Typography variant="subtitle2" gutterBottom>
-              Lorem ipsum
-            </Typography>
-          </Grid>
-          <Grid className={classes.dataColumn} data-cy="column-2" item xs={2}>
-            <Typography className={classes.dataText} variant="h4">
-              2
-            </Typography>
-            <Typography variant="subtitle2" gutterBottom>
-              Lorem ipsum
-            </Typography>
-          </Grid>
-          <Grid className={classes.dataColumn} data-cy="column-3" item xs={2}>
-            <Typography className={classes.dataText} variant="h4">
-              Ja
-            </Typography>
-            <Typography variant="subtitle2" gutterBottom>
-              Lorem ipsum
-            </Typography>
-          </Grid>
-        </Grid>
+          <Typography className={classes.textSecond} variant='h4'>
+            Gamla anor möter morgondagens vanor
+          </Typography>
+        </Container>
       </Box>
     </Box>
   )
