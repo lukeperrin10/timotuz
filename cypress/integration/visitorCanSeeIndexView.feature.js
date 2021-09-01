@@ -13,34 +13,59 @@ describe('visitor can navigate see index view', () => {
       })
       it('is expected to show some information on a black bar on top of image', () => {
         cy.get('[data-cy=shadow-box]').within(() => {
-          cy.get('[data-cy=first-text]').should(
+          cy.get('[data-cy=first-text]').should('contain', 'Fredrik 16')
+          cy.get('[data-cy=second-text]').should(
             'contain',
-            'Fredrik 16'
+            'Gamla anor möter morgondagens vanor'
           )
-          cy.get('[data-cy=second-text]').should('contain', 'Gamla anor möter morgondagens vanor')
         })
       })
     })
   })
 
-  describe('Property section', () => {
-    it('is expected to show Grid of properties', () => {
-      cy.get('[data-cy=properties-header]').should('contain', 'Våra fastigheter')
-      cy.get('[data-cy=property-1]').within(() => {
-        cy.get('[data-cy=property-image]')
-          .should('have.attr', 'alt')
-          .should('equal', 'Stor fastighet med tegelfasad')
-        cy.get('[data-cy=property-address]').should(
+  describe('Property Grid', () => {
+    it('is expected to show Grid', () => {
+      cy.get('[data-cy=first-box]').within(() => {
+        cy.get('[data-cy=question]').should(
           'contain',
-          'Benvägen 32, Limhamn'
+          'Söker du lokal eller bostad?'
         )
-        cy.get('[data-cy=property-description]').should(
-          'contain',
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit.'
-        )
+        cy.get('[data-cy=phone]').should('contain', '040 - 68 59 400')
       })
 
-      cy.get('[data-cy=våra-fastigheter-btn]').click()
+      cy.get('[data-cy=second-box]').within(() => {
+        cy.get('[data-cy=limhamn-img]')
+          .should('have.attr', 'alt')
+          .should('contain', 'Huset strutsen från ovan')
+        cy.get('[data-cy=shadow-box]').within(() => {
+          cy.get('[data-cy=city]').should('contain', 'limhamn')
+          cy.get('[data-cy=address]').should('contain', 'Strutsen 25')
+        })
+      })
+      cy.get('[data-cy=third-box]').within(() => {
+        cy.get('[data-cy=ystad-img]')
+          .should('have.attr', 'alt')
+          .should('contain', 'Illustration av folk på en innergård')
+        cy.get('[data-cy=shadow-box]').within(() => {
+          cy.get('[data-cy=city]').should('contain', 'ystad')
+          cy.get('[data-cy=address]').should('contain', 'Fredrik 16')
+        })
+      })
+      cy.get('[data-cy=fourth-box]').within(() => {
+        cy.get('[data-cy=helsingborg-img]')
+          .should('have.attr', 'alt')
+          .should('contain', 'Industri lokal med röda portar')
+        cy.get('[data-cy=shadow-box]').within(() => {
+          cy.get('[data-cy=city]').should('contain', 'helsingborg')
+          cy.get('[data-cy=address]').should('contain', 'Mörsaren Västra 6')
+        })
+      })
+      cy.get('[data-cy=fifth-box]').within(() => {
+        cy.get('[data-cy=våra-fastigheter-btn]').should(
+          'contain',
+          'Visa flera fastigheter'
+        )
+      })
     })
   })
 
