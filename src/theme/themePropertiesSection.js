@@ -23,16 +23,10 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '50px 400px',
       marginBottom: '10vh',
     },
-  },
-  header: {
-    [theme.breakpoints.up('xs')]: {
-      paddingBottom: '30px',
-    },
-  },
+  },  
   propertyRow: {
     [theme.breakpoints.up('xs')]: {
       justifyContent: 'center',
-      alignItems: 'center',
       padding: '50px 0',
     },
   },
@@ -73,7 +67,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       padding: '20px 30px',
       height: 'auto',
-      alignItems: 'center',
+      alignItems: 'flex-start',
     },
     [theme.breakpoints.up('sm')]: {
       padding: '30px 100px',
@@ -82,10 +76,26 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '30px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '30px 30px',
+      padding: '30px',
       marginLeft: '40px',
       width: 'auto',
     },
+  },
+  district: {
+    [theme.breakpoints.up('xs')]: {
+      paddingBottom: '4px',
+      marginBottom: '32px',
+      textTransform: 'uppercase',
+      borderBottom: '2px solid #000'
+    },
+  },
+  name: {
+    [theme.breakpoints.up('xs')]: {
+      paddingBottom: '30px',
+    },
+  },
+  description: {
+    whiteSpace: 'pre-wrap',
   },
   divider: {
     [theme.breakpoints.up('xs')]: {

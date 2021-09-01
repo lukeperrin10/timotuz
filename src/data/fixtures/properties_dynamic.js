@@ -12,7 +12,7 @@ const properties_dynamic = [
     address: 'Stora Östergatan 31 / Lilla Östergatan 36',
     type: 'Bostäder',
     housing: 'ca 35st',
-    BOA: '667 kvm',
+    boa: '667 kvm',
     images: [
       {
         id: 1,
@@ -35,10 +35,10 @@ const properties_dynamic = [
     address: 'Stora Östergatan 31 / Lilla Östergatan',
     type: 'Bostäder/Lokaler',
     housing: '9st',
-    BOA: '667 kvm',
+    boa: '667 kvm',
     premises: '5st',
-    LOA: '1155 kvm',
-    Parkering: 'Parkeringsplats (16st)',
+    loa: '1155 kvm',
+    parking: 'Parkeringsplats (16st)',
     other:
       'Förädling/exploatering: Lokalerna på innegården kommer rivas och ombildas till ca 30-35 bostäder med levande innergårdar.',
     images: [
@@ -63,14 +63,12 @@ const properties_dynamic = [
     address: 'Västra Bernadottesgatan 30, Limhamn ',
     type: 'Bostäder',
     housing: '13',
-    BOA: '727 kvm',
+    boa: '727 kvm',
     premises: '2',
-    LOA: '460 kvm',
-    Parkering: 'Underjordiskt garage (17st)',
-    Standard:
+    loa: '460 kvm',
+    parking: 'Underjordiskt garage (17st)',
+    standard:
       'Fastigheten håller en hög teknisk standard. Lägenheter har under åren succesivt totalrenoverats med bruksvärdeshöjande uppgraderingar.',
-    other:
-      'Förädling/exploatering: Lokalerna på innegården kommer rivas och ombildas till ca 30-35 bostäder med levande innergårdar.',
     images: [
       {
         id: 1,
