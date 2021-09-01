@@ -34,7 +34,7 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '0 0 50px 0',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '50px 0',
+      padding: '110px 0',
     },
   },
   imageSlider: {
