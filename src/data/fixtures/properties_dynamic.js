@@ -11,12 +11,12 @@ const properties_dynamic = [
     images: [
       {
         id: 1,
-        url: LimhamnFront,
+        photo: LimhamnFront,
         alt: 'Image of the front of brick house',
       },
       {
         id: 2,
-        url: LimhamnSky,
+        photo: LimhamnSky,
         alt: "Image of the bird's-eye view of brick house",
       },
     ],
@@ -29,17 +29,17 @@ const properties_dynamic = [
     images: [
       {
         id: 1,
-        url: threeDImage,
+        photo: threeDImage,
         alt: "Image of the bird's-eye view of brick house",
       },
       {
         id: 2,
-        url: LimhamnFront,
+        photo: LimhamnFront,
         alt: 'Lorem ipsum dolor sit amet consectetur',
       },
       {
         id: 3,
-        url: LimhamnSky,
+        photo: LimhamnSky,
         alt: '8 vånings lägenhets hus',
       },
     ],

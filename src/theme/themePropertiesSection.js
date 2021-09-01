@@ -61,6 +61,14 @@ const propertySectionStyle = makeStyles((theme) => ({
   imageMobile: {
     height: '100%',
   },
+
+  imageFullScreen: {
+    height: '100%',
+    position: 'absolute',
+    left: 0,
+    width: '100%',
+    overflow: 'hidden',
+  },
   textContent: {
     [theme.breakpoints.up('xs')]: {
       padding: '20px 30px',
@@ -95,10 +103,10 @@ const propertySectionStyle = makeStyles((theme) => ({
     margin: '50% 10px',
     color: 'white',
     backgroundColor: theme.palette.secondary.main,
-    opacity: "0.5",
+    opacity: '0.5',
     '&:hover': {
       backgroundColor: theme.palette.secondary.main,
-      opacity: "1",
+      opacity: '1',
     },
   },
 }))
