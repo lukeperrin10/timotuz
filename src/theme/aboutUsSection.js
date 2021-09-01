@@ -52,7 +52,23 @@ const aboutUsStyle = makeStyles((theme) => ({
   },
 
   aboutUsText: {
+    
     paddingBottom: '20px',
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '18px',
+      margin: 'auto',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '24px',
+      paddingTop: '10px',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '28px',
+      paddingTop: '26px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '18px',
+    },
   },
 
   image: {
@@ -77,7 +93,7 @@ const aboutUsStyle = makeStyles((theme) => ({
     color: '#fff',
     letterSpacing: '0px',
     [theme.breakpoints.up('xs')]: {
-      padding: '20px 30px',
+      padding: '50px 30px',
       height: 'auto',
     },
     [theme.breakpoints.up('sm')]: {
@@ -92,9 +108,23 @@ const aboutUsStyle = makeStyles((theme) => ({
   },
 
   header: {
-    marginBottom: '20px',
     color: '#fff',
     alignContent: 'centre',
+    fontStyle: 'light',
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '40px',
+      margin: 'auto',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '55px',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '70px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '45px',
+      marginBottom: '20px',
+    },
   },
 
   button: {
@@ -104,6 +134,7 @@ const aboutUsStyle = makeStyles((theme) => ({
     borderColor: '#fff',
     width: '191px',
     height: '50px',
+    fontSize: '18px'
   },
 
   shadowBox: {
@@ -120,12 +151,13 @@ const aboutUsStyle = makeStyles((theme) => ({
       height: '800px',
       minHeight: '370px',
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      paddingTop: '350px',
     },
     [theme.breakpoints.up('md')]: {
       height: '800px',
       minHeight: '370px',
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      paddingTop: '300px',
+      paddingTop: '350px',
     },
   },
 }))
