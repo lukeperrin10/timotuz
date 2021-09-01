@@ -23,10 +23,12 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '50px 400px',
       marginBottom: '10vh',
     },
-  },  
+  },
   propertyRow: {
     [theme.breakpoints.up('xs')]: {
       justifyContent: 'center',
+      maxWidth: '1740px',
+      margin: 'auto',
       padding: '50px 0',
     },
   },
@@ -76,7 +78,7 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '30px 150px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '30px',
+      padding: '18px',
       marginLeft: '40px',
       width: 'auto',
     },
@@ -86,16 +88,25 @@ const propertySectionStyle = makeStyles((theme) => ({
       paddingBottom: '4px',
       marginBottom: '32px',
       textTransform: 'uppercase',
-      borderBottom: '2px solid #000'
+      borderBottom: '2px solid #000',
     },
   },
   name: {
     [theme.breakpoints.up('xs')]: {
-      paddingBottom: '30px',
+      paddingBottom: '1rem',
+      fontSize: '2rem',
     },
   },
   description: {
-    whiteSpace: 'pre-wrap',
+    [theme.breakpoints.down('md')]: {
+      whiteSpace: 'pre-wrap',
+    },
+    [theme.breakpoints.up('md')]: {
+      whiteSpace: 'none',
+    },
+    '@media (min-width: 1600px)': {
+      whiteSpace: 'pre-wrap',
+    },
   },
   divider: {
     [theme.breakpoints.up('xs')]: {

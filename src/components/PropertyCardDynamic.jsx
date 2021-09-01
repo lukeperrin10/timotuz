@@ -10,7 +10,12 @@ import {
 import propertySectionStyle from '../theme/themePropertiesSection'
 import Slider from './Slider'
 
-const PropertyCard = ({ property, setSlideShow, setSlideShowData }) => {
+const PropertyCardDynamic = ({
+  property,
+  setSlideShow,
+  setSlideShowData,
+  border,
+}) => {
   const { district, name, description, images } = property
   const classes = propertySectionStyle()
 
@@ -39,7 +44,8 @@ const PropertyCard = ({ property, setSlideShow, setSlideShowData }) => {
         container
         item
         xs={12}
-        className={classes.propertyRow}>
+        className={classes.propertyRow}
+        style={border ? { border: '3px solid #00474C' } : undefined}>
         <Grid item container justifyContent='center' lg={5}>
           <Slider autoPlay={false} animation='fade'>
             {listOfImages}
@@ -149,4 +155,4 @@ const PropertyCard = ({ property, setSlideShow, setSlideShowData }) => {
   )
 }
 
-export default PropertyCard
+export default PropertyCardDynamic

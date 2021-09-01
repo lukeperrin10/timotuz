@@ -10,30 +10,35 @@ const PropertiesView = () => {
   const [slideShow, setSlideShow] = useState()
   const [slideShowData, setSlideShowData] = useState([])
   const property = properties_dynamic.map((property, id) => {
+    let trueIfOdd = (id + 1) % 2 === 0
     return (
       <PropertyCardDynamic
         property={property}
-        key={id}
+        key={`property-card-${id}`}
         setSlideShow={setSlideShow}
         setSlideShowData={setSlideShowData}
+        border={trueIfOdd}
       />
     )
   })
 
   return (
     <>
-      <LargeSlideShow images={slideShowData} open={slideShow} setSlideShow={setSlideShow} />
+      <LargeSlideShow
+        images={slideShowData}
+        open={slideShow}
+        setSlideShow={setSlideShow}
+      />
       <Box className={classes.headerTextContainer}>
         <Typography
           className={classes.header}
-          data-cy="properties-header"
-          color="secondary"
-          variant="h4"
-          gutterBottom
-        >
+          data-cy='properties-header'
+          color='secondary'
+          variant='h4'
+          gutterBottom>
           Bostäder
         </Typography>
-        <Typography variant="subtitle1">
+        <Typography variant='subtitle1'>
           Timotuz Fastigheter hyr ut och förvaltar bostäder i vackra och mysiga
           lägen runt om i Skåneregionen. Vi bedriver förvaltningen i egen regi
           med samarbetar med lokala entreprenörer som underleverantörer. Vi
@@ -43,20 +48,19 @@ const PropertiesView = () => {
           vill gärna veta hur vi kan hjälpa dig!
         </Typography>
       </Box>
-      <Container maxWidth="xl" className={classes.viewContainer}>
+      <Container maxWidth='xl' className={classes.viewContainer}>
         <Grid container>{property}</Grid>
       </Container>
       <Box className={classes.headerTextContainer}>
         <Typography
           className={classes.header}
-          data-cy="properties-header"
-          color="secondary"
-          variant="h4"
-          gutterBottom
-        >
+          data-cy='properties-header'
+          color='secondary'
+          variant='h4'
+          gutterBottom>
           Lokaler
         </Typography>
-        <Typography variant="subtitle1">
+        <Typography variant='subtitle1'>
           Genom att välja attraktiva lägen i Skåne där vi förstår marknaden bäst
           kan vi erbjuda dig rätt fastighet för din verksamhet. Vår lokala
           närvaro med max 1h ställtid innebär att vi kan upprätthålla god
