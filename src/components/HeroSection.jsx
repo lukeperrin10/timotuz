@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, CardMedia, Grid, Typography } from '@material-ui/core'
 import overview from '../assets/images/overview.jpeg'
-import houseIconWhite from '../assets/images/Building_ikon_white.svg'
 import heroSectionStyle from '../theme/heroSection'
 
 
@@ -25,13 +24,6 @@ const HeroSection = () => {
           >
             Trygga fastigheter i södra sverige
           </Typography>
-          <CardMedia
-            className={classes.hoseIcon}
-            component="img"
-            image={houseIconWhite}
-            data-cy="house-logo"
-            alt=""
-          />
         </Box>
       </Box>
       <Box
