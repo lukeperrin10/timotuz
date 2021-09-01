@@ -6,7 +6,7 @@ import {
   Divider,
   ButtonBase,
   Box,
-  useMediaQuery
+  useMediaQuery,
 } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
 import theme from '../theme/theme'
@@ -20,7 +20,7 @@ const PropertyCardDynamic = ({
 }) => {
   const { district, name, description, images } = property
   const classes = propertySectionStyle()
-  const mobile = useMediaQuery(theme.breakpoints.down('md'));
+  const mobile = useMediaQuery(theme.breakpoints.down('md'))
 
   const handleClick = () => {
     setSlideShow(true)
@@ -28,14 +28,14 @@ const PropertyCardDynamic = ({
   }
 
   const listOfImages = images.map((image) => (
-    <ButtonBase component='button' onClick={handleClick}>
+    <ButtonBase key={`image${image.id}`} component='button' onClick={handleClick}>
       <CardMedia
         className={classes.imageSlider}
         component='img'
         image={image.photo}
         data-cy='property-image'
         alt={image.alt}
-        key={image.id}
+        
       />
     </ButtonBase>
   ))
@@ -48,7 +48,7 @@ const PropertyCardDynamic = ({
         item
         xs={12}
         className={classes.propertyRow}
-        style={(border && !mobile) ? { border: '3px solid #00474C' } : undefined}>
+        style={border && !mobile ? { border: '3px solid #00474C' } : undefined}>
         <Grid item container justifyContent='center' lg={5}>
           <Slider autoPlay={false} animation='fade'>
             {listOfImages}

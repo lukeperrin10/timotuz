@@ -13,8 +13,8 @@ const PropertiesView = () => {
     let trueIfOdd = (id + 1) % 2 === 0
     return (
       <PropertyCardDynamic
+        key={`fastigheter-card-${id}`}
         property={property}
-        key={`property-card-${id}`}
         setSlideShow={setSlideShow}
         setSlideShowData={setSlideShowData}
         border={trueIfOdd}
