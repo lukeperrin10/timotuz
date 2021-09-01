@@ -21,13 +21,15 @@ const FastigheterHero = () => {
             Bostäder
           </Typography>
           <Typography className={classes.textSecond} variant='h4'>
-            Timotuz Fastigheter hyr ut och förvaltar bostäder i vackra och mysiga lägen 
-            runt om i Skåneregionen. Vi bedriver förvaltningen i egen regi med samarbetar 
-            med lokala entreprenörer som underleverantörer.
-            <br/>
-            <br/>
-            Vi jobbar proaktivt med vår förvaltning där en medvetenhet om miljö och etiska 
-            principer alltid vägs in i de beslut vi tar för att möta hyresgästernas behov.
+            Timotuz Fastigheter hyr ut och förvaltar bostäder i vackra och
+            mysiga lägen runt om i Skåneregionen. Vi bedriver förvaltningen i
+            egen regi med samarbetar med lokala entreprenörer som
+            underleverantörer.
+            <br />
+            <br />
+            Vi jobbar proaktivt med vår förvaltning där en medvetenhet om miljö
+            och etiska principer alltid vägs in i de beslut vi tar för att möta
+            hyresgästernas behov.
           </Typography>
         </Container>
       </Box>
