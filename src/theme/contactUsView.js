@@ -5,37 +5,89 @@ const contactUsStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       height: '100vh',
       width: '100vw',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
     },
   },
   img: {
     [theme.breakpoints.up('xs')]: {
-      width: '40%',
-      height: '100%',
+      width: '100vw',
+      height: '100vh',
+      position: 'absolute',
+      top: '6vh',
+      left: '0',
     },
   },
-  contactContainer: {
+  shadowBox: {
+    [theme.breakpoints.up('xs')]: {
+      height: '100vh',
+      minHeight: '284px',
+      width: '100vw',
+      position: 'absolute',
+      backgroundColor: 'rgba(7, 55, 59, 0.60)',
+      top: '6vh',
+      left: '0',
+      color: theme.palette.primary.contrastText,
+      textTransform: 'uppercase',
+      
+    },
+  },
+  contactText: {
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
-      textAlign: 'center',
-      margin: '0 auto'
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+      height: '20vh',
+      fontSize: '38px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '50vh',
+      fontSize: '38px',
     },
   },
   contactInfo: {
     [theme.breakpoints.up('xs')]: {
-      margin: '40px 0',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      height: '500px',
+      margin: '0px 100px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      height: '100px',
+      margin: '0px 150px'
     },
   },
-  divider: {
+  heading: {
     [theme.breakpoints.up('xs')]: {
-      height: '2px',
-      backgroundColor: theme.palette.secondary.main,
-      margin: '10px 0'
+      fontSize: '1.2rem',
     },
-  }
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.7rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2.2rem',
+    },
+  },
+  text: {
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '1rem',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2rem',
+    },
+  },
 }))
 
 export default contactUsStyle

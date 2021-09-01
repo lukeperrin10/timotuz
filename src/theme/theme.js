@@ -83,7 +83,7 @@ const theme = createTheme({
       disabled: 'rgba(15, 15, 15, 0.38)',
       hint: 'rgba(15, 15, 15, 0.38)',
     },
-    divider: 'rgba(15, 15, 15, 0.12)',
+    divider: 'rgba(255, 255, 255, 1)',
   },
   typography: {
     fontFamily: 'Open Sans Regular',
