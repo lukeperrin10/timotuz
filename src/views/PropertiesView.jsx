@@ -4,6 +4,7 @@ import PropertyCardDynamic from '../components/PropertyCardDynamic'
 import { Grid, Container, Box, Typography } from '@material-ui/core'
 import propertySectionStyle from '../theme/themePropertiesSection'
 import LargeSlideShow from '../components/LargeSlideShow'
+import FastigheterHero from '../components/FastigheterHero'
 
 const PropertiesView = () => {
   const classes = propertySectionStyle()
@@ -49,6 +50,8 @@ const PropertiesView = () => {
         </Typography>
       </Box>
       <Container maxWidth='xl' className={classes.viewContainer}>
+      <FastigheterHero/>
+      <Container maxWidth="xl" className={classes.viewContainer}>
         <Grid container>{property}</Grid>
       </Container>
       <Box className={classes.headerTextContainer}>
