@@ -18,18 +18,21 @@ const FastigheterHero = () => {
       <Box data-cy='shadow-box' className={classes.shadowBox}>
         <Container className={classes.content}>
           <Typography className={classes.textFirst} variant='h1'>
-            Bostäder
+            Lokaler
           </Typography>
           <Typography className={classes.textSecond} variant='h4'>
-            Timotuz Fastigheter hyr ut och förvaltar bostäder i vackra och
-            mysiga lägen runt om i Skåneregionen. Vi bedriver förvaltningen i
-            egen regi med samarbetar med lokala entreprenörer som
-            underleverantörer.
+            Genom att välja attraktiva lägen i Skåne där vi förstår marknaden
+            bäst kan vi erbjuda dig rätt fastighet för din verksamhet. Vår
+            lokala närvaro med max 1h ställtid innebär att vi kan upprätthålla
+            god service och vi sätter en ära i att återkoppla och planera
+            förändringar tätt ihop med våra hyresgäster.
             <br />
             <br />
-            Vi jobbar proaktivt med vår förvaltning där en medvetenhet om miljö
-            och etiska principer alltid vägs in i de beslut vi tar för att möta
-            hyresgästernas behov.
+            För oss är det viktigt att standarden i våra kontors- och
+            industrilokaler tål att synas, och vi jobbar kontinuerligt med
+            underhåll och förbättringar. Hyresgästernas behov är nyckeln för
+            långa relationer mellan våra fastigheter och de duktiga företagare
+            som växer däri.
           </Typography>
         </Container>
       </Box>
