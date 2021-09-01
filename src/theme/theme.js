@@ -8,7 +8,7 @@ const openSansLight = {
   fontFamily: 'Open Sans Light',
   fontStyle: 'light',
   fontDisplay: 'swap',
-  fontWeight: 300,
+  fontWeight: 200,
   src: `
   local('OpenSans'),
   local('OpenSans-Light'),
@@ -36,7 +36,7 @@ const openSansSemiBold = {
   fontFamily: 'Open Sans Semi Bold',
   fontStyle: 'semi-bold',
   fontDisplay: 'swap',
-  fontWeight: 400,
+  fontWeight: 600,
   src: `
   local('OpenSans'),
   local('OpenSans-SemiBold'),
@@ -110,7 +110,7 @@ const theme = createTheme({
     h5: {
       fontFamily: 'Open Sans Light',
       fontStyle: 'light',
-      fontWeight: 400,
+      fontWeight: 300,
     },
     h6: {
       fontFamily: 'Open Sans Semi Bold',
