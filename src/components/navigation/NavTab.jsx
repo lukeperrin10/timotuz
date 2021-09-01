@@ -10,9 +10,12 @@ const useStyles = makeStyles({
   tabDesktop: {
     minWidth: 10,
     marginRight: '2rem',
+    color: '#000',
+    fontSize: '16px'
   },
   tabMobile: {
     width: '50vw',
+    color: '#fff'
   },
 })
 

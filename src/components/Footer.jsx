@@ -7,7 +7,7 @@ import {
   Box,
   Hidden,
 } from '@material-ui/core'
-import logo_web_timotuz from '../assets/images/logo_web_timotuz.svg'
+import logo_web_timotuz from '../assets/images/logo_web_timotuz_white.svg'
 import logo_no_text from '../assets/images/logo_no_text.svg'
 import PhoneIcon from '@material-ui/icons/Phone'
 import { Link } from 'react-router-dom'

@@ -10,18 +10,33 @@ import {
   Hidden,
   SwipeableDrawer,
   IconButton,
-  Typography,
 } from '@material-ui/core'
-import logo_web_timotuz from '../../assets/images/logo_web_timotuz.svg'
+import logo_web_timotuz from '../../assets/images/logo_web_timotuz_green.svg'
 import logo_no_text from '../../assets/images/logo_no_text.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
-import PhoneIcon from '@material-ui/icons/Phone'
 import AdaptiveHelper from '../../modules/AdaptiveHelper'
 import NavTab from './NavTab'
 
 const useStyles = makeStyles({
+  navBar: {
+    [theme.breakpoints.up('sm')]: {
+      backgroundColor: '#ffe',
+    },
+  },
+  drawer:{
+    backgroundColor: ''
+  },
+  navBarTabs: {
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: 'auto',
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginRight: '30px',
+      marginLeft: 'auto',
+    },
+  },
   logoContainer: {
     [theme.breakpoints.up('xs')]: {
       width: '172px',
@@ -39,11 +54,6 @@ const useStyles = makeStyles({
     '&:hover': {
       backgroundColor: 'transparent',
     },
-  },
-  phoneButton: {
-    borderRadius: 0,
-    height: '4rem',
-    padding: '0 1.5rem',
   },
   hamburger: { margin: ' 0 12px 0 auto' },
 })
@@ -74,41 +84,40 @@ const Header = () => {
     })
   }
 
-  const phoneButton = (
-    <Button
-      variant="contained"
-      color="secondary"
-      disableElevation
-      className={classes.phoneButton}
-      href="tel:+46 31-123-4567"
-      data-cy="phone"
-    >
-      <PhoneIcon style={{ marginRight: '1rem' }} />
-      <Typography>031-123-4567</Typography>
-    </Button>
-  )
+  // const phoneButton = (
+  //   <Button
+  //     variant="contained"
+  //     color="secondary"
+  //     disableElevation
+  //     className={classes.phoneButton}
+  //     href="tel:+46 31-123-4567"
+  //     data-cy="phone"
+  //   >
+  //     <PhoneIcon style={{ marginRight: '1rem' }} />
+  //     <Typography>031-123-4567</Typography>
+  //   </Button>
+  // )
 
   const navBar = (
     <>
-      <Tabs value={selectedTab} style={{ marginLeft: 'auto' }}>
+      <Tabs value={selectedTab} className={classes.navBarTabs}>
         {tabs.map((tab, index) => (
           <NavTab key={tab} label={tab} value={index} />
         ))}
       </Tabs>
-      {phoneButton}
     </>
   )
 
   const drawer = (
     <>
       <SwipeableDrawer
+        className={classes.drawer}
         data-cy="drawer"
-        anchor="right"
+        anchor="top"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         onOpen={() => setDrawerOpen(true)}
       >
-        {phoneButton}
         {tabs.map((tab, index) => (
           <NavTab
             key={`${tab}-drawer`}
@@ -138,7 +147,7 @@ const Header = () => {
   return (
     <ElevationScroll>
       <AppBar data-cy="header">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters className={classes.navBar}>
           <Grid container className={classes.logoContainer}>
             <Button
               disableRipple
