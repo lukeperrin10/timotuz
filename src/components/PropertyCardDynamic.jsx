@@ -3,7 +3,6 @@ import {
   Grid,
   Typography,
   CardMedia,
-  Divider,
   ButtonBase,
   Box,
   useMediaQuery,
@@ -145,6 +144,22 @@ const PropertyCardDynamic = ({
                 <Typography component='span'>{property.standard}</Typography>
               </div>
             )}
+            {property.lager && (
+              <div>
+                <Typography component='span'>
+                  <b>Lager: </b>
+                </Typography>
+                <Typography component='span'>{property.lager}</Typography>
+              </div>
+            )}
+            {property.kontor && (
+              <div>
+                <Typography component='span'>
+                  <b>Kontor: </b>
+                </Typography>
+                <Typography component='span'>{property.kontor}</Typography>
+              </div>
+            )}
             {property.other && (
               <div style={{ marginTop: '1rem' }}>
                 <Typography component='span'>{property.other}</Typography>
@@ -153,7 +168,6 @@ const PropertyCardDynamic = ({
           </Box>
         </Grid>
       </Grid>
-      <Divider className={classes.divider} />
     </>
   )
 }

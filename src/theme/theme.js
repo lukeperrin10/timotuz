@@ -131,6 +131,7 @@ const theme = createTheme({
       fontFamily: 'Open Sans Light',
       fontStyle: 'light',
       fontWeight: 300,
+      textTransform: 'none'
     },
     caption: {
       fontFamily: 'Open Sans Bold',
