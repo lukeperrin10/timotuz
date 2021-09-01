@@ -44,13 +44,10 @@ const propertyGridStyle = makeStyles((theme) => ({
   gridItemCenter: {
     [theme.breakpoints.up('xs')]: {
       width: '100vw',
+      height: '550px',
       margin: '27px',
     },
     [theme.breakpoints.up('sm')]: {
-      width: '346px',
-      height: '550px',
-    },
-    [theme.breakpoints.up('lg')]: {
       width: '346px',
       height: '550px',
     },
@@ -102,17 +99,17 @@ const propertyGridStyle = makeStyles((theme) => ({
     backgroundColor: 'rgba(15, 15, 15, 0.2)',
   },
 
-  shadowBoxCenter: {
-    [theme.breakpoints.up('xs')]: {
-      width: '100vw',
-      position: 'absolute',
-      backgroundColor: 'rgba(15, 15, 15, 0.2)',
-    },
-    [theme.breakpoints.up('sm')]: {
-      width: '346px',
-      height: '550px',
-    },
-  },
+  // shadowBoxCenter: {
+  //   [theme.breakpoints.up('xs')]: {
+  //     width: '100vw',
+  //     height: '550px',
+  //     position: 'absolute',
+  //     backgroundColor: 'rgba(15, 15, 15, 0.2)',
+  //   },
+  //   [theme.breakpoints.up('sm')]: {
+  //     width: '346px',
+  //   },
+  // },
 
   button: {
     [theme.breakpoints.up('xs')]: {
