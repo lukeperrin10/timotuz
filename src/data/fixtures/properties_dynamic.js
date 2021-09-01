@@ -1,6 +1,20 @@
-import LimhamnSky from '../../assets/images/LimhamnSky.JPG'
-import LimhamnFront from '../../assets/images/LimhamnFront.JPG'
-import threeDImage from '../../assets/images/3d_draft.jpg'
+import PågåendeYstad1 from '../../assets/images/Pågående_Ystad/01.jpg'
+import PågåendeYstad2 from '../../assets/images/Pågående_Ystad/02.jpg'
+import PågåendeYstad3 from '../../assets/images/Pågående_Ystad/03.jpg'
+import PågåendeYstad4 from '../../assets/images/Pågående_Ystad/04.jpg'
+import PågåendeYstad5 from '../../assets/images/Pågående_Ystad/05.jpg'
+import PågåendeYstad6 from '../../assets/images/Pågående_Ystad/06.jpg'
+import PågåendeYstad7 from '../../assets/images/Pågående_Ystad/07.jpg'
+import PågåendeYstad8 from '../../assets/images/Pågående_Ystad/08.jpg'
+import PågåendeYstad9 from '../../assets/images/Pågående_Ystad/09.jpg'
+import Ystad1 from '../../assets/images/Ystad/1.jpeg'
+import Ystad2 from '../../assets/images/Ystad/2.jpeg'
+import Ystad3 from '../../assets/images/Ystad/3.jpeg'
+import Ystad4 from '../../assets/images/Ystad/4.JPG'
+import Limhamn1 from '../../assets/images/Limhamn/1.JPG'
+import Limhamn2 from '../../assets/images/Limhamn/2.JPG'
+import Limhamn3 from '../../assets/images/Limhamn/3.jpg'
+import Limhamn4 from '../../assets/images/Limhamn/4.jpg'
 
 const properties_dynamic = [
   {
@@ -16,13 +30,48 @@ const properties_dynamic = [
     images: [
       {
         id: 1,
-        photo: LimhamnFront,
-        alt: 'Image of the front of brick house',
+        photo: PågåendeYstad1,
+        alt: '',
       },
       {
         id: 2,
-        photo: LimhamnSky,
-        alt: "Image of the bird's-eye view of brick house",
+        photo: PågåendeYstad2,
+        alt: '',
+      },
+      {
+        id: 3,
+        photo: PågåendeYstad3,
+        alt: '',
+      },
+      {
+        id: 4,
+        photo: PågåendeYstad4,
+        alt: '',
+      },
+      {
+        id: 5,
+        photo: PågåendeYstad5,
+        alt: '',
+      },
+      {
+        id: 6,
+        photo: PågåendeYstad6,
+        alt: '',
+      },
+      {
+        id: 7,
+        photo: PågåendeYstad7,
+        alt: '',
+      },
+      {
+        id: 8,
+        photo: PågåendeYstad8,
+        alt: '',
+      },
+      {
+        id: 9,
+        photo: PågåendeYstad9,
+        alt: '',
       },
     ],
   },
@@ -44,13 +93,23 @@ const properties_dynamic = [
     images: [
       {
         id: 1,
-        photo: LimhamnFront,
-        alt: 'Image of the front of brick house',
+        photo: Ystad1,
+        alt: '',
       },
       {
         id: 2,
-        photo: LimhamnSky,
-        alt: "Image of the bird's-eye view of brick house",
+        photo: Ystad2,
+        alt: '',
+      },
+      {
+        id: 3,
+        photo: Ystad3,
+        alt: '',
+      },
+      {
+        id: 4,
+        photo: Ystad4,
+        alt: '',
       },
     ],
   },
@@ -72,13 +131,23 @@ const properties_dynamic = [
     images: [
       {
         id: 1,
-        photo: LimhamnFront,
-        alt: 'Image of the front of brick house',
+        photo: Limhamn1,
+        alt: '',
       },
       {
-        id: 2,
-        photo: LimhamnSky,
-        alt: "Image of the bird's-eye view of brick house",
+        id: 1,
+        photo: Limhamn2,
+        alt: '',
+      },
+      {
+        id: 3,
+        photo: Limhamn3,
+        alt: '',
+      },
+      {
+        id: 4,
+        photo: Limhamn4,
+        alt: '',
       },
     ],
   },
