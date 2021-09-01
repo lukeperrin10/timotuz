@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core'
+import { transform } from 'framer-motion'
 
 const propertyGridStyle = makeStyles((theme) => ({
   gridContainer: {
@@ -10,13 +11,11 @@ const propertyGridStyle = makeStyles((theme) => ({
       marginBottom: '114px',
     },
     [theme.breakpoints.up('lg')]: {
-      display: 'flex',
       flexDirection: 'row',
-      alignItems: 'center',
-      marginTop: '56px',
-      marginBottom: '114px',
+      flexWrap: 'nowrap',
     },
   },
+
   gridRow: {
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
@@ -24,8 +23,8 @@ const propertyGridStyle = makeStyles((theme) => ({
       flexWrap: 'nowrap',
       alignItems: 'center',
     },
-    [theme.breakpoints.up('lg')]: {},
   },
+
   gridItem: {
     [theme.breakpoints.up('xs')]: {
       width: '346px',
@@ -36,7 +35,6 @@ const propertyGridStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       width: '346px',
       height: '248px',
-      margin: '27px',
       justifyContent: 'center',
     },
   },
@@ -97,19 +95,45 @@ const propertyGridStyle = makeStyles((theme) => ({
     height: '248px',
     position: 'absolute',
     backgroundColor: 'rgba(15, 15, 15, 0.2)',
+    textDecoration: 'none',
+    color: theme.palette.primary.contrastText,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingTop: '45px',
   },
 
-  // shadowBoxCenter: {
-  //   [theme.breakpoints.up('xs')]: {
-  //     width: '100vw',
-  //     height: '550px',
-  //     position: 'absolute',
-  //     backgroundColor: 'rgba(15, 15, 15, 0.2)',
-  //   },
-  //   [theme.breakpoints.up('sm')]: {
-  //     width: '346px',
-  //   },
-  // },
+  shadowBoxCenter: {
+    [theme.breakpoints.up('xs')]: {
+      width: '100vw',
+      height: '550px',
+      position: 'absolute',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      textDecoration: 'none',
+      color: theme.palette.primary.contrastText,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      paddingTop: '45px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '346px',
+    },
+  },
+
+  city: {
+    borderBottom: 'solid 2px',
+    textTransform: 'uppercase',
+    marginBottom: '22px',
+    fontSize: '18px',
+    letterSpacing: '2px',
+  },
+  address: {
+    fontSize: '24px',
+    letterSpacing: '-0.5px',
+  },
 
   button: {
     [theme.breakpoints.up('xs')]: {

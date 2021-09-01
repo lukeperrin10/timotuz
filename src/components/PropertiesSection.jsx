@@ -19,7 +19,7 @@ const PropertiesSection = () => {
   return (
     <Container className={classes.gridContainer}>
       <Grid className={classes.gridRow} container>
-        <Grid className={classes.gridItem} item>
+        <Grid className={classes.gridItem} container item>
           <Container className={classes.outerBox}>
             <Container className={classes.innerBox}>
               <Typography variant='body1' className={classes.firstText}>
@@ -39,7 +39,10 @@ const PropertiesSection = () => {
             image={strutsen}
             data-cy='helsinborg-img'
             alt='Huset strutsen från ovan'>
-            <Box className={classes.shadowBox}></Box>
+            <Box className={classes.shadowBox}>
+              <Typography variant='body2' className={classes.city}>limhamn</Typography>
+              <Typography variant='body2' className={classes.address}>Strutsen 25</Typography>
+            </Box>
           </CardMedia>
         </Grid>
       </Grid>
@@ -52,7 +55,10 @@ const PropertiesSection = () => {
             image={fredrik}
             data-cy='helsinborg-img'
             alt='Illustration av folk på en innergård'>
-            <Box className={classes.shadowBoxCenter}></Box>
+            <Box className={classes.shadowBoxCenter}>
+              <Typography variant='body2' className={classes.city}>ystad</Typography>
+              <Typography variant='body2' className={classes.address}>Fredrik 16</Typography>
+            </Box>
           </CardMedia>
         </Grid>
       </Grid>
@@ -65,7 +71,12 @@ const PropertiesSection = () => {
             image={helsingborg}
             data-cy='helsinborg-img'
             alt='Industri lokal med röda portar'>
-            <Box className={classes.shadowBox}></Box>
+            <Box className={classes.shadowBox}>
+              <Typography variant='body2' className={classes.city}>helsingborg</Typography>
+              <Typography variant='body2' className={classes.address}>
+                Mörsaren Västra 6
+              </Typography>
+            </Box>
           </CardMedia>
         </Grid>
         <Grid className={classes.gridItem} item>
