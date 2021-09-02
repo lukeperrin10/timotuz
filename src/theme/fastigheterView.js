@@ -6,7 +6,7 @@ const fastigheterView = makeStyles((theme) => ({
       position: "relative",
       height: '100vh',
       minHeight: '284px',
-      marginTop: '6vh',
+      marginTop: '3rem',
     },
     [theme.breakpoints.up('sm')]: {
       height: '80vh',

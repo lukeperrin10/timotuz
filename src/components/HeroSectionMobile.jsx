@@ -1,14 +1,13 @@
 import React from 'react'
-import { Box, Container, Typography, useMediaQuery } from '@material-ui/core'
+import { Box, Container, Typography, Button } from '@material-ui/core'
 import heroImage1 from '../assets/images/pågåendeYstad/10.jpg'
 import heroImage2 from '../assets/images/pågåendeYstad/03.jpg'
 import heroSectionStyle from '../theme/heroSection'
 import HeroSlider, { Slide, OverlayContainer } from 'hero-slider'
-import theme from '../theme/theme'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
   const classes = heroSectionStyle()
-  const mobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box data-cy='hero-section' className={classes.section}>
@@ -32,6 +31,16 @@ const HeroSection = () => {
               <Typography className={classes.textSecond} variant='h4'>
                 Gamla anor möter morgondagens vanor
               </Typography>
+              <Button
+                component={Link}
+                to='/vara_fastigheter'
+                variant='outlined'
+                color='inherit'
+                className={classes.heroButton}>
+                <Typography variant='button' className={classes.heroButtonText}>
+                  Läs mer
+                </Typography>
+              </Button>
             </Container>
           </Box>
         </OverlayContainer>
@@ -40,7 +49,6 @@ const HeroSection = () => {
             backgroundImage: heroImage1,
             backgroundPositionY: '100%',
             backgroundWidth: '100%',
-
           }}
         />
         <Slide

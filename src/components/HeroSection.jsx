@@ -1,9 +1,10 @@
 import React from 'react'
-import { Box, Container, Typography } from '@material-ui/core'
+import { Box, Container, Typography, Button } from '@material-ui/core'
 import heroImage1 from '../assets/images/pågåendeYstad/10.jpg'
 import heroImage2 from '../assets/images/pågåendeYstad/03.jpg'
 import heroSectionStyle from '../theme/heroSection'
 import HeroSlider, { Slide, OverlayContainer } from 'hero-slider'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
   const classes = heroSectionStyle()
@@ -30,6 +31,16 @@ const HeroSection = () => {
               <Typography className={classes.textSecond} variant='h4'>
                 Gamla anor möter morgondagens vanor
               </Typography>
+              <Button
+                component={Link}
+                to='/vara_fastigheter'
+                variant='outlined'
+                color='inherit'
+                className={classes.heroButton}>
+                <Typography variant='button' className={classes.heroButtonText}>
+                  Läs mer
+                </Typography>
+              </Button>
             </Container>
           </Box>
         </OverlayContainer>

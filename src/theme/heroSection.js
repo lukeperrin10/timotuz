@@ -87,7 +87,23 @@ const heroSectionStyle = makeStyles((theme) => ({
       fontSize: '3rem',
     },
   },
-
+  heroButton: {
+    margin: '2rem 6px',
+    padding: '6px 4rem',
+    borderRadius: '0',
+    border: '3px solid #fff',
+  },
+  heroButtonText: {
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '1.4rem',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.8rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2.2rem',
+    },
+  },
 }))
 
 export default heroSectionStyle
