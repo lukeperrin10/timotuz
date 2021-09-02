@@ -49,7 +49,7 @@ const useStyles = makeStyles({
   },
   drawerLogo: {
     backgroundColor: theme.palette.secondary.main,
-    height: '60px',
+    height: '68px',
     padding: '0.5rem 0 0.5rem 0',
   },
   logoButton: {
@@ -69,6 +69,7 @@ const StyledTabs = withStyles({
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'transparent',
+    marginBottom: '4px',
     '& > span': {      
       width: '100%',
       backgroundColor: '#fff',
@@ -156,7 +157,7 @@ const Header = () => {
               to='/start'>
               <img
                 src={logo_web_timotuz}
-                style={{ height: '50px' }}
+                style={{ height: '60px' }}
                 data-cy='logo'
                 alt='Timotuz Company Logo'
                 onClick={window.scrollTo({ top: 0, behavior: 'smooth' })}

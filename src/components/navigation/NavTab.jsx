@@ -13,7 +13,7 @@ const StyledTab = withStyles((theme) => ({
     marginRight: '2rem',
     fontSize: '18px',
     fontStyle: 'regular',
-    fontWeight: 600,
+    fontWeight: 300,
     color: '#fff',
     opacity: 1,
     '&:focus': {
