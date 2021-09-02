@@ -9,7 +9,7 @@ const App = ({ component }) => {
     <>
       <ScrollToTop />
       <Header />
-      <Box style={{ width: '100vw' }}>{component}</Box>
+      <Box style={{ width: '100%' }}>{component}</Box>
       <Footer />
     </>
   )

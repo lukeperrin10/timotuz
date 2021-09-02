@@ -11,7 +11,7 @@ const Footer = () => {
     <Box data-cy='footer' className={classes.footer}>
       <Grid container direction='column'>
         <Grid item container direction='row' className={classes.footerGrid}>
-          <Grid item container xs={12} sm={5} justifyContent='center'>
+          <Grid item container xs={12} sm={6} justifyContent='center'>
             <Button
               disableRipple
               className={classes.logoButton}
@@ -34,7 +34,7 @@ const Footer = () => {
           </Grid>
           <Grid
             xs={12}
-            sm={5}
+            sm={6}
             data-cy='contacts'
             item                    
             className={classes.contactsContainer}>

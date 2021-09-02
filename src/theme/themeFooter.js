@@ -45,6 +45,7 @@ const footerStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'center'
     },
     [theme.breakpoints.up('lg')]: {
       flexDirection: 'row',

@@ -4,12 +4,12 @@ const contactUsStyle = makeStyles((theme) => ({
   containerBox: {
     [theme.breakpoints.up('xs')]: {
       height: '100vh',
-      width: '100vw',
+      width: '100%',
     },
   },
   img: {
     [theme.breakpoints.up('xs')]: {
-      width: '100vw',
+      width: '100%',
       height: '100vh',
       position: 'absolute',
       top: '0',
@@ -20,7 +20,7 @@ const contactUsStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       height: '100vh',
       minHeight: '284px',
-      width: '100vw',
+      width: '100%',
       position: 'absolute',
       backgroundColor: 'rgba(7, 55, 59, 0.60)',
       top: '0',
