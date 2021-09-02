@@ -1,4 +1,4 @@
-import Helsingborg1 from '../../assets/images/Helsingborg/1.jpg'
+import Helsingborg1 from '../../assets/images/helsingborg/1.jpg'
 
 const properties_dynamic = [
   {

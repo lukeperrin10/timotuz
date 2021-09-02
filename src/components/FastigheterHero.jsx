@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, CardMedia, Container } from '@material-ui/core'
 import fastigheterView from '../theme/fastigheterView'
-import overview from '../assets/images/Ystad/2.jpg'
+import overview from '../assets/images/ystad/2.jpg'
 
 const FastigheterHero = () => {
   const classes = fastigheterView()
