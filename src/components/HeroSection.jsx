@@ -26,7 +26,7 @@ const HeroSection = () => {
           <Box data-cy='shadow-box' className={classes.shadowBox}>
             <Container className={classes.content}>
               <Typography className={classes.textFirst} variant='h1'>
-                Nyproduktionsproject Aurora:
+                Nyproduktionsprojekt Aurora
               </Typography>
               <Typography className={classes.textSecond} variant='h4'>
                 Gamla anor möter morgondagens vanor
