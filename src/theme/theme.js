@@ -47,7 +47,7 @@ const theme = createTheme({
     },
     h5: {
       fontStyle: 'light',
-      fontWeight: 200,
+      fontWeight: 300,
     },
     h6: {
       fontStyle: 'semiBold',
