@@ -27,14 +27,16 @@ const PropertyCardDynamic = ({
   }
 
   const listOfImages = images.map((image) => (
-    <ButtonBase key={`image${image.id}`} component='button' onClick={handleClick}>
+    <ButtonBase
+      key={`image${image.id}`}
+      component='button'
+      onClick={handleClick}>
       <CardMedia
         className={classes.imageSlider}
         component='img'
         image={image.photo}
         data-cy='property-image'
         alt={image.alt}
-        
       />
     </ButtonBase>
   ))
@@ -62,100 +64,100 @@ const PropertyCardDynamic = ({
           <Typography
             className={classes.district}
             data-cy='property-district'
-            variant='h5'
+            variant='body2'
             gutterBottom>
             {district}
           </Typography>
           <Typography
             className={classes.name}
             data-cy='property-name'
-            variant='h4'
+            variant='body2'
             gutterBottom>
             {name}
           </Typography>
           <Typography
             data-cy='property-description'
-            variant='subtitle1'
+            variant='body1'
             className={classes.description}>
             {description}
           </Typography>
           <Box style={{ marginTop: '1rem' }}>
             {property.address && (
               <div>
-                <Typography component='span'>
-                  <b>Adress: </b>
+                <Typography variant='caption' component='span'>
+                  Adress:{' '}
                 </Typography>
                 <Typography component='span'>{property.address}</Typography>
               </div>
             )}
             {property.type && (
               <div>
-                <Typography component='span'>
-                  <b>Typ: </b>
+                <Typography variant='caption' component='span'>
+                  Typ:{' '}
                 </Typography>
                 <Typography component='span'>{property.type}</Typography>
               </div>
             )}
             {property.housing && (
               <div>
-                <Typography component='span'>
-                  <b>Bostäder: </b>
+                <Typography variant='caption' component='span'>
+                  Bostäder:{' '}
                 </Typography>
                 <Typography component='span'>{property.housing}</Typography>
               </div>
             )}
             {property.boa && (
               <div>
-                <Typography component='span'>
-                  <b>BOA: </b>
+                <Typography variant='caption' component='span'>
+                  BOA:{' '}
                 </Typography>
                 <Typography component='span'>{property.boa}</Typography>
               </div>
             )}
             {property.premises && (
               <div>
-                <Typography component='span'>
-                  <b>Lokaler: </b>
+                <Typography variant='caption' component='span'>
+                  Lokaler:{' '}
                 </Typography>
                 <Typography component='span'>{property.premises}</Typography>
               </div>
             )}
             {property.loa && (
               <div>
-                <Typography component='span'>
-                  <b>LOA: </b>
+                <Typography variant='caption' component='span'>
+                  LOA:{' '}
                 </Typography>
                 <Typography component='span'>{property.loa}</Typography>
               </div>
             )}
             {property.parking && (
               <div>
-                <Typography component='span'>
-                  <b>Parkering: </b>
+                <Typography variant='caption' component='span'>
+                  Parkering:{' '}
                 </Typography>
                 <Typography component='span'>{property.parking}</Typography>
               </div>
             )}
             {property.standard && (
               <div>
-                <Typography component='span'>
-                  <b>Standard: </b>
+                <Typography variant='caption' component='span'>
+                  Standard:{' '}
                 </Typography>
                 <Typography component='span'>{property.standard}</Typography>
               </div>
             )}
             {property.lager && (
               <div>
-                <Typography component='span'>
-                  <b>Lager: </b>
+                <Typography variant='caption' component='span'>
+                  Lager:{' '}
                 </Typography>
                 <Typography component='span'>{property.lager}</Typography>
               </div>
             )}
             {property.kontor && (
               <div>
-                <Typography component='span'>
-                  <b>Kontor: </b>
+                <Typography variant='caption' component='span'>
+                  Kontor:{' '}
                 </Typography>
                 <Typography component='span'>{property.kontor}</Typography>
               </div>

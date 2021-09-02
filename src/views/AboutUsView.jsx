@@ -29,7 +29,7 @@ const AboutUsView = () => {
         <Box className={classes.textContainer}>
           <Box className={classes.textContent}>
             {desktop && (
-              <Typography variant='h4' className={classes.header}>
+              <Typography variant='h2' className={classes.header}>
                 Om oss
               </Typography>
             )}

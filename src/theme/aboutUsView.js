@@ -31,7 +31,6 @@ const aboutUsStyles = makeStyles((theme) => ({
 
   aboutUsText: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: '1.2rem',
       textAlign: 'left',
     },
   },
@@ -55,7 +54,8 @@ const aboutUsStyles = makeStyles((theme) => ({
       padding: '10%',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '2% 35% 2% 8%  ',
+      padding: '2% 25% 2% 8%  ',
+      fontSize: '1.5rem'
     },
   },
 
@@ -63,18 +63,18 @@ const aboutUsStyles = makeStyles((theme) => ({
     color: '#fff',
     fontStyle: 'light',
     [theme.breakpoints.up('xs')]: {
-      fontSize: '40px',
+      fontSize: '38px',
       margin: 'auto',
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '55px',
+      fontSize: '4rem',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '70px',
+
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '45px',
       marginBottom: '20px',
+      fontSize: '2.4rem',
     },
   },
 
