@@ -28,7 +28,7 @@ const HeroSection = () => {
               <Typography className={classes.textFirst} variant='h1'>
                 Nyproduktionsprojekt Aurora
               </Typography>
-              <Typography className={classes.textSecond} variant='h4'>
+              <Typography className={classes.textSecond} variant='h5'>
                 Gamla anor möter morgondagens vanor
               </Typography>
               <Button
