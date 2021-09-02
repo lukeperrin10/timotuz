@@ -3,14 +3,14 @@ import { makeStyles } from '@material-ui/core'
 const contactUsStyle = makeStyles((theme) => ({
   containerBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
+      height: '40vh',
       width: '100%',
     },
   },
   img: {
     [theme.breakpoints.up('xs')]: {
       width: '100%',
-      height: '100vh',
+      height: '40vh',
       position: 'absolute',
       top: '0',
       left: '0',
@@ -18,7 +18,7 @@ const contactUsStyle = makeStyles((theme) => ({
   },
   shadowBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
+      height: '40vh',
       minHeight: '284px',
       width: '100%',
       position: 'absolute',
@@ -26,26 +26,22 @@ const contactUsStyle = makeStyles((theme) => ({
       top: '0',
       left: '0',
       color: theme.palette.primary.contrastText,
-      textTransform: 'uppercase',
-      
     },
   },
   contactText: {
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      height: '30vh',
-      fontSize: '38px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      display: 'flex',
-      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '55vh',
+      height: '40vh',
       fontSize: '38px',
+      width: '50%',
+      margin: 'auto',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '38px',
+      
     },
   },
   contactInfo: {
@@ -55,7 +51,7 @@ const contactUsStyle = makeStyles((theme) => ({
       justifyContent: 'space-evenly',
       alignItems: 'center',
       height: '500px',
-      margin: '0px 100px'
+      margin: '0px 100px',
     },
     [theme.breakpoints.up('lg')]: {
       display: 'flex',
@@ -63,12 +59,13 @@ const contactUsStyle = makeStyles((theme) => ({
       justifyContent: 'space-evenly',
       alignItems: 'center',
       height: '100px',
-      margin: '0px 70px'
+      margin: '0px 70px',
     },
   },
   heading: {
     [theme.breakpoints.up('xs')]: {
       fontSize: '24px',
+      paddingBottom: '24px',
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.7rem',
@@ -80,15 +77,40 @@ const contactUsStyle = makeStyles((theme) => ({
   text: {
     [theme.breakpoints.up('xs')]: {
       fontSize: '18px',
+      textAlign: 'center'
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '24px',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2.4rem',
+      fontSize: '1.6rem',
       fontStyle: 'regular',
       fontWeight: 400,
     },
+  },
+  bodySection: {
+    [theme.breakpoints.up('xs')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      maxWidth: '960px',
+      margin: '0 4rem 10rem 4rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      margin: '0 auto 10rem auto',
+    },
+  },
+  bodyHeading: {
+    fontSize: '3rem',
+    marginTop: '8rem',
+    marginBottom: '1rem',
+    fontWeight: 300,
+  },
+  subHeading: {
+    fontSize: '1.7rem',
+    marginTop: '2rem',
+  },
+  bodyText: {
+    marginTop: '1.5rem',
   },
 }))
 
