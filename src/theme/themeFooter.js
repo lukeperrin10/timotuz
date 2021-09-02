@@ -34,6 +34,7 @@ const footerStyle = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
+      paddingTop: "0",
     },
   },
   contactUs: {

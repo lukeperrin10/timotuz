@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <Box data-cy='footer' className={classes.footer}>
       <Grid container direction='row' className={classes.footerGrid}>
-        <Grid item container sm={3} md={5} justifyContent='center'>
+        <Grid item container xs={12} sm={5} justifyContent='center'>
           <Button
             disableRipple
             className={classes.logoButton}
@@ -40,8 +40,8 @@ const Footer = () => {
           </Typography>
         </Grid>
         <Grid
-          sm={3}
-          md={5}
+          xs={12}
+          sm={5}
           data-cy='contacts'
           item
           container
