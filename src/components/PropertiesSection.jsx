@@ -27,7 +27,10 @@ const PropertiesSection = () => {
             data-cy='limhamn-img'
             alt='Huset strutsen från ovan'>
             <Box data-cy='shadow-box' className={classes.shadowBoxContactUs}>
-              <Typography data-cy='city' variant='body2' className={classes.titleFirstBox}>
+              <Typography
+                data-cy='city'
+                variant='body2'
+                className={classes.titleFirstBox}>
                 Söker du bostad?
               </Typography>
               <Button
@@ -53,12 +56,14 @@ const PropertiesSection = () => {
             data-cy='limhamn-img'
             alt='Huset strutsen från ovan'>
             <Box data-cy='shadow-box' className={classes.shadowBox}>
-              <Typography
-                data-cy='city'
-                variant='body2'
-                className={classes.city}>
-                limhamn
-              </Typography>
+              <Box className={classes.cityBox}>
+                <Typography
+                  data-cy='city'
+                  variant='body2'
+                  className={classes.city}>
+                  malmö/limhamn
+                </Typography>
+              </Box>
               <Typography
                 data-cy='address'
                 variant='body2'
@@ -79,12 +84,14 @@ const PropertiesSection = () => {
             data-cy='ystad-img'
             alt='Illustration av folk på en innergård'>
             <Box data-cy='shadow-box' className={classes.shadowBoxCenter}>
-              <Typography
-                data-cy='city'
-                variant='body2'
-                className={classes.city}>
-                ystad
-              </Typography>
+              <Box className={classes.cityBoxCenter}>
+                <Typography
+                  data-cy='city'
+                  variant='body2'
+                  className={classes.city}>
+                  ystad
+                </Typography>
+              </Box>
               <Typography
                 data-cy='address'
                 variant='body2'
@@ -105,12 +112,14 @@ const PropertiesSection = () => {
             data-cy='helsingborg-img'
             alt='Industri lokal med röda portar'>
             <Box data-cy='shadow-box' className={classes.shadowBox}>
-              <Typography
-                data-cy='city'
-                variant='body2'
-                className={classes.city}>
-                helsingborg
-              </Typography>
+              <Box className={classes.cityBoxTwo}>
+                <Typography
+                  data-cy='city'
+                  variant='body2'
+                  className={classes.city}>
+                  helsingborg
+                </Typography>
+              </Box>
               <Typography
                 data-cy='address'
                 variant='body2'
