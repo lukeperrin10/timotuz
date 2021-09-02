@@ -23,7 +23,7 @@ const ContactUsView = () => {
       />
       <Box className={classes.shadowBox}>
         <Box className={classes.contactText}>
-          <Typography className={classes.heading} data-cy='text' variant='body1'>
+          <Typography className={classes.heading} data-cy='text' variant='h2'>
             välkommen att höra av dig
           </Typography>
         </Box>
@@ -31,7 +31,7 @@ const ContactUsView = () => {
           <Typography
             className={classes.text}
             data-cy='phone-number'
-            variant='body1'>
+            variant='h3'>
             040 - 68 59 400
           </Typography>
           <Hidden mdDown>
@@ -40,7 +40,7 @@ const ContactUsView = () => {
           <Typography
             className={classes.text}
             data-cy='email-address'
-            variant='body1'>
+            variant='h3'>
             info@timotuz.com
           </Typography>
           <Hidden mdDown>
@@ -49,7 +49,7 @@ const ContactUsView = () => {
           <Typography
             className={classes.text}
             data-cy='address'
-            variant='body1'>
+            variant='h3'>
             box 20, 239 21 skanör
           </Typography>
         </Box>

@@ -63,29 +63,31 @@ const contactUsStyle = makeStyles((theme) => ({
       justifyContent: 'space-evenly',
       alignItems: 'center',
       height: '100px',
-      margin: '0px 150px'
+      margin: '0px 70px'
     },
   },
   heading: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: '1.2rem',
+      fontSize: '24px',
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.7rem',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2.2rem',
+      fontSize: '2.4rem',
     },
   },
   text: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: '1rem',
+      fontSize: '18px',
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '1.5rem',
+      fontSize: '24px',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2rem',
+      fontSize: '2.4rem',
+      fontStyle: 'regular',
+      fontWeight: 400,
     },
   },
 }))
