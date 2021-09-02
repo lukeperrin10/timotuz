@@ -49,13 +49,6 @@ const Footer = () => {
           alignContent='center'
           justifyContent='center'>
           <Typography
-            data-cy='header'
-            variant='button'
-            className={classes.contactUs}
-            gutterBottom>
-            Kontakta oss
-          </Typography>
-          <Typography
             data-cy='phone'
             variant='body2'
             className={classes.contactUsContent}
