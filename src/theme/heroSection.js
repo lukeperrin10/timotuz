@@ -22,9 +22,9 @@ const heroSectionStyle = makeStyles((theme) => ({
       minHeight: '284px',
       width: '100vw',
       position: 'absolute',
-      backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      top: '3.5rem',
-      left: '0px',
+      backgroundColor: 'rgba(15, 15, 15, 0.3)',
+      top: '0',
+      left: '0',
     },
     [theme.breakpoints.up('sm')]: {
       height: '100vh',
@@ -37,7 +37,8 @@ const heroSectionStyle = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      alignItems: 'center',
+      alignItems: 'flex-start',
+      margin: '-2% 0 0 15%',
       color: theme.palette.primary.contrastText,
     },
   },
@@ -56,7 +57,6 @@ const heroSectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       fontSize: '1.7rem',
       textAlign: 'center',
-      margin: '0 20px'
     },
     [theme.breakpoints.up('lg')]: {
       fontSize: '3rem',
