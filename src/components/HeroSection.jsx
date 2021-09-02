@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, CardMedia, Container, Typography } from '@material-ui/core'
-import overview from '../assets/images/Pågående_Ystad/01.jpg'
+import overview from '../assets/images/pågåendeYstad/01.jpg'
 import heroSectionStyle from '../theme/heroSection'
 
 const HeroSection = () => {

@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <Box data-cy='footer' className={classes.footer}>
       <Grid container direction='row' className={classes.footerGrid}>
-        <Grid item container sm={3} md={5} justifyContent='center'>
+        <Grid item container xs={12} sm={5} justifyContent='center'>
           <Button
             disableRipple
             className={classes.logoButton}
@@ -35,13 +35,13 @@ const Footer = () => {
               alt='Timotuz Company Logo'
             />
           </Button>
-          <Typography variant='body1' className={classes.copyright}>
+          <Typography variant='overline' className={classes.copyright}>
             © Copyright 2020 Timotuz AB
           </Typography>
         </Grid>
         <Grid
-          sm={3}
-          md={5}
+          xs={12}
+          sm={5}
           data-cy='contacts'
           item
           container
@@ -50,28 +50,28 @@ const Footer = () => {
           justifyContent='center'>
           <Typography
             data-cy='header'
-            variant='h5'
+            variant='button'
             className={classes.contactUs}
             gutterBottom>
             Kontakta oss
           </Typography>
           <Typography
             data-cy='phone'
-            variant='h6'
+            variant='body2'
             className={classes.contactUsContent}
             gutterBottom>
             040 - 68 59 400
           </Typography>
           <Typography
             data-cy='email'
-            variant='h6'
+            variant='body2'
             className={classes.contactUsContent}
             gutterBottom>
             info@timotuz.com
           </Typography>
           <Typography
             data-cy='address'
-            variant='h6'
+            variant='body2'
             className={classes.contactUsContent}
             gutterBottom>
             Box 20, 239 21 Skanör

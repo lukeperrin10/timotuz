@@ -5,7 +5,7 @@ const heroSectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       height: '40vh',
       minHeight: '284px',
-      marginTop: '6vh',
+      marginTop: '3.5rem',
     },
     [theme.breakpoints.up('sm')]: {
       height: '100vh',
@@ -23,7 +23,7 @@ const heroSectionStyle = makeStyles((theme) => ({
       width: '100vw',
       position: 'absolute',
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
-      top: '6vh',
+      top: '3.5rem',
       left: '0px',
     },
     [theme.breakpoints.up('sm')]: {

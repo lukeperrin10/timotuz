@@ -34,7 +34,7 @@ const propertySectionStyle = makeStyles((theme) => ({
       padding: '0 0 50px 0',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '50px 0',
+      padding: '110px 0',
     },
   },
   imageSlider: {
@@ -99,11 +99,11 @@ const propertySectionStyle = makeStyles((theme) => ({
   name: {
     [theme.breakpoints.up('xs')]: {
       paddingBottom: '1rem',
-      fontSize: '2rem',
+      fontSize: '1.5rem',
     },
   },
   description: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.up('xs')]: {
       whiteSpace: 'pre-wrap',
     },
     [theme.breakpoints.up('md')]: {

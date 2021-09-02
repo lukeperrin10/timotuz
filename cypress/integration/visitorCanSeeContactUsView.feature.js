@@ -5,14 +5,11 @@ describe('visitor can navigate see index view', () => {
   })
 
   describe('can see contact us page', () => {
-    it('it is expected to show image on left', () => {
-      cy.get('[data-cy=image]')
-        .should('have.attr', 'alt')
-        .should('contain', 'Bild av stad från ovan')
-      cy.get('[data-cy=phone]').should('contain', 'Telefonnummer')
-      cy.get('[data-cy=phone-number]').should('contain', '031-123-4567')
-      cy.get('[data-cy=email]').should('contain', 'E-post')
-      cy.get('[data-cy=email-address]').should('contain', 'jakob@timotuz.se')
+    it('it is expected to show contact us page', () => {
+      cy.get('[data-cy=text]').should('contain', 'välkommen att höra av dig')
+      cy.get('[data-cy=phone-number]').should('contain', '040 - 68 59 400')
+      cy.get('[data-cy=email-address]').should('contain', 'info@timotuz.com')
+      cy.get('[data-cy=address]').should('contain', 'box 20, 239 21 skanör')
     })
   })
 })

@@ -17,7 +17,7 @@ const FastigheterHero = () => {
       />
       <Box data-cy='shadow-box' className={classes.shadowBox}>
         <Container className={classes.content}>
-          <Typography className={classes.textFirst} variant='h1'>
+          <Typography className={classes.textFirst} variant='h2'>
             Lokaler
           </Typography>
           <Typography className={classes.textSecond} variant='h4'>

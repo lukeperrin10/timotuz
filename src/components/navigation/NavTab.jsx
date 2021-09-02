@@ -3,25 +3,40 @@ import { Tab } from '@material-ui/core'
 import { useRouteMatch } from 'react-router'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
-import { makeStyles } from '@material-ui/core'
+import { withStyles } from '@material-ui/core'
 
 const _ = require('lodash')
-const useStyles = makeStyles((theme) => ({
-  tabDesktop: {
+
+const StyledTab = withStyles((theme) => ({
+  root: {
     minWidth: 10,
     marginRight: '2rem',
-    color: '#000',
-    fontSize: '16px',
+    fontSize: '18px',
+    fontStyle: 'regular',
+    fontWeight: 300,
+    color: '#fff',
+    opacity: 1,
+    '&:focus': {
+      opacity: 1,
+    },
   },
-  tabMobile: {
+}))((props) => <Tab disableRipple {...props} />)
+
+const StyledTabMobile = withStyles((theme) => ({
+  root: {
     minWidth: '100vw',
     maxWidth: '100vw',
     opacity: '1',
-    fontSize: '16px',
+    fontSize: '18px',
+    fontStyle: 'light',
+    fontWeight: 300,
     color: theme.palette.primary.contrastText,
     backgroundColor: theme.palette.primary.main,
+    '&:focus': {
+      opacity: 1,
+    },
   },
-}))
+}))((props) => <Tab disableRipple {...props} />)
 
 const NavTab = ({
   label,
@@ -30,7 +45,6 @@ const NavTab = ({
   scroll = false,
   setDrawerOpen = () => {},
 }) => {
-  const classes = useStyles()
   let noRedirect = useRouteMatch(_.snakeCase(label))
 
   const handleClick = () => {
@@ -42,18 +56,27 @@ const NavTab = ({
     }
   }
 
-  return (
-    <Tab
-      orientation={drawer ? 'vertical' : undefined}
+  return (!drawer ? (
+    <StyledTab    
       label={label}
       value={value}
-      className={drawer ? classes.tabMobile : classes.tabDesktop}
       component={scroll ? HashLink : Link}
       to={scroll ? `/start#${_.snakeCase(label)}` : _.snakeCase(label)}
       smooth={scroll ? true : undefined}
       data-cy={`${_.kebabCase(label)}-tab`}
       onClick={handleClick}
     />
+  ) : (
+    <StyledTabMobile
+      orientation='vertical'
+      label={label}
+      value={value}
+      component={scroll ? HashLink : Link}
+      to={scroll ? `/start#${_.snakeCase(label)}` : _.snakeCase(label)}
+      smooth={scroll ? true : undefined}
+      data-cy={`${_.kebabCase(label)}-tab`}
+      onClick={handleClick}
+    />)
   )
 }
 

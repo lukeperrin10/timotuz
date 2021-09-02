@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, CardMedia, Container } from '@material-ui/core'
 import fastigheterView from '../theme/fastigheterView'
-import overview from '../assets/images/overview.jpeg'
+import overview from '../assets/images/Ystad/2.jpg'
 
 const FastigheterHero = () => {
   const classes = fastigheterView()
@@ -17,7 +17,7 @@ const FastigheterHero = () => {
       />
       <Box data-cy='shadow-box' className={classes.shadowBox}>
         <Container className={classes.content}>
-          <Typography className={classes.textFirst} variant='h1'>
+          <Typography className={classes.textFirst} variant='h2'>
             Bostäder
           </Typography>
           <Typography className={classes.textSecond} variant='h4'>

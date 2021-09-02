@@ -89,12 +89,13 @@ const propertyGridStyle = makeStyles((theme) => ({
       padding: '164px 35px',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '65px 35px',
+      padding: '65px 5px',
     },
   },
 
   firstText: {
     marginBottom: '18px',
+    fontSize: '18px',
   },
 
   phoneNumber: {
@@ -169,11 +170,10 @@ const propertyGridStyle = makeStyles((theme) => ({
     borderBottom: 'solid 2px',
     textTransform: 'uppercase',
     marginBottom: '22px',
-    fontSize: '18px',
     letterSpacing: '2px',
   },
   address: {
-    fontSize: '24px',
+    fontSize: '1.5rem',
     letterSpacing: '-0.5px',
   },
 
@@ -183,8 +183,8 @@ const propertyGridStyle = makeStyles((theme) => ({
       justifyContent: 'center',
       border: 'solid #fff 2px',
       borderRadius: '0px',
-      width: '191px',
-      height: '50px',
+      width: '210px',
+      height: '60px',
       margin: 'auto',
     },
   },
