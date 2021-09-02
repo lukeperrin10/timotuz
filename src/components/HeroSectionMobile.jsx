@@ -20,7 +20,7 @@ const HeroSection = () => {
           shouldAutoplay: true,
           shouldDisplayButtons: false,
           autoplayDuration: 5000,
-          height: '100vh',
+          height: '40vh',
         }}>
         <OverlayContainer>
           <Box data-cy='shadow-box' className={classes.shadowBox}>
@@ -47,15 +47,15 @@ const HeroSection = () => {
         <Slide
           background={{
             backgroundImage: heroImage1,
-            backgroundPositionY: '95%',
-            backgroundAttachment: 'fixed',
+            backgroundPositionY: '100%',
+            backgroundWidth: '100%',
           }}
         />
         <Slide
           background={{
             backgroundImage: heroImage2,
-            backgroundPositionY: '95%',
-            backgroundAttachment: 'fixed',
+            backgroundPositionY: '100%',
+            backgroundWidth: '100%',
           }}
         />
       </HeroSlider>
