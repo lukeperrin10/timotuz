@@ -3,17 +3,18 @@ import { makeStyles } from '@material-ui/core'
 const footerStyle = makeStyles((theme) => ({
   footer: {
     [theme.breakpoints.up('xs')]: {
-      width: '100vw',
+      width: '100%',
       height: '700px',
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.secondary.contrastText,
       textAlign: 'center',
     },
     [theme.breakpoints.up('lg')]: {
-      height: '339px',
+      height: 'auto',
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.secondary.contrastText,
       textAlign: 'right',
+      padding: '38px 0 12px 0'
     },
   },
   footerGrid: {
