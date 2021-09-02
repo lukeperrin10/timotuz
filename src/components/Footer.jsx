@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Grid, Typography, Box } from '@material-ui/core'
+import { Button, Grid, Typography, Box, Divider } from '@material-ui/core'
 
 import logo_web_timotuz from '../assets/images/logo_web_timotuz_white.svg'
 import footerStyle from '../theme/themeFooter'
@@ -36,32 +36,35 @@ const Footer = () => {
             xs={12}
             sm={5}
             data-cy='contacts'
-            item
-            container
-            direction='column'
-            alignContent='center'
-            justifyContent='center'>
-            <Typography
-              data-cy='phone'
-              variant='body2'
-              className={classes.contactUsContent}
-              gutterBottom>
-              040 - 68 59 400
-            </Typography>
-            <Typography
-              data-cy='email'
-              variant='body2'
-              className={classes.contactUsContent}
-              gutterBottom>
-              info@timotuz.com
-            </Typography>
-            <Typography
-              data-cy='address'
-              variant='body2'
-              className={classes.contactUsContent}
-              gutterBottom>
-              Box 20, 239 21 Skanör
-            </Typography>
+            item                    
+            className={classes.contactsContainer}>
+            <Grid item className={classes.contactsGrid}>
+              <Typography
+                data-cy='phone'
+                variant='body2'
+                className={classes.contactUsContent}
+                gutterBottom>
+                040 - 68 59 400
+              </Typography>
+            </Grid>
+            <Grid item className={classes.contactsGrid}>
+              <Typography
+                data-cy='email'
+                variant='body2'
+                className={classes.contactUsContent}
+                gutterBottom>
+                info@timotuz.com
+              </Typography>
+            </Grid>
+            <Grid item className={classes.contactsGrid}>
+              <Typography
+                data-cy='address'
+                variant='body2'
+                className={classes.contactUsContent}
+                gutterBottom>
+                Box 20, 239 21 Skanör
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
         <Grid item container justifyContent='center'>
