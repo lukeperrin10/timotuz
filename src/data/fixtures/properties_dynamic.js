@@ -115,7 +115,7 @@ const properties_dynamic = [
   },
   {
     id: 3,
-    district: 'Limhamn',
+    district: 'Malmö / Limhamn',
     name: 'Strutsen 25',
     description:
       'Fastigheten är belägen på centrala läge i de pittoreska “gamla” delarna av Limhamn på en lugn återvändsgata ett par minuters promenadavstånd från havet och ett stenkast från Limhamns centrum med restauranger, matbutiker och caféer.',

@@ -20,7 +20,7 @@ const heroSectionStyle = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       height: '40vh',
       minHeight: '284px',
-      width: '100vw',
+      width: '100%',
       position: 'absolute',
       backgroundColor: 'rgba(15, 15, 15, 0.3)',
       top: '0',
