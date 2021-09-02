@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Grid, Typography, Box, Divider } from '@material-ui/core'
+import { Button, Grid, Typography, Box } from '@material-ui/core'
 
 import logo_web_timotuz from '../assets/images/logo_web_timotuz_white.svg'
 import footerStyle from '../theme/themeFooter'
