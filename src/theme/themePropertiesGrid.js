@@ -140,6 +140,38 @@ const propertyGridStyle = makeStyles((theme) => ({
     },
   },
 
+  shadowBoxContactUs: {
+    [theme.breakpoints.up('xs')]: {
+      width: '346px',
+      height: '248px',
+      position: 'absolute',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      textDecoration: 'none',
+      color: theme.palette.primary.contrastText,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      paddingTop: '45px',
+      paddingBottom: '45px'
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '460px',
+      height: '304px',
+      paddingTop: '57px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '692px',
+      height: '456px',
+      paddingTop: '96px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '346px',
+      height: '248px',
+      paddingTop: '45px',
+    },
+  },
+
   shadowBoxCenter: {
     [theme.breakpoints.up('xs')]: {
       width: '100vw',
@@ -186,12 +218,18 @@ const propertyGridStyle = makeStyles((theme) => ({
       width: '210px',
       height: '60px',
       margin: 'auto',
+      backgroundColor: 'rgba(15, 15, 15, 0.4)',
     },
   },
   buttonText: {
     [theme.breakpoints.up('xs')]: {
       color: theme.palette.primary.contrastText,
     },
+  },
+
+  titleFirstBox: {
+    fontSize: '24px',
+    margin: 'auto',
   },
 }))
 
