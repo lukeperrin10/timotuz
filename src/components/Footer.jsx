@@ -50,28 +50,28 @@ const Footer = () => {
           justifyContent='center'>
           <Typography
             data-cy='header'
-            variant='h5'
+            variant='button'
             className={classes.contactUs}
             gutterBottom>
             Kontakta oss
           </Typography>
           <Typography
             data-cy='phone'
-            variant='h6'
+            variant='body2'
             className={classes.contactUsContent}
             gutterBottom>
             040 - 68 59 400
           </Typography>
           <Typography
             data-cy='email'
-            variant='h6'
+            variant='body2'
             className={classes.contactUsContent}
             gutterBottom>
             info@timotuz.com
           </Typography>
           <Typography
             data-cy='address'
-            variant='h6'
+            variant='body2'
             className={classes.contactUsContent}
             gutterBottom>
             Box 20, 239 21 Skanör

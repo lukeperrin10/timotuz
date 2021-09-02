@@ -38,9 +38,10 @@ const footerStyle = makeStyles((theme) => ({
   contactUs: {
     textTransform: 'uppercase',
     marginBottom: '40px',
+    fontSize: '24px',
   },
   contactUsContent: {
-    fontSize: '18px',
+    fontSize: '24px',
   },
   copyright: {
     position: 'absolute',
