@@ -44,7 +44,7 @@ const fastigheterView = makeStyles((theme) => ({
   },
   textFirst: {
     [theme.breakpoints.up('xs')]: {
-      letterSpacing: '-1px',
+      letterSpacing: '-0.5px',
       marginBottom: '32px',
     },
     [theme.breakpoints.up('lg')]: {
