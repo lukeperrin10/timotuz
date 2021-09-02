@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 const fastigheterView = makeStyles((theme) => ({
   section: {
     [theme.breakpoints.up('xs')]: {
-      position: "relative",
+      position: 'relative',
       height: '100vh',
       minHeight: '284px',
       marginTop: '3rem',
@@ -23,7 +23,7 @@ const fastigheterView = makeStyles((theme) => ({
       minHeight: '284px',
       width: '100vw',
       position: 'absolute',
-      backgroundColor: 'rgba(7, 55, 59, 0.75)',
+      backgroundColor: 'rgba(7, 55, 59, 0)',
       top: '0px',
       left: '0px',
     },
@@ -31,6 +31,25 @@ const fastigheterView = makeStyles((theme) => ({
       height: '80vh',
     },
   },
+
+  circle: {
+    marginTop: '5%',
+    margin: '10%',
+    height: '350px',
+    width: '350px',
+    borderRadius: '175px',
+    backgroundColor: '#eee',
+    padding: '50px 85px',
+    textAlign: 'center',
+    display: 'flex',
+  },
+
+  circleText: {
+    margin: 'auto',
+    color: theme.palette.primary.main,
+    fontSize: '35px',
+  },
+
   content: {
     [theme.breakpoints.up('xs')]: {
       height: '100%',
@@ -59,7 +78,7 @@ const fastigheterView = makeStyles((theme) => ({
       fontSize: '18px',
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '1.5rem'
+      fontSize: '1.5rem',
     },
   },
 }))

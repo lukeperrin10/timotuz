@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, CardMedia, Container } from '@material-ui/core'
 import fastigheterView from '../theme/fastigheterView'
-import overview from '../assets/images/Ystad/2.jpg'
+import overview from '../assets/images/2_covered_3.jpg'
 
 const FastigheterHero = () => {
   const classes = fastigheterView()
@@ -16,6 +16,14 @@ const FastigheterHero = () => {
         alt='Fågelperspektiv över det historiska distriktet'
       />
       <Box data-cy='shadow-box' className={classes.shadowBox}>
+        <Box className={classes.circle}>
+          <Typography variant='h4' className={classes.circleText}>
+            Fastigheter med hög standard i centrala lägen
+          </Typography>
+        </Box>
+      </Box>
+
+      {/* <Box data-cy='shadow-box' className={classes.shadowBox}>
         <Container className={classes.content}>
           <Typography className={classes.textFirst} variant='h2'>
             Bostäder
@@ -32,7 +40,7 @@ const FastigheterHero = () => {
             hyresgästernas behov.
           </Typography>
         </Container>
-      </Box>
+      </Box> */}
     </Box>
   )
 }
