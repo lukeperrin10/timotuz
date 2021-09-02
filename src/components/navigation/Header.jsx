@@ -157,7 +157,7 @@ const Header = () => {
               to='/start'>
               <img
                 src={logo_web_timotuz}
-                style={{ height: '60px' }}
+                style={{ height: '50px' }}
                 data-cy='logo'
                 alt='Timotuz Company Logo'
                 onClick={window.scrollTo({ top: 0, behavior: 'smooth' })}
