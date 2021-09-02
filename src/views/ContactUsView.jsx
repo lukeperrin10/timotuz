@@ -1,13 +1,11 @@
 import React from 'react'
 import {
-  Hidden,
   Container,
   Box,
   CardMedia,
   Typography,
-  Divider,
 } from '@material-ui/core'
-import contact from '../assets/images/contact_01.jpg'
+import contact_us_hero from '../assets/images/contact_us_hero.jpg'
 import contactUsStyle from '../theme/contactUsView'
 
 const ContactUsView = () => {
@@ -18,7 +16,7 @@ const ContactUsView = () => {
         <CardMedia
           className={classes.img}
           component='img'
-          image={contact}
+          image={contact_us_hero}
           data-cy='image'
           alt=''
         />
@@ -35,40 +33,48 @@ const ContactUsView = () => {
               berör ditt boende. För felanmälan ber vi dig alltid att vända dig
               till det fastighetsskötsel bolag vi anlitat på sin ort.
             </Typography>
-          </Box>
-          <Box className={classes.contactInfo}></Box>
+          </Box>       
         </Box>
       </Container>
       <Box className={classes.bodySection}>
-        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+        <Typography className={classes.bodyHeading} data-cy='heading' variant='h3'>
           Felanmälan: Malmö/Limhamn
         </Typography>
-        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+        <Typography
+          className={classes.subHeading}
+          data-cy='heading'
+          variant='h4'>
           Fastighetsskötsel och felanmälan
         </Typography>
-        <Typography className={classes.text} data-cy='heding' variant='h2'>
+        <Typography className={classes.bodyText} data-cy='text' variant='p'>
           Fastighetsskötsel utförs av Förvaltning AB Malmöborg. Samtliga
           felanmälningar skall registreras direkt till Förvaltning s AB
           Malmöborg vardagar mellan kl. 8.00 – 16.00 på telefon 072-353 46 31‬
           alternativt email info@malmoborg.se.
         </Typography>
 
-        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+        <Typography
+          className={classes.subHeading}
+          data-cy='heading'
+          variant='h4'>
           Journummer
         </Typography>
-        <Typography className={classes.text} data-cy='heding' variant='h2'>
+        <Typography className={classes.bodyText} data-cy='text' variant='p'>
           För akuta fel och störningar på kvällar och helger som inte kan vänta
           till följande vardag hänvisar vi till Örestads Bevakning på telefon
           040-93 12 70.
         </Typography>
 
-        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+        <Typography className={classes.bodyHeading} data-cy='heading' variant='h3'>
           Felanmälan: Ystad
         </Typography>
-        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+        <Typography
+          className={classes.subHeading}
+          data-cy='heading'
+          variant='h4'>
           Fastighetsskötsel och felanmälan
         </Typography>
-        <Typography className={classes.text} data-cy='heding' variant='h2'>
+        <Typography className={classes.bodyText} data-cy='text' variant='p'>
           Fastighetsskötsel och felanmälningar utförs av Kanslihuset AB.
           <br />
           <br />
@@ -86,10 +92,13 @@ const ContactUsView = () => {
           till nästkommande vardag ring 040 680 15 67
         </Typography>
 
-        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+        <Typography
+          className={classes.subHeading}
+          data-cy='heading'
+          variant='h4'>
           Journummer
         </Typography>
-        <Typography className={classes.text} data-cy='heding' variant='h2'>
+        <Typography className={classes.bodyText} data-cy='text' variant='p'>
           Akuta fel och störningar under kvällar och helger som ej kan vänta
           till nästkommande vardag hänvisar vi till Örestad Bevakning på telefon
           040 93 12 70.
