@@ -10,8 +10,9 @@ import {
   Hidden,
   SwipeableDrawer,
   IconButton,
+  withStyles
 } from '@material-ui/core'
-import logo_web_timotuz from '../../assets/images/logo_web_timotuz_green.svg'
+import logo_web_timotuz from '../../assets/images/logo_web_timotuz_white.svg'
 import logo_no_text from '../../assets/images/logo_no_text_white.svg'
 import theme from '../../theme/theme'
 import { Link, useLocation } from 'react-router-dom'
@@ -22,7 +23,7 @@ import NavTab from './NavTab'
 const useStyles = makeStyles({
   navBar: {
     [theme.breakpoints.up('xs')]: {
-      backgroundColor: '#fafafa',
+      backgroundColor: theme.palette.primary.main,
     },
   },
   navBarTabs: {
@@ -48,7 +49,7 @@ const useStyles = makeStyles({
   },
   drawerLogo: {
     backgroundColor: theme.palette.secondary.main,
-    height: '60px',
+    height: '68px',
     padding: '0.5rem 0 0.5rem 0',
   },
   logoButton: {
@@ -57,8 +58,24 @@ const useStyles = makeStyles({
       backgroundColor: 'transparent',
     },
   },
-  hamburger: { margin: ' 0 12px 0 auto' },
+  hamburger: {
+    margin: ' 0 12px 0 auto',
+    color: '#fff',
+  },
 })
+
+const StyledTabs = withStyles({
+  indicator: {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    marginBottom: '4px',
+    '& > span': {      
+      width: '100%',
+      backgroundColor: '#fff',
+    },
+  },
+})((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
 
 const Header = () => {
   let currentUrl = useLocation().pathname
@@ -87,11 +104,11 @@ const Header = () => {
   }
 
   const navBar = (
-    <Tabs value={selectedTab} className={classes.navBarTabs}>
+    <StyledTabs value={selectedTab} className={classes.navBarTabs}>
       {tabs.map((tab, index) => (
         <NavTab key={tab} label={tab} value={index} />
       ))}
-    </Tabs>
+    </StyledTabs>
   )
 
   const drawer = (
