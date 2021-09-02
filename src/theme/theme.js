@@ -34,6 +34,7 @@ const theme = createTheme({
     h2: {
       fontStyle: 'regular',
       fontWeight: 400,
+      fontSize: '2.4rem',
     },
     h3: {
       fontStyle: 'semi-bold',
@@ -42,6 +43,7 @@ const theme = createTheme({
     h4: {
       fontStyle: 'regular',
       fontWeight: 400,
+      fontSize: '1.5rem'
     },
     h5: {
       fontStyle: 'light',
@@ -70,6 +72,7 @@ const theme = createTheme({
     caption: {
       fontStyle: 'bold',
       fontWeight: 700,
+      fontSize: '18px',
     },
     overline: {
       fontStyle: 'light',

@@ -99,11 +99,11 @@ const propertySectionStyle = makeStyles((theme) => ({
   name: {
     [theme.breakpoints.up('xs')]: {
       paddingBottom: '1rem',
-      fontSize: '2rem',
+      fontSize: '1.5rem',
     },
   },
   description: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.up('xs')]: {
       whiteSpace: 'pre-wrap',
     },
     [theme.breakpoints.up('md')]: {
