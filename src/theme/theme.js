@@ -54,15 +54,18 @@ const theme = createTheme({
     body1: {
       fontStyle: 'regular',
       fontWeight: 400,
+      fontSize: '18px',
     },
     body2: {
       fontStyle: 'semiBold',
       fontWeight: 600,
+      fontSize: '18px',
     },
     button: {
       fontStyle: 'light',
       fontWeight: 300,
-      textTransform: 'none'
+      textTransform: 'none',
+      fontSize: '18px',
     },
     caption: {
       fontStyle: 'bold',
