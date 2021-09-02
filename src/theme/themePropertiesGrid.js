@@ -119,9 +119,38 @@ const propertyGridStyle = makeStyles((theme) => ({
       color: theme.palette.primary.contrastText,
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'flex-end',
+      padding: '20px',
+      alignItems: 'left',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '460px',
+      height: '304px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '692px',
+      height: '456px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '346px',
+      height: '248px',
+    },
+  },
+
+  shadowBoxContactUs: {
+    [theme.breakpoints.up('xs')]: {
+      width: '346px',
+      height: '248px',
+      position: 'absolute',
+      backgroundColor: 'rgba(15, 15, 15, 0.2)',
+      textDecoration: 'none',
+      color: theme.palette.primary.contrastText,
+      display: 'flex',
+      flexDirection: 'column',
       justifyContent: 'flex-start',
       alignItems: 'center',
       paddingTop: '45px',
+      paddingBottom: '45px',
     },
     [theme.breakpoints.up('sm')]: {
       width: '460px',
@@ -148,29 +177,33 @@ const propertyGridStyle = makeStyles((theme) => ({
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
       textDecoration: 'none',
       color: theme.palette.primary.contrastText,
+      padding: '20px',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'flex-start',
-      alignItems: 'center',
-      paddingTop: '45px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: '57px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: '96px',
+      justifyContent: 'flex-end',
     },
     [theme.breakpoints.up('lg')]: {
       width: '346px',
-      paddingTop: '45px',
     },
   },
 
+  cityBox: {
+    width: '176px',
+  },
+  
+  cityBoxCenter: {
+    width: '59px',
+  },
+
+  cityBoxTwo: {
+    width: '140px',
+  },
+
   city: {
-    borderBottom: 'solid 2px',
+    borderBottom: 'solid 1.5px',
     textTransform: 'uppercase',
-    marginBottom: '22px',
     letterSpacing: '2px',
+    fontSize: '18px',
   },
   address: {
     fontSize: '1.5rem',
@@ -186,12 +219,18 @@ const propertyGridStyle = makeStyles((theme) => ({
       width: '210px',
       height: '60px',
       margin: 'auto',
+      backgroundColor: 'rgba(15, 15, 15, 0.4)',
     },
   },
   buttonText: {
     [theme.breakpoints.up('xs')]: {
       color: theme.palette.primary.contrastText,
     },
+  },
+
+  titleFirstBox: {
+    fontSize: '24px',
+    margin: 'auto',
   },
 }))
 

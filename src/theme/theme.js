@@ -64,8 +64,8 @@ const theme = createTheme({
       fontSize: '18px',
     },
     button: {
-      fontStyle: 'light',
-      fontWeight: 300,
+      fontStyle: 'regular',
+      fontWeight: 400,
       textTransform: 'none',
       fontSize: '18px',
     },
