@@ -6,7 +6,6 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-
 import logo_web_timotuz from '../assets/images/logo_web_timotuz_white.svg'
 import footerStyle from '../theme/themeFooter'
 

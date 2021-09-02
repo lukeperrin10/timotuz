@@ -3,14 +3,14 @@ import { makeStyles } from '@material-ui/core'
 const contactUsStyle = makeStyles((theme) => ({
   containerBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
+      height: '40vh',
       width: '100vw',
     },
   },
   img: {
     [theme.breakpoints.up('xs')]: {
       width: '100vw',
-      height: '100vh',
+      height: '40vh',
       position: 'absolute',
       top: '0',
       left: '0',
@@ -18,16 +18,14 @@ const contactUsStyle = makeStyles((theme) => ({
   },
   shadowBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
+      height: '40vh',
       minHeight: '284px',
       width: '100vw',
       position: 'absolute',
       backgroundColor: 'rgba(7, 55, 59, 0.60)',
       top: '0',
       left: '0',
-      color: theme.palette.primary.contrastText,
-      textTransform: 'uppercase',
-      
+      color: theme.palette.primary.contrastText,    
     },
   },
   contactText: {
@@ -38,14 +36,16 @@ const contactUsStyle = makeStyles((theme) => ({
       alignItems: 'center',
       height: '30vh',
       fontSize: '38px',
+      width: '50%'
     },
     [theme.breakpoints.up('lg')]: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '55vh',
+      height: '40vh',
       fontSize: '38px',
+      margin: 'auto'
     },
   },
   contactInfo: {
@@ -69,6 +69,7 @@ const contactUsStyle = makeStyles((theme) => ({
   heading: {
     [theme.breakpoints.up('xs')]: {
       fontSize: '24px',
+      paddingBottom: '24px'
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.7rem',
@@ -85,7 +86,7 @@ const contactUsStyle = makeStyles((theme) => ({
       fontSize: '24px',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2.4rem',
+      fontSize: '1.6rem',
       fontStyle: 'regular',
       fontWeight: 400,
     },
