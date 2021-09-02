@@ -29,7 +29,7 @@ const PropertiesSection = () => {
             <Box data-cy='shadow-box' className={classes.shadowBoxContactUs}>
               <Typography
                 data-cy='city'
-                variant='body2'
+                variant='h5'
                 className={classes.titleFirstBox}>
                 Söker du bostad?
               </Typography>
@@ -59,14 +59,14 @@ const PropertiesSection = () => {
               <Box className={classes.cityBox}>
                 <Typography
                   data-cy='city'
-                  variant='body2'
+                  variant='h5'
                   className={classes.city}>
                   malmö/limhamn
                 </Typography>
               </Box>
               <Typography
                 data-cy='address'
-                variant='body2'
+                variant='body1'
                 className={classes.address}>
                 Strutsen 25
               </Typography>
@@ -87,14 +87,14 @@ const PropertiesSection = () => {
               <Box className={classes.cityBoxCenter}>
                 <Typography
                   data-cy='city'
-                  variant='body2'
+                  variant='h5'
                   className={classes.city}>
                   ystad
                 </Typography>
               </Box>
               <Typography
                 data-cy='address'
-                variant='body2'
+                variant='body1'
                 className={classes.address}>
                 Fredrik 16
               </Typography>
@@ -115,14 +115,14 @@ const PropertiesSection = () => {
               <Box className={classes.cityBoxTwo}>
                 <Typography
                   data-cy='city'
-                  variant='body2'
+                  variant='h5'
                   className={classes.city}>
                   helsingborg
                 </Typography>
               </Box>
               <Typography
                 data-cy='address'
-                variant='body2'
+                variant='body1'
                 className={classes.address}>
                 Mörsaren Västra 6
               </Typography>

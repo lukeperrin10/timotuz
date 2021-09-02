@@ -119,26 +119,21 @@ const propertyGridStyle = makeStyles((theme) => ({
       color: theme.palette.primary.contrastText,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'flex-start',
+      justifyContent: 'flex-end',
+      padding: '20px',
       alignItems: 'left',
-      paddingTop: '47%',
-      paddingLeft: '5%',
     },
     [theme.breakpoints.up('sm')]: {
       width: '460px',
       height: '304px',
-      paddingTop: '57px',
     },
     [theme.breakpoints.up('md')]: {
       width: '692px',
       height: '456px',
-      paddingTop: '96px',
     },
     [theme.breakpoints.up('lg')]: {
       width: '346px',
       height: '248px',
-      paddingTop: '13% ',
-      paddingLeft: '1%',
     },
   },
 
@@ -182,15 +177,10 @@ const propertyGridStyle = makeStyles((theme) => ({
       backgroundColor: 'rgba(15, 15, 15, 0.2)',
       textDecoration: 'none',
       color: theme.palette.primary.contrastText,
+      padding: '20px',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'flex-start',
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: '57px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: '96px',
+      justifyContent: 'flex-end',
     },
     [theme.breakpoints.up('lg')]: {
       width: '346px',
@@ -198,23 +188,25 @@ const propertyGridStyle = makeStyles((theme) => ({
   },
 
   cityBox: {
-    width: '57%',
+    width: '176px',
+  },
+  
+  cityBoxCenter: {
+    width: '59px',
   },
 
   cityBoxTwo: {
-    width: '45%',
-  },
-  cityBoxCenter: {
-    width: '20%',
+    width: '140px',
   },
 
   city: {
     borderBottom: 'solid 1.5px',
     textTransform: 'uppercase',
     letterSpacing: '2px',
+    fontSize: '18px',
   },
   address: {
-    fontSize: '1.4rem',
+    fontSize: '1.5rem',
     letterSpacing: '-0.5px',
   },
 
