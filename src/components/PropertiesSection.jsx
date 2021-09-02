@@ -12,7 +12,7 @@ import propertyGridStyle from '../theme/themePropertiesGrid'
 import helsingborg from '../assets/images/Helsingborg/1.jpg'
 import fredrik from '../assets/images/pågåendeYstad/02.jpg'
 import strutsen from '../assets/images/Limhamn/1.JPG'
-import couple from '../assets/images/looking_2.jpg'
+import couple from '../assets/images/looking.jpg'
 
 const PropertiesSection = () => {
   const classes = propertyGridStyle()
