@@ -25,7 +25,7 @@ const contactUsStyle = makeStyles((theme) => ({
       backgroundColor: 'rgba(7, 55, 59, 0.60)',
       top: '0',
       left: '0',
-      color: theme.palette.primary.contrastText,    
+      color: theme.palette.primary.contrastText,
     },
   },
   contactText: {
@@ -36,7 +36,7 @@ const contactUsStyle = makeStyles((theme) => ({
       alignItems: 'center',
       height: '30vh',
       fontSize: '38px',
-      width: '50%'
+      width: '50%',
     },
     [theme.breakpoints.up('lg')]: {
       display: 'flex',
@@ -45,7 +45,7 @@ const contactUsStyle = makeStyles((theme) => ({
       alignItems: 'center',
       height: '40vh',
       fontSize: '38px',
-      margin: 'auto'
+      margin: 'auto',
     },
   },
   contactInfo: {
@@ -55,7 +55,7 @@ const contactUsStyle = makeStyles((theme) => ({
       justifyContent: 'space-evenly',
       alignItems: 'center',
       height: '500px',
-      margin: '0px 100px'
+      margin: '0px 100px',
     },
     [theme.breakpoints.up('lg')]: {
       display: 'flex',
@@ -63,13 +63,13 @@ const contactUsStyle = makeStyles((theme) => ({
       justifyContent: 'space-evenly',
       alignItems: 'center',
       height: '100px',
-      margin: '0px 70px'
+      margin: '0px 70px',
     },
   },
   heading: {
     [theme.breakpoints.up('xs')]: {
       fontSize: '24px',
-      paddingBottom: '24px'
+      paddingBottom: '24px',
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '1.7rem',
@@ -90,6 +90,12 @@ const contactUsStyle = makeStyles((theme) => ({
       fontStyle: 'regular',
       fontWeight: 400,
     },
+  },
+  bodySection: {
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '1200px',
+    margin: '4rem auto',
   },
 }))
 

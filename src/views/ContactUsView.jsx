@@ -39,9 +39,60 @@ const ContactUsView = () => {
           <Box className={classes.contactInfo}></Box>
         </Box>
       </Container>
-      <Box>
+      <Box className={classes.bodySection}>
         <Typography className={classes.heading} data-cy='heding' variant='h2'>
-          KONTAKTA OSS
+          Felanmälan: Malmö/Limhamn
+        </Typography>
+        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+          Fastighetsskötsel och felanmälan
+        </Typography>
+        <Typography className={classes.text} data-cy='heding' variant='h2'>
+          Fastighetsskötsel utförs av Förvaltning AB Malmöborg. Samtliga
+          felanmälningar skall registreras direkt till Förvaltning s AB
+          Malmöborg vardagar mellan kl. 8.00 – 16.00 på telefon 072-353 46 31‬
+          alternativt email info@malmoborg.se.
+        </Typography>
+
+        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+          Journummer
+        </Typography>
+        <Typography className={classes.text} data-cy='heding' variant='h2'>
+          För akuta fel och störningar på kvällar och helger som inte kan vänta
+          till följande vardag hänvisar vi till Örestads Bevakning på telefon
+          040-93 12 70.
+        </Typography>
+
+        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+          Felanmälan: Ystad
+        </Typography>
+        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+          Fastighetsskötsel och felanmälan
+        </Typography>
+        <Typography className={classes.text} data-cy='heding' variant='h2'>
+          Fastighetsskötsel och felanmälningar utförs av Kanslihuset AB.
+          <br />
+          <br />
+          Felanmälan ska i första hand göras på www.kanslihuset.se under ”FÖR
+          HYRESGÄSTER”,”FELANMÄLAN”. Vid entren till trapphus finner ni
+          detaljerade instruktioner och den information ni behöver uppge till
+          Kanslihuset vid felanmälan.
+          <br />
+          <br />
+          Det går också bra ringa in på vardagar (måndag-fredag) under
+          telefontid kl. 08:00 – 11:00 på telefonnummer 040 680 15 65.
+          <br />
+          <br />
+          Akuta fel och störningar mellan kl. 11:00 – 16:30 som ej kan vänta
+          till nästkommande vardag ring 040 680 15 67
+        </Typography>
+
+        <Typography className={classes.heading} data-cy='heding' variant='h2'>
+          Journummer
+        </Typography>
+        <Typography className={classes.text} data-cy='heding' variant='h2'>
+          Akuta fel och störningar under kvällar och helger som ej kan vänta
+          till nästkommande vardag hänvisar vi till Örestad Bevakning på telefon
+          040 93 12 70.
         </Typography>
       </Box>
     </>
