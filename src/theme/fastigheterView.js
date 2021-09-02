@@ -55,7 +55,11 @@ const fastigheterView = makeStyles((theme) => ({
   textSecond: {
     [theme.breakpoints.up('xs')]: {
       textAlign: 'center',
-      margin: '0 20px 0 20px'
+      margin: '0 20px 0 20px',
+      fontSize: '18px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.5rem'
     },
   },
 }))
