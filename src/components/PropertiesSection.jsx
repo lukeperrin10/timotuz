@@ -9,9 +9,9 @@ import {
 } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import propertyGridStyle from '../theme/themePropertiesGrid'
-import helsingborg from '../assets/images/helsingborg/1.jpg'
+import helsingborg from '../assets/images/Helsingborg/1.jpg'
 import fredrik from '../assets/images/pågåendeYstad/02.jpg'
-import strutsen from '../assets/images/limhamn/1.jpg'
+import strutsen from '../assets/images/Limhamn/1.JPG'
 
 const PropertiesSection = () => {
   const classes = propertyGridStyle()
