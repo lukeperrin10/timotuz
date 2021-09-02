@@ -77,6 +77,7 @@ const theme = createTheme({
     overline: {
       fontStyle: 'light',
       fontWeight: 300,
+      fontSize: '14px',
     },
   },
 })

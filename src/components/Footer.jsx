@@ -35,7 +35,7 @@ const Footer = () => {
               alt='Timotuz Company Logo'
             />
           </Button>
-          <Typography variant='body1' className={classes.copyright}>
+          <Typography variant='overline' className={classes.copyright}>
             © Copyright 2020 Timotuz AB
           </Typography>
         </Grid>

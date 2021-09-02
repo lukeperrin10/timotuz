@@ -29,14 +29,14 @@ const AboutUsView = () => {
         <Box className={classes.textContainer}>
           <Box className={classes.textContent}>
             {desktop && (
-              <Typography variant='h4' className={classes.header}>
+              <Typography variant='h2' className={classes.header}>
                 Om oss
               </Typography>
             )}
             <Typography
               data-cy='about-us-content'
               className={classes.aboutUsText}
-              variant='body1'>
+              variant='h4'>
               Timotuz har varit verksamt inom fastighetsbranschen sedan 2014.
               <br></br> <br></br> Vi förvärvar, förädlar, nyproducerar,
               exploaterar, äger och förvaltar hyresbostäder i Södra Sverige.
