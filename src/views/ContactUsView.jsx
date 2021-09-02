@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  Box,
-  CardMedia,
-  Typography,
-} from '@material-ui/core'
+import { Container, Box, CardMedia, Typography } from '@material-ui/core'
 import contact_us_hero from '../assets/images/contact_us_hero.jpg'
 import contactUsStyle from '../theme/contactUsView'
 
@@ -28,16 +23,19 @@ const ContactUsView = () => {
               variant='h2'>
               KONTAKTA OSS
             </Typography>
-            <Typography className={classes.text} data-cy='text' variant='p'>
+            <Typography className={classes.text} data-cy='text' variant='body1'>
               Vi finns här för dig. Tveka inte att höra av dig med frågor som
               berör ditt boende. För felanmälan ber vi dig alltid att vända dig
               till det fastighetsskötsel bolag vi anlitat på sin ort.
             </Typography>
-          </Box>       
+          </Box>
         </Box>
       </Container>
       <Box className={classes.bodySection}>
-        <Typography className={classes.bodyHeading} data-cy='heading' variant='h3'>
+        <Typography
+          className={classes.bodyHeading}
+          data-cy='heading'
+          variant='h3'>
           Felanmälan: Malmö/Limhamn
         </Typography>
         <Typography
@@ -46,11 +44,11 @@ const ContactUsView = () => {
           variant='h4'>
           Fastighetsskötsel och felanmälan
         </Typography>
-        <Typography className={classes.bodyText} data-cy='text' variant='p'>
+        <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           Fastighetsskötsel utförs av Förvaltning AB Malmöborg. Samtliga
-          felanmälningar skall registreras direkt till Förvaltning s AB
-          Malmöborg vardagar mellan kl. 8.00 – 16.00 på telefon 072-353 46 31‬
-          alternativt email info@malmoborg.se.
+          felanmälningar skall registreras direkt till Förvaltnings AB Malmöborg
+          vardagar mellan kl. 8.00 – 16.00 på telefon 072-353 46 31‬ alternativt
+          email info@malmoborg.se.
         </Typography>
 
         <Typography
@@ -59,13 +57,16 @@ const ContactUsView = () => {
           variant='h4'>
           Journummer
         </Typography>
-        <Typography className={classes.bodyText} data-cy='text' variant='p'>
+        <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           För akuta fel och störningar på kvällar och helger som inte kan vänta
           till följande vardag hänvisar vi till Örestads Bevakning på telefon
           040-93 12 70.
         </Typography>
 
-        <Typography className={classes.bodyHeading} data-cy='heading' variant='h3'>
+        <Typography
+          className={classes.bodyHeading}
+          data-cy='heading'
+          variant='h3'>
           Felanmälan: Ystad
         </Typography>
         <Typography
@@ -74,12 +75,12 @@ const ContactUsView = () => {
           variant='h4'>
           Fastighetsskötsel och felanmälan
         </Typography>
-        <Typography className={classes.bodyText} data-cy='text' variant='p'>
+        <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           Fastighetsskötsel och felanmälningar utförs av Kanslihuset AB.
           <br />
           <br />
           Felanmälan ska i första hand göras på www.kanslihuset.se under ”FÖR
-          HYRESGÄSTER”,”FELANMÄLAN”. Vid entren till trapphus finner ni
+          HYRESGÄSTER”, ”FELANMÄLAN”. Vid entren till trapphus finner ni
           detaljerade instruktioner och den information ni behöver uppge till
           Kanslihuset vid felanmälan.
           <br />
@@ -98,7 +99,7 @@ const ContactUsView = () => {
           variant='h4'>
           Journummer
         </Typography>
-        <Typography className={classes.bodyText} data-cy='text' variant='p'>
+        <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           Akuta fel och störningar under kvällar och helger som ej kan vänta
           till nästkommande vardag hänvisar vi till Örestad Bevakning på telefon
           040 93 12 70.
