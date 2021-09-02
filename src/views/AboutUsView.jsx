@@ -29,12 +29,12 @@ const AboutUsView = () => {
         <Box className={classes.textContainer}>
           <Box className={classes.textContent}>
             {desktop && (
-              <Typography variant='h2' className={classes.header}>
+              <Typography data-cy='about-us-header' variant='h2' className={classes.header}>
                 Om oss
               </Typography>
             )}
             <Typography
-              data-cy='about-us-content'
+              data-cy='about-us-text'
               className={classes.aboutUsText}
               variant='body1'>
               Timotuz har varit verksamt inom fastighetsbranschen sedan 2014.
@@ -51,7 +51,8 @@ const AboutUsView = () => {
               <br></br> Vi är lyhörda och jobbar alltid i ett nära samarbete med
               kommunen var sig det beträffar gestaltning, planritningar eller
               mobilitetsåtgärder.<br></br>
-              <br></br> Vi finns idag etablerade i Malmö, Ystad och Helsingborg.
+              <br></br> Timotuz är en långsiktigt fastighetsägare och finns idag
+              etablerad i Malmö, Ystad och Helsingborg
             </Typography>
           </Box>
         </Box>
