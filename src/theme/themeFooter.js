@@ -4,7 +4,7 @@ const footerStyle = makeStyles((theme) => ({
   footer: {
     [theme.breakpoints.up('xs')]: {
       width: '100vw',
-      height: '550px',
+      height: '700px',
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.secondary.contrastText,
       textAlign: 'center',
@@ -24,6 +24,7 @@ const footerStyle = makeStyles((theme) => ({
       justifyContent: 'space-evenly',
       flexWrap: 'nowrap',
       alignItems: 'center',
+      paddingTop: "100px",
       bottom: 0,
       height: '100%',
       width: '100%',
