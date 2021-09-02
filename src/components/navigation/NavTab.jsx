@@ -10,14 +10,21 @@ const _ = require('lodash')
 const StyledTab = withStyles((theme) => ({
   root: {
     minWidth: 10,
+    paddingTop: '17px',
+    paddingBottom: '17px',
     marginRight: '2rem',
     fontSize: '18px',
     fontStyle: 'regular',
-    fontWeight: 300,
+    fontWeight: 400,
     color: '#fff',
     opacity: 1,
+    height: '100%',
     '&:focus': {
       opacity: 1,
+    },
+    '&:hover': {
+      color: '#03292C',
+      backgroundColor: 'rgba( 255, 255, 255, 0.2)'
     },
   },
 }))((props) => <Tab disableRipple {...props} />)
@@ -28,15 +35,15 @@ const StyledTabMobile = withStyles((theme) => ({
     maxWidth: '100vw',
     opacity: '1',
     fontSize: '18px',
-    fontStyle: 'light',
-    fontWeight: 300,
+    fontStyle: 'regular',
+    fontWeight: 400,
     color: theme.palette.primary.contrastText,
     backgroundColor: theme.palette.primary.main,
     '&:focus': {
       opacity: 1,
     },
   },
-}))((props) => <Tab disableRipple {...props} />)
+}))((props) => <Tab {...props} />)
 
 const NavTab = ({
   label,
