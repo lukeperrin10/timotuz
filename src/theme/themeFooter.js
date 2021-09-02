@@ -4,7 +4,7 @@ const footerStyle = makeStyles((theme) => ({
   footer: {
     [theme.breakpoints.up('xs')]: {
       width: '100%',
-      height: '400px',
+      height: '340px',
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.secondary.contrastText,
       textAlign: 'center',
@@ -39,13 +39,14 @@ const footerStyle = makeStyles((theme) => ({
     },
   },
   contactUsContent: {
-    fontSize: '17px',
+    fontSize: '18px',
+    fontWeight: '300',
   },
   contactsContainer: {
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },
     [theme.breakpoints.up('lg')]: {
       flexDirection: 'row',
@@ -53,11 +54,7 @@ const footerStyle = makeStyles((theme) => ({
   },
   contactsGrid: {
     [theme.breakpoints.up('xs')]: {
-      padding: '24px 12px 24px 12px',
-      borderBottom: '1px solid #fff',
-      '&:last-child': {
-        borderBottom: '0px solid #fff',
-      },
+      padding: '24px 12px 0px 12px',
     },
     [theme.breakpoints.up('lg')]: {
       padding: '8px 12px 6px 12px',
