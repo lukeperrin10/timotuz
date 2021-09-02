@@ -9,7 +9,7 @@ describe('visitor can see header on desktop', () => {
       cy.get('[data-cy=logo]').should('be.visible')
       cy.get('[data-cy=start-tab]')
         .invoke('attr', 'href')
-        .should('include', '/start')
+        .should('include', '/hem')
       cy.get('[data-cy=vara-fastigheter-tab]')
         .invoke('attr', 'href')
         .should('include', '/vara_fastigheter')
@@ -37,7 +37,7 @@ describe('visitor can use hamburger menu on mobile', () => {
     cy.get('[data-cy=drawer]').within(() => {
       cy.get('[data-cy=start-tab]')
         .invoke('attr', 'href')
-        .should('include', '/start')
+        .should('include', '/hem')
       cy.get('[data-cy=vara-fastigheter-tab]')
         .invoke('attr', 'href')
         .should('include', '/vara_fastigheter')

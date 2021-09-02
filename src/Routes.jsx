@@ -15,10 +15,10 @@ const Routes = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/" render={() => <Redirect to="/start" />} />
+        <Route exact path="/" render={() => <Redirect to="/hem" />} />
         <Route
           exact
-          path="/start"
+          path="/hem"
           render={() => <App component={<IndexView />} />}
         />
         <Route
