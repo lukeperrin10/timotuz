@@ -54,7 +54,8 @@ const aboutUsStyles = makeStyles((theme) => ({
       padding: '10%',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '2% 10% 2% 8%  ',
+      padding: '2% 25% 2% 8%  ',
+      fontSize: '1.5rem'
     },
   },
 

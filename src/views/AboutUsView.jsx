@@ -36,7 +36,7 @@ const AboutUsView = () => {
             <Typography
               data-cy='about-us-content'
               className={classes.aboutUsText}
-              variant='h4'>
+              variant='body1'>
               Timotuz har varit verksamt inom fastighetsbranschen sedan 2014.
               <br></br> <br></br> Vi förvärvar, förädlar, nyproducerar,
               exploaterar, äger och förvaltar hyresbostäder i Södra Sverige.
