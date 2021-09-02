@@ -93,7 +93,6 @@ const contactUsStyle = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       maxWidth: '960px',
-      margin: '0 auto 10rem auto',
       margin: '0 4rem 10rem 4rem',
     },
     [theme.breakpoints.up('md')]: {
