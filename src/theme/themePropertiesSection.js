@@ -39,8 +39,7 @@ const propertySectionStyle = makeStyles((theme) => ({
   },
   imageContainer: {
     [theme.breakpoints.up('lg')]: {
-      height: '600px',
-      width: '100%',
+      minHeight: '600px',
       maxHeight: '600px',
       maxWidth: '600px',
       minWidth: '600px',
