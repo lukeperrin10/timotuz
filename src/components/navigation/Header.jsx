@@ -83,7 +83,7 @@ const Header = () => {
   const [selectedTab, setSelectedTab] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const tabs = useMemo(
-    () => ['Hem', 'Våra fastigheter', 'Om oss', 'Kontakta oss'],
+    () => ['Hem', 'Fastigheter', 'Om oss', 'Kontakt'],
     []
   )
 
