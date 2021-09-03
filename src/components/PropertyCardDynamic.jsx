@@ -50,7 +50,7 @@ const PropertyCardDynamic = ({
         xs={12}
         className={classes.propertyRow}
         style={border && !mobile ? { border: '3px solid #00474C' } : undefined}>
-        <Grid item container justifyContent='center' lg={5}>
+        <Grid item container className={classes.imageContainer} justifyContent='center' lg={5}>
           <Slider autoPlay={false} animation='fade'>
             {listOfImages}
           </Slider>

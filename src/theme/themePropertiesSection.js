@@ -4,14 +4,14 @@ const propertySectionStyle = makeStyles((theme) => ({
   viewContainer: {
     [theme.breakpoints.up('xs')]: {
       marginTop: '7px',
-      padding: '0'
+      padding: '0',
     },
     [theme.breakpoints.up('sm')]: {
       marginTop: '14px',
     },
     [theme.breakpoints.up('lg')]: {
       marginTop: '4rem',
-      padding: '0 24px'
+      padding: '0 24px',
     },
   },
   headerTextContainer: {
@@ -35,6 +35,14 @@ const propertySectionStyle = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       padding: '110px 0',
+    },
+  },
+  imageContainer: {
+    [theme.breakpoints.up('lg')]: {
+      minHeight: '600px',
+      maxHeight: '600px',
+      maxWidth: '600px',
+      minWidth: '600px',
     },
   },
   imageSlider: {
@@ -126,7 +134,7 @@ const propertySectionStyle = makeStyles((theme) => ({
     },
   },
   sliderButton: {
-    margin: '50% 10px',
+    margin: 'auto 10px',
     color: 'white',
     backgroundColor: theme.palette.secondary.main,
     opacity: '0.5',
