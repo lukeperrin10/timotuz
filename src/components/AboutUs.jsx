@@ -22,7 +22,7 @@ const AboutUs = () => {
         id='about_us'>
         {desktop ? undefined : (
           <Box className={classes.shadowBox}>
-            <Typography className={classes.header}>
+            <Typography variant='h4' className={classes.header}>
               Om oss
             </Typography>
           </Box>
