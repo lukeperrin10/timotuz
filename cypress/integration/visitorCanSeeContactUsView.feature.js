@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 describe('visitor can navigate see index view', () => {
   beforeEach(() => {
-    cy.visit('/kontakta_oss')
+    cy.visit('/kontakt')
   })
 
   describe('can see contact us page', () => {

@@ -12,7 +12,7 @@ import propertyGridStyle from '../theme/themePropertiesGrid'
 import helsingborg from '../assets/images/Helsingborg/1.jpg'
 import fredrik from '../assets/images/pågåendeYstad/02.jpg'
 import strutsen from '../assets/images/Limhamn/1.JPG'
-import couple from '../assets/images/looking_2.jpg'
+import couple from '../assets/images/looking.jpg'
 
 const PropertiesSection = () => {
   const classes = propertyGridStyle()
@@ -37,9 +37,8 @@ const PropertiesSection = () => {
                 className={classes.button}
                 data-cy='kontakta-oss-btn'
                 variant='outlined'
-                color='common'
                 component={Link}
-                to='/kontakta_oss'>
+                to='/kontakt'>
                 <Typography className={classes.buttonText} variant='button'>
                   Kontakta oss
                 </Typography>
@@ -51,7 +50,7 @@ const PropertiesSection = () => {
           <CardMedia
             className={classes.image}
             component={Link}
-            to='/vara_fastigheter'
+            to='/fastigheter'
             image={strutsen}
             data-cy='limhamn-img'
             alt='Huset strutsen från ovan'>
@@ -79,7 +78,7 @@ const PropertiesSection = () => {
           <CardMedia
             className={classes.image}
             component={Link}
-            to='/vara_fastigheter'
+            to='/fastigheter'
             image={fredrik}
             data-cy='ystad-img'
             alt='Illustration av folk på en innergård'>
@@ -89,14 +88,14 @@ const PropertiesSection = () => {
                   data-cy='city'
                   variant='h5'
                   className={classes.city}>
-                  ystad
+                  Nyproduktion
                 </Typography>
               </Box>
               <Typography
                 data-cy='address'
                 variant='body1'
                 className={classes.address}>
-                Fredrik 16
+                Aurora
               </Typography>
             </Box>
           </CardMedia>
@@ -107,7 +106,7 @@ const PropertiesSection = () => {
           <CardMedia
             className={classes.image}
             component={Link}
-            to='/vara_fastigheter'
+            to='/fastigheter'
             image={helsingborg}
             data-cy='helsingborg-img'
             alt='Industri lokal med röda portar'>
@@ -135,9 +134,8 @@ const PropertiesSection = () => {
               className={classes.button}
               data-cy='våra-fastigheter-btn'
               variant='outlined'
-              color='common'
               component={Link}
-              to='/vara_fastigheter'>
+              to='/fastigheter'>
               <Typography className={classes.buttonText} variant='button'>
                 Visa flera fastigheter
               </Typography>

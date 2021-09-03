@@ -83,7 +83,7 @@ const Header = () => {
   const [selectedTab, setSelectedTab] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const tabs = useMemo(
-    () => ['Start', 'Våra fastigheter', 'Om oss', 'Kontakta oss'],
+    () => ['Hem', 'Fastigheter', 'Om oss', 'Kontakt'],
     []
   )
 
@@ -154,10 +154,10 @@ const Header = () => {
               disableRipple
               className={classes.logoButton}
               component={Link}
-              to='/start'>
+              to='/hem'>
               <img
                 src={logo_web_timotuz}
-                style={{ height: '50px' }}
+                style={{ height: '60px' }}
                 data-cy='logo'
                 alt='Timotuz Company Logo'
                 onClick={window.scrollTo({ top: 0, behavior: 'smooth' })}

@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 describe('visitor can navigate see properties view', () => {
   beforeEach(() => {
-    cy.visit('/vara_fastigheter');
+    cy.visit('/fastigheter');
   });
 
   describe('on desktop', () => {
