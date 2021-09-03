@@ -3,92 +3,103 @@ import { makeStyles } from '@material-ui/core'
 const contactUsStyle = makeStyles((theme) => ({
   containerBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
-      width: '100vw',
+      height: '385px',
+      width: '100%',
     },
   },
   img: {
     [theme.breakpoints.up('xs')]: {
-      width: '100vw',
-      height: '100vh',
+      width: '100%',
+      height: '385px',
       position: 'absolute',
-      top: '0',
+      top: '55px',
       left: '0',
     },
   },
   shadowBox: {
     [theme.breakpoints.up('xs')]: {
-      height: '100vh',
-      minHeight: '284px',
-      width: '100vw',
+      display: 'flex',
+      justifyContent: 'center',
+      height: '385px',
+      width: '100%',
       position: 'absolute',
       backgroundColor: 'rgba(7, 55, 59, 0.60)',
-      top: '0',
+      top: '55px',
       left: '0',
       color: theme.palette.primary.contrastText,
-      textTransform: 'uppercase',
-      
     },
   },
   contactText: {
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      height: '30vh',
-      fontSize: '38px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      display: 'flex',
-      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '55vh',
+      height: '100%',
       fontSize: '38px',
-    },
-  },
-  contactInfo: {
-    [theme.breakpoints.up('xs')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-evenly',
-      alignItems: 'center',
-      height: '500px',
-      margin: '0px 100px'
+      width: '80%',
     },
     [theme.breakpoints.up('lg')]: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      alignItems: 'center',
-      height: '100px',
-      margin: '0px 70px'
+      width: '60%',
     },
   },
   heading: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: '24px',
-    },
-    [theme.breakpoints.up('sm')]: {
-      fontSize: '1.7rem',
+      fontSize: '1.5rem',
+      paddingBottom: '24px',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2.4rem',
+      fontSize: '2rem',
     },
   },
   text: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: '18px',
+      textAlign: 'center',
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '24px',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '2.4rem',
-      fontStyle: 'regular',
-      fontWeight: 400,
+      fontSize: '1.5rem',
     },
+  },
+  bodySection: {
+    [theme.breakpoints.up('xs')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignContent: 'center',
+      alignItems: 'flex-start',
+      width: '100%',
+      padding: '0 30px 100px 30px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+      padding: '0 20% 100px 20%',
+    },
+  },
+  bodyHeading: {
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '2rem',
+      marginTop: '8rem',
+      marginBottom: '1rem',
+      fontWeight: 600,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2rem',
+    },
+  },
+  subHeading: {
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '1.5rem',
+      marginTop: '1.5rem',
+      fontWeight: 300,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2rem',
+    },
+  },
+  bodyText: {
+    marginTop: '18px',
   },
 }))
 

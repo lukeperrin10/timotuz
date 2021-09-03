@@ -21,7 +21,7 @@ const fastigheterView = makeStyles((theme) => ({
     [theme.breakpoints.up('xs')]: {
       height: '100vh',
       minHeight: '284px',
-      width: '100vw',
+      width: '100%',
       position: 'absolute',
       backgroundColor: 'rgba(7, 55, 59, 0)',
       top: '0px',

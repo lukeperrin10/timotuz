@@ -15,15 +15,15 @@ const Routes = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/" render={() => <Redirect to="/start" />} />
+        <Route exact path="/" render={() => <Redirect to="/hem" />} />
         <Route
           exact
-          path="/start"
+          path="/hem"
           render={() => <App component={<IndexView />} />}
         />
         <Route
           exact
-          path="/vara_fastigheter"
+          path="/fastigheter"
           render={() => <App component={<PropertiesView />} />}
         />
         <Route
@@ -34,12 +34,7 @@ const Routes = () => {
         </Route>
         <Route
           exact
-          path="/om_oss"
-          render={() => <App component={<AboutUsView />} />}
-        />
-        <Route
-          exact
-          path="/kontakta_oss"
+          path="/kontakt"
           render={() => <App component={<ContactUsView />} />}
         />
       </Switch>
