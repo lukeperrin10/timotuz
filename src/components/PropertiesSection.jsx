@@ -89,14 +89,14 @@ const PropertiesSection = () => {
                   data-cy='city'
                   variant='h5'
                   className={classes.city}>
-                  ystad
+                  Nyproduktion
                 </Typography>
               </Box>
               <Typography
                 data-cy='address'
                 variant='body1'
                 className={classes.address}>
-                Fredrik 16
+                Aurora
               </Typography>
             </Box>
           </CardMedia>
