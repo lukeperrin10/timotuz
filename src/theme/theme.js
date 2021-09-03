@@ -43,7 +43,7 @@ const theme = createTheme({
     h4: {
       fontStyle: 'regular',
       fontWeight: 400,
-      fontSize: '1.5rem'
+      fontSize: '1.5rem',
     },
     h5: {
       fontStyle: 'light',

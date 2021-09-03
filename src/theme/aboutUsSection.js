@@ -109,6 +109,7 @@ const aboutUsStyle = makeStyles((theme) => ({
     width: '191px',
     height: '50px',
     fontSize: '18px',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)'
   },
 
   shadowBox: {
