@@ -37,7 +37,6 @@ const PropertiesSection = () => {
                 className={classes.button}
                 data-cy='kontakta-oss-btn'
                 variant='outlined'
-                color='common'
                 component={Link}
                 to='/kontakt'>
                 <Typography className={classes.buttonText} variant='button'>
@@ -135,7 +134,6 @@ const PropertiesSection = () => {
               className={classes.button}
               data-cy='våra-fastigheter-btn'
               variant='outlined'
-              color='common'
               component={Link}
               to='/fastigheter'>
               <Typography className={classes.buttonText} variant='button'>
