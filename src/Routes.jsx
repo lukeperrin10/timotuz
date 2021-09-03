@@ -23,7 +23,7 @@ const Routes = () => {
         />
         <Route
           exact
-          path="/vara_fastigheter"
+          path="/fastigheter"
           render={() => <App component={<PropertiesView />} />}
         />
         <Route
@@ -34,12 +34,7 @@ const Routes = () => {
         </Route>
         <Route
           exact
-          path="/om_oss"
-          render={() => <App component={<AboutUsView />} />}
-        />
-        <Route
-          exact
-          path="/kontakta_oss"
+          path="/kontakt"
           render={() => <App component={<ContactUsView />} />}
         />
       </Switch>

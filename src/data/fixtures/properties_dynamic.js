@@ -26,7 +26,7 @@ const properties_dynamic = [
     address: 'Stora Östergatan 31 / Lilla Östergatan 36',
     type: 'Bostäder',
     housing: 'ca 35st',
-    boa: '667 kvm',
+    boa: '1205 kvm',
     images: [
       {
         id: 1,
