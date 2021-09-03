@@ -43,7 +43,7 @@ const Footer = () => {
                 variant='body2'
                 className={classes.contactUsContent}
                 gutterBottom>
-                040 - 68 59 400
+                040 685 94 00
               </Typography>
             </Grid>
             <Grid item className={classes.contactsGrid}>
@@ -68,7 +68,7 @@ const Footer = () => {
         </Grid>
         <Grid item container justifyContent='center'>
           <Typography variant='overline'>
-            © Copyright 2020 Timotuz AB
+            Copyright 2020 Timotuz Holding AB
           </Typography>
         </Grid>
       </Grid>
