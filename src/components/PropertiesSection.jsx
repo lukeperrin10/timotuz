@@ -39,7 +39,7 @@ const PropertiesSection = () => {
                 variant='outlined'
                 color='common'
                 component={Link}
-                to='/kontakta_oss'>
+                to='/kontakt'>
                 <Typography className={classes.buttonText} variant='button'>
                   Kontakta oss
                 </Typography>
@@ -51,7 +51,7 @@ const PropertiesSection = () => {
           <CardMedia
             className={classes.image}
             component={Link}
-            to='/vara_fastigheter'
+            to='/fastigheter'
             image={strutsen}
             data-cy='limhamn-img'
             alt='Huset strutsen från ovan'>
@@ -79,7 +79,7 @@ const PropertiesSection = () => {
           <CardMedia
             className={classes.image}
             component={Link}
-            to='/vara_fastigheter'
+            to='/fastigheter'
             image={fredrik}
             data-cy='ystad-img'
             alt='Illustration av folk på en innergård'>
@@ -107,7 +107,7 @@ const PropertiesSection = () => {
           <CardMedia
             className={classes.image}
             component={Link}
-            to='/vara_fastigheter'
+            to='/fastigheter'
             image={helsingborg}
             data-cy='helsingborg-img'
             alt='Industri lokal med röda portar'>
@@ -137,7 +137,7 @@ const PropertiesSection = () => {
               variant='outlined'
               color='common'
               component={Link}
-              to='/vara_fastigheter'>
+              to='/fastigheter'>
               <Typography className={classes.buttonText} variant='button'>
                 Visa flera fastigheter
               </Typography>

@@ -33,7 +33,7 @@ const HeroSection = () => {
               </Typography>
               <Button
                 component={Link}
-                to='/vara_fastigheter'
+                to='/fastigheter'
                 variant='outlined'
                 color='inherit'
                 className={classes.heroButton}>
