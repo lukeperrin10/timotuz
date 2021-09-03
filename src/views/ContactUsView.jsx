@@ -1,5 +1,12 @@
 import React from 'react'
-import { Container, Box, CardMedia, Typography } from '@material-ui/core'
+import {
+  Container,
+  Box,
+  CardMedia,
+  Typography,
+  Hidden,
+  Divider,
+} from '@material-ui/core'
 import contact_us_hero from '../assets/images/contact_us_hero.jpg'
 import contactUsStyle from '../theme/contactUsView'
 
@@ -16,6 +23,34 @@ const ContactUsView = () => {
           alt=''
         />
         <Box className={classes.shadowBox}>
+          <Box className={classes.contactInfo}>
+            <Typography
+              className={classes.text}
+              data-cy='phone-number'
+              variant='body1'>
+              040 - 68 59 400
+            </Typography>
+            <Hidden mdDown>
+              <Divider orientation='vertical' />
+            </Hidden>
+            <Typography
+              className={classes.text}
+              data-cy='email-address'
+              variant='body1'>
+              info@timotuz.com
+            </Typography>
+            <Hidden mdDown>
+              <Divider orientation='vertical' />
+            </Hidden>
+            <Typography
+              className={classes.text}
+              data-cy='address'
+              variant='body1'>
+              box 20, 239 21 skanör
+            </Typography>
+          </Box>
+        </Box>
+        {/* <Box className={classes.shadowBox}>
           <Box className={classes.contactText}>
             <Typography
               className={classes.heading}
@@ -29,7 +64,7 @@ const ContactUsView = () => {
               till det fastighetsskötsel bolag vi anlitat på sin ort.
             </Typography>
           </Box>
-        </Box>
+        </Box> */}
       </Container>
       <Box className={classes.bodySection}>
         <Typography
