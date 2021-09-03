@@ -7,6 +7,7 @@ import PågåendeYstad6 from '../../assets/images/pågåendeYstad/06.jpg'
 import PågåendeYstad7 from '../../assets/images/pågåendeYstad/07.jpg'
 import PågåendeYstad8 from '../../assets/images/pågåendeYstad/08.jpg'
 import PågåendeYstad9 from '../../assets/images/pågåendeYstad/09.jpg'
+import PågåendeYstad10 from '../../assets/images/pågåendeYstad/10.jpg'
 import Ystad1 from '../../assets/images/Ystad/1.jpg'
 import Ystad2 from '../../assets/images/Ystad/2.jpg'
 import Ystad3 from '../../assets/images/Ystad/3.jpg'
@@ -28,6 +29,11 @@ const properties_dynamic = [
     housing: 'ca 35st',
     boa: '1205 kvm',
     images: [
+      {
+        id: 10,
+        photo: PågåendeYstad10,
+        alt: '',
+      },
       {
         id: 1,
         photo: PågåendeYstad1,
@@ -116,7 +122,6 @@ const properties_dynamic = [
   {
     id: 3,
     district: 'Malmö / Limhamn',
-    name: 'Strutsen 25',
     description:
       'Fastigheten är belägen på centrala läge i de pittoreska “gamla” delarna av Limhamn på en lugn återvändsgata ett par minuters promenadavstånd från havet och ett stenkast från Limhamns centrum med restauranger, matbutiker och caféer.',
     address: 'Västra Bernadottesgatan 30, Limhamn ',
