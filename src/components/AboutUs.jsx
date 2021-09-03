@@ -46,12 +46,14 @@ const AboutUs = () => {
               data-cy='about-us-content'
               className={classes.aboutUsText}
               variant='body1'>
-              Timotuz skall skapa platser för skåningar att växa och trivas på.
-              Vi gör det genom att tillgodose bostads- och lokalbehov idag, men
-              med ena foten in i morgondagens teknik och miljö. <br></br>
-              <br></br> Vi ska hitta eller skapa fastigheter med stor
-              värdepotential och utveckla dessa för ett lönsamt ägande och en
-              hållbar framtid.
+              Timotuz har varit verksamt inom fastighetsbranschen sedan 2014.
+              <br></br>
+              <br></br>
+              Vi förvärvar, förädlar, nyproducerar, exploaterar, äger och
+              förvaltar hyresbostäder i Södra Sverige. Strategin är att i städer
+              med tillväxtpotential förvärva befintliga bostadsfastigheter
+              liksom mark för nyproduktion samt strategiskt belägna lager och
+              logistikfastigheter. hållbar framtid.
             </Typography>
 
             <Button
