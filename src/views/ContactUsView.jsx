@@ -28,7 +28,7 @@ const ContactUsView = () => {
               className={classes.text}
               data-cy='phone-number'
               variant='body1'>
-              040 - 68 59 400
+              040 685 94 00
             </Typography>
             <Hidden mdDown>
               <Divider orientation='vertical' />
@@ -50,21 +50,6 @@ const ContactUsView = () => {
             </Typography>
           </Box>
         </Box>
-        {/* <Box className={classes.shadowBox}>
-          <Box className={classes.contactText}>
-            <Typography
-              className={classes.heading}
-              data-cy='heding'
-              variant='h2'>
-              KONTAKTA OSS
-            </Typography>
-            <Typography className={classes.text} data-cy='text' variant='body1'>
-              Vi finns här för dig. Tveka inte att höra av dig med frågor som
-              berör ditt boende. För felanmälan ber vi dig alltid att vända dig
-              till det fastighetsskötsel bolag vi anlitat på sin ort.
-            </Typography>
-          </Box>
-        </Box> */}
       </Container>
       <Box className={classes.bodySection}>
         <Typography
@@ -82,7 +67,7 @@ const ContactUsView = () => {
         <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           Fastighetsskötsel utförs av Förvaltning AB Malmöborg. Samtliga
           felanmälningar skall registreras direkt till Förvaltnings AB Malmöborg
-          vardagar mellan kl. 8.00 – 16.00 på telefon 072-353 46 31‬ alternativt
+          vardagar mellan kl. 8.00 – 16.00 på telefon 072 353 46 31‬ alternativt
           email info@malmoborg.se.
         </Typography>
 
@@ -95,7 +80,7 @@ const ContactUsView = () => {
         <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           För akuta fel och störningar på kvällar och helger som inte kan vänta
           till följande vardag hänvisar vi till Örestads Bevakning på telefon
-          040-93 12 70.
+          040 93 12 70.
         </Typography>
 
         <Typography
