@@ -16,6 +16,7 @@ import Limhamn1 from '../../assets/images/Limhamn/1.JPG'
 import Limhamn2 from '../../assets/images/Limhamn/2.JPG'
 import Limhamn3 from '../../assets/images/Limhamn/3.jpg'
 import Limhamn4 from '../../assets/images/Limhamn/4.jpg'
+import Helsingborg1 from '../../assets/images/Helsingborg/1.jpg'
 
 const properties_dynamic = [
   {
@@ -122,6 +123,7 @@ const properties_dynamic = [
   {
     id: 3,
     district: 'Malmö / Limhamn',
+    name: 'Strutsen 25',
     description:
       'Fastigheten är belägen på centrala läge i de pittoreska “gamla” delarna av Limhamn på en lugn återvändsgata ett par minuters promenadavstånd från havet och ett stenkast från Limhamns centrum med restauranger, matbutiker och caféer.',
     address: 'Västra Bernadottesgatan 30, Limhamn ',
@@ -152,6 +154,24 @@ const properties_dynamic = [
       {
         id: 4,
         photo: Limhamn4,
+        alt: '',
+      },
+    ],
+  },
+  {
+    id: 4,
+    district: 'Helsingborg',
+    name: 'Mörsaren Västra 6',
+    description:
+      'Fastigheten ligger på det mest attraktiva och expansiva industriområdet Berga i Norra Helsingborg. På endast 10 minuter med bil nås Helsingborg centrum. Buss avgår ett stenkast från fastigheten till centrala Helsingborg och från Maria station som ligger inom promenadavstånd från fastigheten avgår Pågatågen.',
+    address: 'Pistolgatan 3, Helsingborg',
+    type: 'Industrilokal',
+    lager: '480 kvm',
+    kontor: '120 kvm',
+    images: [
+      {
+        id: 1,
+        photo: Helsingborg1,
         alt: '',
       },
     ],
