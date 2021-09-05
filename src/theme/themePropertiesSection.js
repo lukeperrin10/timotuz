@@ -10,7 +10,7 @@ const propertySectionStyle = makeStyles((theme) => ({
       marginTop: '14px',
     },
     [theme.breakpoints.up('lg')]: {
-      marginTop: '4rem',
+      marginTop: '1rem',
       padding: '0 24px',
     },
   },
@@ -35,6 +35,8 @@ const propertySectionStyle = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       padding: '110px 0',
+      marginBottom: '20px',
+      paddingBottom: '110px',
     },
   },
   imageContainer: {
