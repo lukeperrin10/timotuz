@@ -172,6 +172,14 @@ const PropertyCardDynamic = ({
                 <Typography component='span'>{property.other}</Typography>
               </div>
             )}
+            {property.foradling && (
+              <div style={{ marginTop: '1rem' }}>
+                <Typography variant='caption' component='span'>
+                  Förädling/exploatering:{' '}
+                </Typography>
+                <Typography component='span'>{property.foradling}</Typography>
+              </div>
+            )}
           </Box>
         </Grid>
       </Grid>

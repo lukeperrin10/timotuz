@@ -95,8 +95,8 @@ const properties_dynamic = [
     premises: '5st',
     loa: '1155 kvm',
     parking: 'Parkeringsplats (16st)',
-    other:
-      'Förädling/exploatering: Lokalerna på innegården kommer rivas och ombildas till ca 30-35 bostäder med levande innergårdar.',
+    foradling:
+      'Lokalerna på innegården kommer rivas och ombildas till ca 30-35 bostäder med levande innergårdar.',
     images: [
       {
         id: 1,
