@@ -105,7 +105,7 @@ const ContactUsView = () => {
           Kanslihuset vid felanmälan.
           <br />
           <br />
-          Det går också bra ringa in på vardagar (måndag-fredag) under
+          Det går också bra att ringa in på vardagar (måndag-fredag) under
           telefontid kl. 08:00 – 11:00 på telefonnummer 040 680 15 65.
           <br />
           <br />
