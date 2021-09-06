@@ -33,21 +33,40 @@ const fastigheterView = makeStyles((theme) => ({
   },
 
   circle: {
-    marginTop: '5%',
-    margin: '10%',
-    height: '350px',
-    width: '350px',
-    borderRadius: '175px',
-    backgroundColor: '#eee',
-    padding: '50px 85px',
-    textAlign: 'center',
-    display: 'flex',
+    [theme.breakpoints.up('xs')]: {
+      marginTop: '6%',
+      marginLeft: '4%',
+      height: '200px',
+      width: '200px',
+      borderRadius: '180px',
+      backgroundColor: '#eee',
+      padding: '30px 30px',
+      textAlign: 'center',
+      display: 'flex',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '240px',
+      width: '240px',
+      padding: '50px 50px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '5%',
+      marginLeft: '10%',
+      height: '350px',
+      width: '350px',
+      padding: '50px 85px',
+    },
   },
 
   circleText: {
-    margin: 'auto',
-    color: theme.palette.primary.main,
-    fontSize: '35px',
+    [theme.breakpoints.up('xs')]: {
+      margin: 'auto',
+      color: theme.palette.primary.main,
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '35px',
+    },
   },
 
   content: {
