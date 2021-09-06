@@ -53,7 +53,7 @@ const AboutUs = () => {
               förvaltar hyresbostäder i Södra Sverige. Strategin är att i städer
               med tillväxtpotential förvärva befintliga bostadsfastigheter
               liksom mark för nyproduktion samt strategiskt belägna lager och
-              logistikfastigheter. hållbar framtid.
+              logistikfastigheter.
             </Typography>
 
             <Button
