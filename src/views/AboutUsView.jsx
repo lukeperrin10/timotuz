@@ -52,7 +52,7 @@ const AboutUsView = () => {
               kommunen var sig det beträffar gestaltning, planritningar eller
               mobilitetsåtgärder.<br></br>
               <br></br> Timotuz är en långsiktigt fastighetsägare och finns idag
-              etablerad i Malmö, Ystad och Helsingborg
+              etablerad i Malmö, Ystad och Helsingborg.
             </Typography>
           </Box>
         </Box>

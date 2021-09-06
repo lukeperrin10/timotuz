@@ -7,6 +7,7 @@ import PågåendeYstad6 from '../../assets/images/pågåendeYstad/06.jpg'
 import PågåendeYstad7 from '../../assets/images/pågåendeYstad/07.jpg'
 import PågåendeYstad8 from '../../assets/images/pågåendeYstad/08.jpg'
 import PågåendeYstad9 from '../../assets/images/pågåendeYstad/09.jpg'
+import PågåendeYstad10 from '../../assets/images/pågåendeYstad/10.jpg'
 import Ystad1 from '../../assets/images/Ystad/1.jpg'
 import Ystad2 from '../../assets/images/Ystad/2.jpg'
 import Ystad3 from '../../assets/images/Ystad/3.jpg'
@@ -15,12 +16,13 @@ import Limhamn1 from '../../assets/images/Limhamn/1.JPG'
 import Limhamn2 from '../../assets/images/Limhamn/2.JPG'
 import Limhamn3 from '../../assets/images/Limhamn/3.jpg'
 import Limhamn4 from '../../assets/images/Limhamn/4.jpg'
+import Helsingborg1 from '../../assets/images/Helsingborg/1.jpg'
 
 const properties_dynamic = [
   {
     id: 1,
     district: 'YSTAD',
-    name: 'Pågående nyproduktion: Fredrik 16',
+    name: 'Pågående nyproduktion: Aurora',
     description:
       'Aurora, möjligheternas kvarter, beläget i hjärtat av pittoreska Ystad längs de brokiga kullerstensgatorna. Här har vi ambitionen och förutsättningarna att bygga och förvalta hyresbostäder som möter morgondagens behov. Vi är i full fas med att utveckla ett nytt bostadskoncept i Ystad för den medvetna stadsmänniskan.\n\nFastigheten som sträcker sig från Stora Östergatan, den så kallade gågatan, och Lilla Östergatan, är i dagens läge en fastighet som har en enorm potential till att bidra med något speciellt till Ystad som stad\n\nKvarterets centrala läge gör det enkelt att gå, cykla eller åka kollektivt istället för att äga en bil. Med fokus på att leva hållbart, tillgängligt och enkelt bidrar livsstilen samtidigt till en bättre miljö, en bättre hälsa och en bättre privatekonomi för de boende.',
     address: 'Stora Östergatan 31 / Lilla Östergatan 36',
@@ -28,6 +30,11 @@ const properties_dynamic = [
     housing: 'ca 35st',
     boa: '1205 kvm',
     images: [
+      {
+        id: 10,
+        photo: PågåendeYstad10,
+        alt: '',
+      },
       {
         id: 1,
         photo: PågåendeYstad1,
@@ -88,8 +95,8 @@ const properties_dynamic = [
     premises: '5st',
     loa: '1155 kvm',
     parking: 'Parkeringsplats (16st)',
-    other:
-      'Förädling/exploatering: Lokalerna på innegården kommer rivas och ombildas till ca 30-35 bostäder med levande innergårdar.',
+    foradling:
+      'Lokalerna på innegården kommer rivas och ombildas till ca 30-35 bostäder med levande innergårdar.',
     images: [
       {
         id: 1,
@@ -147,6 +154,24 @@ const properties_dynamic = [
       {
         id: 4,
         photo: Limhamn4,
+        alt: '',
+      },
+    ],
+  },
+  {
+    id: 4,
+    district: 'Helsingborg',
+    name: 'Mörsaren Västra 6',
+    description:
+      'Fastigheten ligger på det mest attraktiva och expansiva industriområdet Berga i Norra Helsingborg. På endast 10 minuter med bil nås Helsingborg centrum. Buss avgår ett stenkast från fastigheten till centrala Helsingborg och från Maria station som ligger inom promenadavstånd från fastigheten avgår Pågatågen.',
+    address: 'Pistolgatan 3, Helsingborg',
+    type: 'Industrilokal',
+    lager: '480 kvm',
+    kontor: '120 kvm',
+    images: [
+      {
+        id: 1,
+        photo: Helsingborg1,
         alt: '',
       },
     ],

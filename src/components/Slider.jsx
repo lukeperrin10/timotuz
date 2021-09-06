@@ -34,7 +34,7 @@ const Slider = ({
             {prev && <ChevronLeftIcon />}
           </IconButton>
         )
-      }      
+      }
       indicatorIconButtonProps={{
         style: {
           color: '#707070',

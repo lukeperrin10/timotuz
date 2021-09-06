@@ -1,5 +1,12 @@
 import React from 'react'
-import { Container, Box, CardMedia, Typography } from '@material-ui/core'
+import {
+  Container,
+  Box,
+  CardMedia,
+  Typography,
+  Hidden,
+  Divider,
+} from '@material-ui/core'
 import contact_us_hero from '../assets/images/contact_us_hero.jpg'
 import contactUsStyle from '../theme/contactUsView'
 
@@ -16,17 +23,30 @@ const ContactUsView = () => {
           alt=''
         />
         <Box className={classes.shadowBox}>
-          <Box className={classes.contactText}>
+          <Box className={classes.contactInfo}>
             <Typography
-              className={classes.heading}
-              data-cy='heding'
-              variant='h2'>
-              KONTAKTA OSS
+              className={classes.text}
+              data-cy='phone-number'
+              variant='body1'>
+              040 685 94 00
             </Typography>
-            <Typography className={classes.text} data-cy='text' variant='body1'>
-              Vi finns här för dig. Tveka inte att höra av dig med frågor som
-              berör ditt boende. För felanmälan ber vi dig alltid att vända dig
-              till det fastighetsskötsel bolag vi anlitat på sin ort.
+            <Hidden mdDown>
+              <Divider orientation='vertical' />
+            </Hidden>
+            <Typography
+              className={classes.text}
+              data-cy='email-address'
+              variant='body1'>
+              info@timotuz.com
+            </Typography>
+            <Hidden mdDown>
+              <Divider orientation='vertical' />
+            </Hidden>
+            <Typography
+              className={classes.text}
+              data-cy='address'
+              variant='body1'>
+              box 20, 239 21 skanör
             </Typography>
           </Box>
         </Box>
@@ -47,7 +67,7 @@ const ContactUsView = () => {
         <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           Fastighetsskötsel utförs av Förvaltning AB Malmöborg. Samtliga
           felanmälningar skall registreras direkt till Förvaltnings AB Malmöborg
-          vardagar mellan kl. 8.00 – 16.00 på telefon 072-353 46 31‬ alternativt
+          vardagar mellan kl. 8.00 – 16.00 på telefon 072 353 46 31‬ alternativt
           email info@malmoborg.se.
         </Typography>
 
@@ -60,7 +80,7 @@ const ContactUsView = () => {
         <Typography className={classes.bodyText} data-cy='text' variant='body1'>
           För akuta fel och störningar på kvällar och helger som inte kan vänta
           till följande vardag hänvisar vi till Örestads Bevakning på telefon
-          040-93 12 70.
+          040 93 12 70.
         </Typography>
 
         <Typography

@@ -50,7 +50,12 @@ const PropertyCardDynamic = ({
         xs={12}
         className={classes.propertyRow}
         style={border && !mobile ? { border: '3px solid #00474C' } : undefined}>
-        <Grid item container className={classes.imageContainer} justifyContent='center' lg={5}>
+        <Grid
+          item
+          container
+          className={classes.imageContainer}
+          justifyContent='center'
+          lg={5}>
           <Slider autoPlay={false} animation='fade'>
             {listOfImages}
           </Slider>
@@ -165,6 +170,14 @@ const PropertyCardDynamic = ({
             {property.other && (
               <div style={{ marginTop: '1rem' }}>
                 <Typography component='span'>{property.other}</Typography>
+              </div>
+            )}
+            {property.foradling && (
+              <div style={{ marginTop: '1rem' }}>
+                <Typography variant='caption' component='span'>
+                  Förädling/exploatering:{' '}
+                </Typography>
+                <Typography component='span'>{property.foradling}</Typography>
               </div>
             )}
           </Box>

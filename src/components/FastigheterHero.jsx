@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Typography, CardMedia, Container } from '@material-ui/core'
+import { Box, Typography, CardMedia } from '@material-ui/core'
 import fastigheterView from '../theme/fastigheterView'
-import overview from '../assets/images/Ystad/2.jpg'
+import overview from '../assets/images/2_covered_3.jpg'
 
 const FastigheterHero = () => {
   const classes = fastigheterView()
@@ -16,22 +16,11 @@ const FastigheterHero = () => {
         alt='Fågelperspektiv över det historiska distriktet'
       />
       <Box data-cy='shadow-box' className={classes.shadowBox}>
-        <Container className={classes.content}>
-          <Typography className={classes.textFirst} variant='h2'>
-            Bostäder
+        <Box className={classes.circle}>
+          <Typography variant='h4' className={classes.circleText}>
+            Fastigheter med hög standard i centrala lägen
           </Typography>
-          <Typography className={classes.textSecond} variant='h4'>
-            Timotuz Fastigheter hyr ut och förvaltar bostäder i vackra och
-            mysiga lägen runt om i Skåneregionen. Vi bedriver förvaltningen i
-            egen regi med samarbetar med lokala entreprenörer som
-            underleverantörer.
-            <br />
-            <br />
-            Vi jobbar proaktivt med vår förvaltning där en medvetenhet om miljö
-            och etiska principer alltid vägs in i de beslut vi tar för att möta
-            hyresgästernas behov.
-          </Typography>
-        </Container>
+        </Box>
       </Box>
     </Box>
   )

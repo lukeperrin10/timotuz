@@ -24,22 +24,24 @@ const contactUsStyle = makeStyles((theme) => ({
       width: '100%',
       position: 'absolute',
       backgroundColor: 'rgba(7, 55, 59, 0.60)',
-      top: '55px',
+      top: '3.4rem',
       left: '0',
       color: theme.palette.primary.contrastText,
     },
   },
-  contactText: {
+  contactInfo: {
     [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100%',
+      alignSelf: 'center',
+      height: '20%',
       fontSize: '38px',
       width: '80%',
     },
     [theme.breakpoints.up('lg')]: {
+      flexDirection: 'row',
       width: '60%',
     },
   },
@@ -55,6 +57,7 @@ const contactUsStyle = makeStyles((theme) => ({
   text: {
     [theme.breakpoints.up('xs')]: {
       textAlign: 'center',
+      margin: '1rem'
     },
     [theme.breakpoints.up('sm')]: {
       fontSize: '24px',

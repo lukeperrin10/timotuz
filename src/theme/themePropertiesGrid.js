@@ -196,7 +196,7 @@ const propertyGridStyle = makeStyles((theme) => ({
   },
 
   cityBoxTwo: {
-    width: '140px',
+    width: '60px',
   },
 
   city: {
