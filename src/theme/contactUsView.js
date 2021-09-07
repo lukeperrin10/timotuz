@@ -14,6 +14,7 @@ const contactUsStyle = makeStyles((theme) => ({
       position: 'absolute',
       top: '55px',
       left: '0',
+      objectPosition: '100% 40%'
     },
   },
   shadowBox: {
@@ -63,7 +64,7 @@ const contactUsStyle = makeStyles((theme) => ({
       fontSize: '24px',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '1.5rem',
+      fontSize: '2rem',
     },
   },
   bodySection: {

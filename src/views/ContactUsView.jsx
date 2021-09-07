@@ -7,7 +7,7 @@ import {
   Hidden,
   Divider,
 } from '@material-ui/core'
-import contact_us_hero from '../assets/images/contact_us_hero.jpg'
+import contact_us_hero from '../assets/images/contact_page.jpg'
 import contactUsStyle from '../theme/contactUsView'
 
 const ContactUsView = () => {
@@ -15,13 +15,15 @@ const ContactUsView = () => {
   return (
     <>
       <Container className={classes.containerBox}>
-        <CardMedia
-          className={classes.img}
-          component='img'
-          image={contact_us_hero}
-          data-cy='image'
-          alt=''
-        />
+        <Box className={classes.heroBox}>
+          <CardMedia
+            className={classes.img}
+            component='img'
+            image={contact_us_hero}
+            data-cy='image'
+            alt=''
+          />
+        </Box>
         <Box className={classes.shadowBox}>
           <Box className={classes.contactInfo}>
             <Typography
@@ -38,15 +40,6 @@ const ContactUsView = () => {
               data-cy='email-address'
               variant='body1'>
               info@timotuz.com
-            </Typography>
-            <Hidden mdDown>
-              <Divider orientation='vertical' />
-            </Hidden>
-            <Typography
-              className={classes.text}
-              data-cy='address'
-              variant='body1'>
-              box 20, 239 21 skanör
             </Typography>
           </Box>
         </Box>
@@ -65,9 +58,11 @@ const ContactUsView = () => {
           Fastighetsskötsel och felanmälan
         </Typography>
         <Typography className={classes.bodyText} data-cy='text' variant='body1'>
-          Fastighetsskötsel utförs av Förvaltning AB Malmöborg. Samtliga
-          felanmälningar skall registreras direkt till Förvaltnings AB Malmöborg
-          vardagar mellan kl. 8.00 – 16.00 på telefon 072 353 46 31‬ alternativt
+          Fastighetsskötsel utförs av Förvaltning AB Malmöborg.
+          <br />
+          <br />
+          Samtliga felanmälningar skall registreras direkt till Förvaltnings AB Malmöborg
+          vardagar mellan kl.8.00 – 16.00 på telefon 072 353 46 31‬ alternativt
           email info@malmoborg.se.
         </Typography>
 
