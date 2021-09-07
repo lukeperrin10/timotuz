@@ -7,7 +7,7 @@ import {
   Hidden,
   Divider,
 } from '@material-ui/core'
-import contact_us_hero from '../assets/images/contact_page_new.jpg'
+import contact_us_hero from '../assets/images/contact_page.jpg'
 import contactUsStyle from '../theme/contactUsView'
 
 const ContactUsView = () => {
@@ -63,7 +63,7 @@ const ContactUsView = () => {
           <br />
           Samtliga felanmälningar skall registreras direkt till Förvaltnings AB Malmöborg
           vardagar mellan kl.8.00 – 16.00 på telefon 072 353 46 31‬ alternativt
-          email info @malmoborg.se.
+          email info@malmoborg.se.
         </Typography>
 
         <Typography

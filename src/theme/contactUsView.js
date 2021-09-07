@@ -14,7 +14,7 @@ const contactUsStyle = makeStyles((theme) => ({
       position: 'absolute',
       top: '55px',
       left: '0',
-      objectPosition: '100% 60%'
+      objectPosition: '100% 40%'
     },
   },
   shadowBox: {
