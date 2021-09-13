@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 const aboutUsStyles = makeStyles((theme) => ({
   contentContainer: {
     [theme.breakpoints.up('lg')]: {
-      height: '100%',
+      minimumheight: '100vh',
       width: '100%',
       display: 'flex',
       flexDirection: 'row',
