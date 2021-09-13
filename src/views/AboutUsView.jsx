@@ -21,7 +21,7 @@ const AboutUsView = () => {
 
         <Box className={classes.imageContainer}>
           <CardMedia
-            component='img'
+            component='div'
             image={people_2}
             className={classes.image}
           />
