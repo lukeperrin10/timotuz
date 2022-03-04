@@ -57,7 +57,7 @@ const ContactUsView = () => {
           variant='h4'>
           Fastighetsskötsel och felanmälan
         </Typography>
-        <Typography className={classes.bodyText} data-cy='text' variant='body1'>
+        <Typography className={classes.bodyText} data-cy='text-1' variant='body1'>
           Fastighetsskötsel utförs av Förvaltning AB Malmöborg.
           <br />
           <br />
