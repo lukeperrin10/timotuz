@@ -40,17 +40,17 @@ const properties_dynamic = [
         photo: PågåendeYstad1,
         alt: '',
       },
-      {
+    /*   {
         id: 2,
         photo: PågåendeYstad2,
         alt: '',
-      },
+      }, */
       {
         id: 3,
         photo: PågåendeYstad3,
         alt: '',
       },
-      {
+     /*  {
         id: 4,
         photo: PågåendeYstad4,
         alt: '',
@@ -79,7 +79,7 @@ const properties_dynamic = [
         id: 9,
         photo: PågåendeYstad9,
         alt: '',
-      },
+      }, */
     ],
   },
   {
