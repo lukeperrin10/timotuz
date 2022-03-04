@@ -24,11 +24,11 @@ const properties_dynamic = [
     district: 'YSTAD',
     name: 'Pågående nyproduktion: Aurora',
     description:
-      'Aurora, möjligheternas kvarter, beläget i hjärtat av pittoreska Ystad längs de brokiga kullerstensgatorna. Här har vi ambitionen och förutsättningarna att bygga och förvalta hyresbostäder som möter morgondagens behov. Vi är i full fas med att utveckla ett nytt bostadskoncept i Ystad för den medvetna stadsmänniskan.\n\nFastigheten som sträcker sig från Stora Östergatan, den så kallade gågatan, och Lilla Östergatan, är i dagens läge en fastighet som har en enorm potential till att bidra med något speciellt till Ystad som stad.\n\nKvarterets centrala läge gör det enkelt att gå, cykla eller åka kollektivt istället för att äga en bil. Med fokus på att leva hållbart, tillgängligt och enkelt bidrar livsstilen samtidigt till en bättre miljö, en bättre hälsa och en bättre privatekonomi för de boende.',
+      'Aurora, möjligheternas kvarter, beläget i hjärtat av pittoreska Ystad längs de brokiga kullerstensgatorna. Här har vi ambitionen och förutsättningarna att bygga bostäder som möter morgondagens behov. Vi är i full fas med att utveckla ett nytt bostadskoncept i Ystad för den medvetna stadsmänniskan. \r\n\r\n Fastigheten som sträcker sig från Stora Östergatan, den så kallade gågatan, och Lilla Östergatan, är i dagens läge en fastighet som har en enorm potential till att bidra med något speciellt till Ystad som stad. \r\n\r\n Kvarterets centrala läge gör det enkelt att gå, cykla eller åka kollektivt. Med fokus på att leva hållbart och tillgängligt bidrar livsstilen samtidigt till en bättre miljö och en bättre hälsa för de boende. I sann Ystadsanda med en pittoresk innergård och privat pool så är vår ambition att  skapa Ystads Gårdshus 2.0.\r\n\r\n Preliminär säljstart: Hösten 2022 ',
     address: 'Stora Östergatan 31 / Lilla Östergatan 36',
     type: 'Bostäder',
-    housing: 'ca 35st',
-    boa: '1205 kvm',
+    housing: '19st',
+    boa: '1500 kvm',
     images: [
       {
         id: 10,
