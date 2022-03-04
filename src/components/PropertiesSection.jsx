@@ -25,7 +25,7 @@ const PropertiesSection = () => {
             className={classes.image}
             image={couple}
             data-cy='limhamn-img'
-            alt='Huset strutsen från ovan'>
+            alt=''>
             <Box data-cy='shadow-box' className={classes.shadowBoxContactUs}>
               <Typography
                 data-cy='city'
