@@ -1,7 +1,7 @@
 import PågåendeYstad1 from '../../assets/images/pågåendeYstad/03.jpg'
-//import PågåendeYstad2 from '../../assets/images/pågåendeYstad/01.jpg'
-import PågåendeYstad3 from '../../assets/images/pågåendeYstad/02.jpg'
-/* import PågåendeYstad4 from '../../assets/images/pågåendeYstad/04.jpg'
+import PågåendeYstad2 from '../../assets/images/pågåendeYstad/01.jpg'
+/*import PågåendeYstad3 from '../../assets/images/pågåendeYstad/02.jpg'
+ import PågåendeYstad4 from '../../assets/images/pågåendeYstad/04.jpg'
 import PågåendeYstad5 from '../../assets/images/pågåendeYstad/05.jpg'
 import PågåendeYstad6 from '../../assets/images/pågåendeYstad/06.jpg'
 import PågåendeYstad7 from '../../assets/images/pågåendeYstad/07.jpg'
@@ -40,17 +40,18 @@ const properties_dynamic = [
         photo: PågåendeYstad1,
         alt: '',
       },
-    /*   {
+      {
         id: 2,
         photo: PågåendeYstad2,
         alt: '',
-      }, */
+      },
+      /*
       {
         id: 3,
         photo: PågåendeYstad3,
         alt: '',
       },
-     /*  {
+       {
         id: 4,
         photo: PågåendeYstad4,
         alt: '',
