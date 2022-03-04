@@ -1,13 +1,13 @@
-import PågåendeYstad1 from '../../assets/images/pågåendeYstad/01.jpg'
-import PågåendeYstad2 from '../../assets/images/pågåendeYstad/02.jpg'
-import PågåendeYstad3 from '../../assets/images/pågåendeYstad/03.jpg'
+import PågåendeYstad1 from '../../assets/images/pågåendeYstad/03.jpg'
+import PågåendeYstad2 from '../../assets/images/pågåendeYstad/01.jpg'
+import PågåendeYstad3 from '../../assets/images/pågåendeYstad/02.jpg'
 import PågåendeYstad4 from '../../assets/images/pågåendeYstad/04.jpg'
 import PågåendeYstad5 from '../../assets/images/pågåendeYstad/05.jpg'
 import PågåendeYstad6 from '../../assets/images/pågåendeYstad/06.jpg'
 import PågåendeYstad7 from '../../assets/images/pågåendeYstad/07.jpg'
 import PågåendeYstad8 from '../../assets/images/pågåendeYstad/08.jpg'
 import PågåendeYstad9 from '../../assets/images/pågåendeYstad/09.jpg'
-import PågåendeYstad10 from '../../assets/images/pågåendeYstad/10.jpg'
+// import PågåendeYstad10 from '../../assets/images/pågåendeYstad/10.jpg'
 import Ystad1 from '../../assets/images/Ystad/1.jpg'
 import Ystad2 from '../../assets/images/Ystad/2.jpg'
 import Ystad3 from '../../assets/images/Ystad/3.jpg'
@@ -30,11 +30,11 @@ const properties_dynamic = [
     housing: '19st',
     boa: '1500 kvm',
     images: [
-      {
-        id: 10,
-        photo: PågåendeYstad10,
-        alt: '',
-      },
+      // {
+      //   id: 10,
+      //   photo: PågåendeYstad10,
+      //   alt: '',
+      // },
       {
         id: 1,
         photo: PågåendeYstad1,
